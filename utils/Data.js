@@ -67,7 +67,7 @@ export const Data  = [
     }, 
     {
         title: 'Watch App',
-        subtitle: 'A taiwanese job search webbsite',
+        subtitle: 'A Flutter app',
         discription: 'A beautiful app build using Flutter',
         color: 'green', 
         imgScr: '/assets/imgs/watchapp.svg',
@@ -78,7 +78,7 @@ export const Data  = [
     },
     {
         title: 'Furniture App',
-        subtitle: 'A taiwanese job search webbsite',
+        subtitle: 'A Flutter app',
         discription: 'A beautiful mobile app built using Flutter',
         color: 'green', 
         imgScr: '/assets/imgs/furniture.svg',
