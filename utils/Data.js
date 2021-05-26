@@ -20,7 +20,7 @@ export const Data  = [
         stack: [ 'react native', 'react-navigation', 'expo-cli'],
         isReverse: true,
         isFeatured: true,
-        githubLink: 'https://github.com/kemojal/job178.com',
+        githubLink: 'https://github.com/kemojal/Recipee',
     },
     // {
     //     title: 'Expense',
