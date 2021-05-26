@@ -9,6 +9,7 @@ export const Data  = [
         isReverse: false,
         isFeatured: true,
         githubLink: 'https://github.com/kemojal/habitee',
+        previewLink: 'https://'
     }, 
     {
         title: 'Recipe',

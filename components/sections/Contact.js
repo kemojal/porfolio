@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const ContactContainer = styled.section`
 width: 100vw;
-background-color: black;
+background-color: #E33140;
 color: white;
 padding-bottom: 5rem;
 `
@@ -71,6 +71,7 @@ const SeeMyWorkBtn  = styled.div`
     text-align: center;
     z-index: 50;
     color: var(--lightTextTitleColor);
+    color: white;
     p{
         z-index: 10;
         color: white;
@@ -88,6 +89,7 @@ const Circle = styled.div`
     border-radius: 30px;
     border: 2px solid var(--crimson);
     background-color: #fd4370;
+    background-color: black;
     position: absolute;
     left: 0;
     ${SeeMyWorkBtn}:hover & {
