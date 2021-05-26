@@ -66,27 +66,7 @@ z-index: 50;
 `
 const About = () => {
     return (
-        <AboutSection>
-            {/* <RelativeDiv>
-             <BlobLight>
-            <Image 
-            src='/assets/imgs/blob.svg' 
-            alt="Picture of the author"
-            width='1000px'
-            height='840px'
-            />
-            </BlobLight>
-            </RelativeDiv> */}
-            {/* <RelativeDiv>
-            <BlobDark>
-            <Image 
-            src='/assets/imgs/blobDark.svg' 
-            alt="Picture of the author"
-            width='1000px'
-            height='840px'
-            />
-            </BlobDark> 
-            </RelativeDiv> */}
+        <AboutSection id="about">
             <ProfileImageContainer>
             <Image 
             src='/assets/imgs/profile.svg' 
