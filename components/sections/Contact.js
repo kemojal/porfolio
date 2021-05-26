@@ -37,7 +37,7 @@ const TextContainer = styled.div`
         font-size: 1.2rem;
         text-align: center;
         padding: 0.1rem 2rem;
-        color: #8F8E8E;
+        color: white;
         font-weight: 300;
         line-height: 2.2rem;
         
