@@ -99,7 +99,7 @@ const Circle = styled.div`
 `
 const Contact = () => {
     return (
-        <ContactContainer id ='#contact'>
+        <ContactContainer id ='contact'>
             <TextContainer>
                 <h1>Let's work together</h1>
                 <p>Have an app or website idea?

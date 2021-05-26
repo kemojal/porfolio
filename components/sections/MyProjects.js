@@ -26,7 +26,7 @@ const ProjectsSection  = styled.section`
 const MyProjects = () => {
     const [featureProjects, setFeaturedProjects] = useState([])
     return (
-        <ProjectsSection id="#projects">
+        <ProjectsSection id="projects">
             <SectionTitle title ={"Projects"}/>
             { 
             Data.map( (p,i)=>(
