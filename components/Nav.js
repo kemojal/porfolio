@@ -94,10 +94,6 @@ const Menu = styled.div`
         padding-top: 0rem;
         z-index: 1000;
         flex-direction: column;
-        /* transform: ${({ isOpen }) => (isOpen ? "translateY(0)" : "translateY(0%)")};
-        transition: transform .8s cubic-bezier(.16,1,.3,1) .2s,-webkit-transform .8s cubic-bezier(.16,1,.3,1) .2s,-moz-transform .8s cubic-bezier(.16,1,.3,1) .2s,-o-transform .8s cubic-bezier(.16,1,.3,1) .2s;
-        transition: max-height 0.2s ease-in;
-        transition: all 0.2s ease-in; */
         transform: ${({ isOpen }) => (isOpen ? "translateX(0)" : "translateX(100vw)")};
         transition: all 0.2s ease-in;
         transition: transform 0.2s ease-in;
@@ -174,17 +170,6 @@ const MenuLink = styled.a`
         margin: 2px 0px;
     }
 `
-// const MenuTitleBar  = styled.div`
-// width: 100%;
-// height: 50px; 
-// display: flex;
-// align-items: center;
-// justify-content: flex-end;
-// padding-right: 40px;
-// @media (min-width: 768px) {
-//     display: none;  
-// }
-// `
 
 const MenuTitleBody  = styled.div`
 width: 100%;
@@ -202,45 +187,6 @@ justify-content: center;
 
 }
 `
-
-// const CloseBtn = styled.button`
-    
-//     display:${({ isOpen }) => (isOpen ? "inline-block" : "none")};
-//     top: 10px;
-//     left: 10px;
-//     width: 24px;
-//     height: 24px;
-//     background-color: transparent;
-//     line-height: 25px;
-//     vertical-align: middle;
-//     color: #fff;
-//     border-width: 0px;
-//     border-style: none;
-//     border-color: none;
-//     position: relative;
-//     span{
-//         position: absolute;
-//         display: block;
-//         display:${({ isOpen }) => (isOpen ? "block" : "none")};
-//         width: 100%;
-//         height: 2px;
-//         margin: 5px 0;
-//         background: white;
-//         z-index: 1;
-
-//     }
-//     .left{
-//         transform: ${({ isOpen }) => (isOpen ? "rotate(45deg) scaleX(1)" : "rotate(0deg) scaleX(0.5)")};
-//         transition: top .3s .3s,transform .3s;
-//     }
-//     .right{
-//         transform: ${({ isOpen }) => (isOpen ? "rotate(-45deg) scaleX(1)" : "rotate(0deg) scaleX(0.5)")};
-//         transition: top .3s .3s,transform .3s;
-//     }
-//     @media (max-width: 768px) {
-//             display: flex;
-//         }
-// `
 const nav = () => {
     const [isOpen, setIsOpen] =useState(false);
     const onClick = () => setIsOpen(!isOpen);
@@ -262,12 +208,6 @@ const nav = () => {
             </div>
         </Hamburger>
         <Menu isOpen ={ isOpen}>
-            {/* <MenuTitleBar>
-                <CloseBtn onClick ={ onClick} isOpen ={ isOpen}>
-                    <span  className="left"/>
-                    <span className="right"/>
-                </CloseBtn>
-            </MenuTitleBar> */}
             <MenuTitleBody>
             <MenuLink href="#about" isOpen ={ isOpen} index = {1}>
                 <span className="number" isOpen ={ isOpen}>01.</span>
@@ -275,16 +215,16 @@ const nav = () => {
             </MenuLink>
             <MenuLink href="#projects" isOpen ={ isOpen} index = {1}>
                 <span className="number">02.</span>
-                <span className="s-name">Experience</span>
-            </MenuLink>
-            <MenuLink href="#projects" isOpen ={ isOpen} index = {1}>
-                <span className="number">03.</span>
-                <span className="s-name">Work</span>
+                <span className="s-name">Projects</span>
             </MenuLink>
             <MenuLink href="#contact" isOpen ={ isOpen} index = {1}>
-                <span className="number">04.</span>
+                <span className="number">03.</span>
                 <span className="s-name">Contact</span>
             </MenuLink>
+            {/* <MenuLink href="#contact" isOpen ={ isOpen} index = {1}>
+                <span className="number">04.</span>
+                <span className="s-name">Contact</span>
+            </MenuLink> */}
             </MenuTitleBody>
             
         </Menu>
