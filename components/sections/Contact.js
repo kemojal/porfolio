@@ -59,7 +59,7 @@ const ActionBTContainer = styled.div`
     align-items: center;
     justify-content: center;
 `
-const SeeMyWorkBtn  = styled.div`
+const SeeMyWorkBtn  = styled.a`
     width: 181px;
     height: 60px;
     position: relative;
@@ -107,7 +107,7 @@ const Contact = () => {
                 </p>
             </TextContainer>
             <ActionBTContainer>
-            <SeeMyWorkBtn>
+            <SeeMyWorkBtn href = "mailto:kemo3855@yahoo.com">
                 <Circle/>
                 <p>Let's chat</p>
             </SeeMyWorkBtn>

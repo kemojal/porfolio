@@ -120,7 +120,7 @@ padding-top: 0.5em;
 const AnimatedWord  = styled.span`
 
 `
-const SeeMyWorkBtn  = styled.div`
+const SeeMyWorkBtn  = styled.a`
     width: 181px;
     height: 60px;
     position: relative;
@@ -239,7 +239,7 @@ for </span>
 Currently, working at home and social distancing.</motion.p>
         </MainContainer>
 
-        <SeeMyWorkBtn>
+        <SeeMyWorkBtn href="#projects">
             <Circle/>
             <p>See My Work</p>
         </SeeMyWorkBtn>
