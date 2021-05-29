@@ -88,8 +88,7 @@ const Menu = styled.div`
         background-color:${({ isOpen }) => (isOpen ? "crimson" : "crimson")};
         color: white;
         position: absolute;
-         top: 5rem; /*${({ isOpen }) => (isOpen ? "0" : "-20px")}; */
-         /*$left: 100vw {({ isOpen }) => (isOpen ? "0" : "100vw")}; */
+         top: 5rem; 
         padding-bottom: 1rem;
         padding-top: 0rem;
         z-index: 1000;
@@ -97,11 +96,17 @@ const Menu = styled.div`
         transform: ${({ isOpen }) => (isOpen ? "translateX(0)" : "translateX(100vw)")};
         transition: all 0.2s ease-in;
         transition: transform 0.2s ease-in;
-         width: 100vw;/*${({ isOpen }) => (isOpen ? "100%" : "40px")}; */
-         height: 100vh;/* ${({ isOpen }) => (isOpen ? "100vh" : "40px")}; */
-        /* border-top-left-radius: ${({ isOpen }) => (isOpen ? "100px" : "100px")}; */
-        opacity: ${({ isOpen }) => (isOpen ? "1" : "1")}
+         width: 100vw;
+         height: 100vh;
+        opacity: ${({ isOpen }) => (isOpen ? "1" : "1")};
         
+        
+    }
+    @media (min-width: 768px) {
+        width: 50%;
+    }
+    @media (min-width: 1025px) {
+        width: 30%;
     }
 `
 const MenuLink = styled.a`

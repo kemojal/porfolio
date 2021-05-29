@@ -8,7 +8,7 @@ import { Data } from '../../utils/Data'
 
 const ProjectsSection  = styled.section`
     width: 100vw;
-    padding: 0 2rem;
+    /* padding: 0 2rem; */
     padding-bottom: 5rem;
     margin-top: 150px ;
     background-color: #0A3CB7;

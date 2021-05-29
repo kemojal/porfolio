@@ -16,6 +16,10 @@ const MoreProjectContainer = styled.div`
     &:hover{
     background-color: white;
     padding: 40px 80px;
+    h1{
+        color: black;
+    }
+
     }
 `
 const MoreProjectNum  = styled.div`

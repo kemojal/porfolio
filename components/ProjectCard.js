@@ -6,7 +6,7 @@ import Image from 'next/image';
 import ProjectTitle from './ProjectTitle';
 
 const Card = styled.div`
-    padding: 5rem 0;
+    padding: 5rem 2rem;
     margin-top: 10px;
     position: relative;
     display: flex;
@@ -31,6 +31,8 @@ const Card = styled.div`
 `
 const Wrapper = styled.div`
 position: relative;
+/* padding-left:2rem;
+padding-right: 2rem; */
 @media (min-width: 768px) {
     display: flex;
     flex-direction:column;
@@ -228,7 +230,6 @@ const ProjectCard = ({title, subtitle, discription, color, imgScr, isReverse=fal
     return (
         <Card isReverse={isReverse} >
             <Wrapper >
-                
                 <ProjectTitle title={title} color ={ color} />
                 <ProjectSubTitle>
                     <p>{subtitle}</p>
