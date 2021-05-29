@@ -209,22 +209,18 @@ const nav = () => {
         </Hamburger>
         <Menu isOpen ={ isOpen}>
             <MenuTitleBody>
-            <MenuLink href="#about" isOpen ={ isOpen} index = {1}>
+            <MenuLink href="#about" isOpen ={ isOpen} index = {1} onClick={onClick}>
                 <span className="number" isOpen ={ isOpen}>01.</span>
                 <span className="s-name">About</span>
             </MenuLink>
-            <MenuLink href="#projects" isOpen ={ isOpen} index = {1}>
+            <MenuLink href="#projects" isOpen ={ isOpen} index = {1} onClick={onClick}>
                 <span className="number">02.</span>
                 <span className="s-name">Projects</span>
             </MenuLink>
-            <MenuLink href="#contact" isOpen ={ isOpen} index = {1}>
+            <MenuLink href="#contact" isOpen ={ isOpen} index = {1} onClick={onClick}>
                 <span className="number">03.</span>
                 <span className="s-name">Contact</span>
             </MenuLink>
-            {/* <MenuLink href="#contact" isOpen ={ isOpen} index = {1}>
-                <span className="number">04.</span>
-                <span className="s-name">Contact</span>
-            </MenuLink> */}
             </MenuTitleBody>
             
         </Menu>

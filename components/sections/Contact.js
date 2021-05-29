@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components';
 
 const ContactContainer = styled.section`
+
 width: 100vw;
 background-color: #E33140;
 color: white;
