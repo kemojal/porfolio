@@ -18,6 +18,7 @@ const Nav  = styled.nav`
     left: 0;
     right: 0;
     background-color: var( --bgLight);
+    background-color: ${({ isOpen }) => (isOpen ? "crimson" : "var( --bgLight)")};
 `
 const NavLogo = styled.a`
     padding: 1rem 0;
@@ -49,26 +50,27 @@ const Hamburger = styled.div`
         position: absolute;
         height: 2px;
         width: 25px;
-        background-color: var(--hamburgerSpanColor);
+        background-color: ${({ isOpen }) => (isOpen ? "white" : "var(--hamburgerSpanColor)")};
         margin-bottom: 4px;
         border-radius: 5px;
+
     }
     @media (max-width: 768px) {
         display: flex;
     }
     .first {
-        top: 0;
+        top: ${({ isOpen }) => (isOpen ? "8px" : "0")};
         transform: ${({ isOpen }) => (isOpen ? "rotate(45deg)" : "rotate(0deg)")};
-        transition: top .3s .3s,transform .3s;
+        transition: top .1s .1s,transform .2s;
     }
     .center {
         top:  8px;
         display:${({ isOpen }) => (isOpen ? "none" : "block")};
     }
     .second{
-        top: 16px;
+        top: ${({ isOpen }) => (isOpen ? "8px" : "16px")};
         transform: ${({ isOpen }) => (isOpen ? "rotate(-45deg)" : "rotate(0deg)")};
-        transition: top .3s .3s,transform .3s;
+        transition: top .1s .1s,transform .2s;
     }
 `
 const Menu = styled.div`
@@ -88,7 +90,7 @@ const Menu = styled.div`
         background-color:${({ isOpen }) => (isOpen ? "crimson" : "crimson")};
         color: white;
         position: absolute;
-         top: 5rem; 
+        top: 5rem; 
         padding-bottom: 1rem;
         padding-top: 0rem;
         z-index: 1000;
@@ -96,11 +98,9 @@ const Menu = styled.div`
         transform: ${({ isOpen }) => (isOpen ? "translateX(0)" : "translateX(100vw)")};
         transition: all 0.2s ease-in;
         transition: transform 0.2s ease-in;
-         width: 100vw;
-         height: 100vh;
+        width: 100vw;
+        height: 100vh;
         opacity: ${({ isOpen }) => (isOpen ? "1" : "1")};
-        
-        
     }
     @media (min-width: 768px) {
         width: 50%;
@@ -196,7 +196,7 @@ const nav = () => {
     const [isOpen, setIsOpen] =useState(false);
     const onClick = () => setIsOpen(!isOpen);
     return (
-            <Nav>
+            <Nav isOpen={ isOpen}>
         <NavLogo>
             <Image 
             src='/assets/imgs/logo.svg' 
@@ -205,7 +205,7 @@ const nav = () => {
             height={45}
         />
         </NavLogo>
-        <Hamburger onClick={onClick}>
+        <Hamburger onClick={onClick} isOpen={isOpen}>
             <div>
                 <span className="first" isOpen = { isOpen }/>
                 <span className="center" isOpen = { isOpen }/>
