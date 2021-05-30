@@ -1,64 +1,64 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap'); */
 
 @font-face {
-  font-family: "Inter";
-  src: url("/fonts/Inter/Inter-Thin.ttf");
+  font-family: 'Inter';
+  src: url('/fonts/Inter/Inter-Thin.ttf');
   font-style: thin;
   font-weight: 100;
   font-display: swap;
 }
 @font-face {
-  font-family: "Inter";
-  src: url("/fonts/Inter/Inter-ExtraLight.ttf");
+  font-family: 'Inter';
+  src: url('/fonts/Inter/Inter-ExtraLight.ttf');
   font-style: thinner;
   font-weight: 200;
   font-display: swap;
 }
 @font-face {
-  font-family: "Inter";
-  src: url("/fonts/Inter/Inter-Light.ttf");
+  font-family: 'Inter';
+  src: url('/fonts/Inter/Inter-Light.ttf');
   font-style: light;
   font-weight: 300;
   font-display: swap;
 }
 @font-face {
-  font-family: "Inter";
-  src: url("/fonts/Inter/Inter-Regular.ttf");
+  font-family: 'Inter';
+  src: url('/fonts/Inter/Inter-Regular.ttf');
   font-style: normal;
   font-weight: 400;
   font-display: swap;
 }
 @font-face {
-  font-family: "Inter";
-  src: url("/fonts/Inter/Inter-Medium.ttf");
+  font-family: 'Inter';
+  src: url('/fonts/Inter/Inter-Medium.ttf');
   font-style: medium;
   font-weight: 500;
   font-display: swap;
 }
 @font-face {
-  font-family: "Inter";
-  src: url("/fonts/Inter/Inter-SemiBold.ttf");
+  font-family: 'Inter';
+  src: url('/fonts/Inter/Inter-SemiBold.ttf');
   font-style: Semi-bold;
   font-weight: 600;
   font-display: swap;
 }
 @font-face {
-  font-family: "Inter";
-  src: url("/fonts/Inter/Inter-Bold.ttf");
+  font-family: 'Inter';
+  src: url('/fonts/Inter/Inter-Bold.ttf');
   font-style: bold;
   font-weight: 700;
   font-display: swap;
 }
 @font-face {
-  font-family: "Inter";
-  src: url("/fonts/Inter/Inter-ExtraBold.ttf");
+  font-family: 'Inter';
+  src: url('/fonts/Inter/Inter-ExtraBold.ttf');
   font-style: bolder;
   font-weight: 800;
   font-display: swap;
 }
 @font-face {
-  font-family: "Inter";
-  src: url("/fonts/Inter/Inter-Black.ttf");
+  font-family: 'Inter';
+  src: url('/fonts/Inter/Inter-Black.ttf');
   font-style: bolder;
   font-weight: 800;
   font-display: swap;
@@ -67,7 +67,7 @@
   box-sizing: border-box;
   padding: 0px;
   margin: 0px;
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
   transition: all 0.2s;
   position: relative;
 }
@@ -81,7 +81,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
 a {
@@ -136,12 +136,12 @@ body {
   overflow-x: hidden;
 }
 .red {
-  color: #C52B46;
+  color: #c52b46;
   animation-duration: 0.2s;
   animation: fadeInOut;
 }
 .green {
-  color: #67E8BB;
+  color: #67e8bb;
   animation-duration: 0.2s;
   animation: fadeInOut;
 }
@@ -164,16 +164,23 @@ body {
   }
 } */
 
-*::-webkit-webkit-scrollbar {
-  width: 5px; /* width of the entire scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
 }
 
-*::-webkit-webkit-scrollbar-track {
-  background: orange; /* color of the tracking area */
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
 }
 
-*::-webkit-scrollbar-thumb {
-  background-color: blue; /* color of the scroll thumb */
-  border-radius: 20px; /* roundness of the scroll thumb */
-  border: 3px solid orange; /* creates padding around scroll thumb */
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #ffda29;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #b30000;
 }

@@ -51,7 +51,7 @@ export default function Home() {
       </main>
 
       <footer className={styles.footer}>
-      ©2021 Kemo Jallow{' '}
+      <p className={styles.footerText}>©2021 Kemo Jallow</p>
       </footer> 
     </div>
   )

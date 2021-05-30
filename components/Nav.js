@@ -99,7 +99,7 @@ const Menu = styled.div`
         padding-top: 0rem;
         z-index: 1000;
         flex-direction: column;
-        transform: ${({ isOpen }) => (isOpen ? "translateX(0)" : "translateX(100vw)")};
+        transform: ${({ isOpen }) => (isOpen ? "translate(0)" : "translateX(100vw)")};
         transition: all 0.2s ease-in;
         transition: transform 0.2s ease-in;
         width: 100vw;

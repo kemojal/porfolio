@@ -6,7 +6,10 @@ const ContactContainer = styled.section`
 width: 100vw;
 background-color: #E33140;
 color: white;
-padding-bottom: 5rem;
+padding-bottom: 8rem;
+@media (min-width: 1025px){
+        padding-bottom: 10rem;
+    }
 `
 const TextContainer = styled.div`
     padding: 1rem 0;
