@@ -6,7 +6,7 @@ const TitleContainer = styled.div`
     position: relative;
     display: flex;
     align-items: center;
-    padding-top:6rem;
+    padding-top:1.2rem;
     span{
         color: green;
         padding-left: 10px;
@@ -34,18 +34,18 @@ const Line  = styled.div `
     width: 100vw;
     height: 55px;
     border-radius:0px;
-    opacity: 0.5;
+    opacity: 0.8;
     left: 0px;
     background-color: var(--crimson);
     background: #FF5700;
-    background: #2D89F5; /*radial-gradient(circle, #FF5700 0%,  #FF0056 100%); */
+    background: orange; /*radial-gradient(circle, #FF5700 0%,  #FF0056 100%); */
     @media (min-width: 768px) {
         width: 50%;
-        height: 60px;
-        background: #2D89F5;
+        height: 20px;
+        background: orange;
         left: 25%;
-        top: 35%;
-        transform: rotate(3deg);
+        top: 45%;
+        transform: rotate(1deg);
     }
     `
 
@@ -56,7 +56,6 @@ const SectionTitle = ({title}) => {
           <Line/>
           <span>{title}
           </span>
-          
         </TitleContainer>
     )
 }
