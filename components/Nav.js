@@ -18,7 +18,10 @@ const Nav  = styled.nav`
     left: 0;
     right: 0;
     background-color: var( --bgLight);
-    background-color: ${({ isOpen }) => (isOpen ? "crimson" : "var( --bgLight)")};
+    background-color: ${({ isOpen }) => (isOpen ? "#E33140" : "var( --bgLight)")};
+    @media (min-width: 768px) {
+        background-color: var( --bgLight);
+    }
 
 `
 const NavLogo = styled.a`
@@ -62,7 +65,7 @@ const Hamburger = styled.div`
     .first {
         top: ${({ isOpen }) => (isOpen ? "8px" : "0")};
         transform: ${({ isOpen }) => (isOpen ? "rotate(45deg)" : "rotate(0deg)")};
-        transition: top .2s .02s,transform .2s;
+        transition: top 0s 0s,transform .2s ease-in;
     }
     .center {
         top:  8px;
@@ -71,7 +74,7 @@ const Hamburger = styled.div`
     .second{
         top: ${({ isOpen }) => (isOpen ? "8px" : "16px")};
         transform: ${({ isOpen }) => (isOpen ? "rotate(-45deg)" : "rotate(0deg)")};
-        transition: top .2s .2s,transform .2s;
+        transition: top 0s 0s,transform .2s ease-in;
     }
 `
 const Menu = styled.div`
@@ -88,10 +91,10 @@ const Menu = styled.div`
     
     @media (max-width: 768px) {
         overflow: hidden; 
-        background-color:${({ isOpen }) => (isOpen ? "crimson" : "crimson")};
+        background-color:${({ isOpen }) => (isOpen ? "#E33140" : "crimson")};
         color: white;
         position: absolute;
-         top: 5rem; 
+        top: 5rem; 
         padding-bottom: 1rem;
         padding-top: 0rem;
         z-index: 1000;
@@ -99,14 +102,15 @@ const Menu = styled.div`
         transform: ${({ isOpen }) => (isOpen ? "translateX(0)" : "translateX(100vw)")};
         transition: all 0.2s ease-in;
         transition: transform 0.2s ease-in;
-         width: 100vw;
-         height: 100vh;
+        width: 100vw;
+        height: 100vh;
         opacity: ${({ isOpen }) => (isOpen ? "1" : "1")};
         
         
     }
     @media (min-width: 768px) {
         width: 50%;
+        background-color: white;
     }
     @media (min-width: 1025px) {
         width: 30%;
