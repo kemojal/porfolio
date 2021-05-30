@@ -18,6 +18,8 @@ const Nav  = styled.nav`
     left: 0;
     right: 0;
     background-color: var( --bgLight);
+    background-color: ${({ isOpen }) => (isOpen ? "crimson" : "var( --bgLight)")};
+
 `
 const NavLogo = styled.a`
     padding: 1rem 0;
@@ -50,6 +52,7 @@ const Hamburger = styled.div`
         height: 2px;
         width: 25px;
         background-color: var(--hamburgerSpanColor);
+        background-color: ${({ isOpen }) => (isOpen ? "white" : "var(--hamburgerSpanColor)")};
         margin-bottom: 4px;
         border-radius: 5px;
     }
@@ -57,18 +60,18 @@ const Hamburger = styled.div`
         display: flex;
     }
     .first {
-        top: 0;
+        top: ${({ isOpen }) => (isOpen ? "8px" : "0")};
         transform: ${({ isOpen }) => (isOpen ? "rotate(45deg)" : "rotate(0deg)")};
-        transition: top .3s .3s,transform .3s;
+        transition: top .2s .02s,transform .2s;
     }
     .center {
         top:  8px;
         display:${({ isOpen }) => (isOpen ? "none" : "block")};
     }
     .second{
-        top: 16px;
+        top: ${({ isOpen }) => (isOpen ? "8px" : "16px")};
         transform: ${({ isOpen }) => (isOpen ? "rotate(-45deg)" : "rotate(0deg)")};
-        transition: top .3s .3s,transform .3s;
+        transition: top .2s .2s,transform .2s;
     }
 `
 const Menu = styled.div`
@@ -196,7 +199,7 @@ const nav = () => {
     const [isOpen, setIsOpen] =useState(false);
     const onClick = () => setIsOpen(!isOpen);
     return (
-            <Nav>
+            <Nav isOpen={isOpen}>
         <NavLogo>
             <Image 
             src='/assets/imgs/logo.svg' 
@@ -205,7 +208,7 @@ const nav = () => {
             height={45}
         />
         </NavLogo>
-        <Hamburger onClick={onClick}>
+        <Hamburger onClick={onClick} isOpen={ isOpen}>
             <div>
                 <span className="first" isOpen = { isOpen }/>
                 <span className="center" isOpen = { isOpen }/>
