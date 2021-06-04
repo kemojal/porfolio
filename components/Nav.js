@@ -43,20 +43,23 @@ const Hamburger = styled.div`
     height: 40px;
     width: 40px;
     border-radius: 40px;
+    /* padding: 15px 15px; */
+    /* background-color: pink; */
     cursor: pointer;
     position: relative;
+    box-shadow: 0 2px 4px 0 rgb(136 144 195 / 20%), 0 5px 15px 0 rgb(37 44 97 / 15%);
     div {
         position: relative;
-        width:25px;
-        height: 16px;
+        width:12px;
+        height: 14px;
     }
     span {
         position: absolute;
         height: 2px;
-        width: 25px;
+        width: 12px;
         background-color: var(--hamburgerSpanColor);
         background-color: ${({ isOpen }) => (isOpen ? "white" : "var(--hamburgerSpanColor)")};
-        margin-bottom: 4px;
+        margin-bottom: 2px;
         border-radius: 5px;
     }
     @media (max-width: 768px) {
@@ -68,11 +71,11 @@ const Hamburger = styled.div`
         transition: top 0s 0s,transform .2s ease-in;
     }
     .center {
-        top:  8px;
+        top:  6px;
         display:${({ isOpen }) => (isOpen ? "none" : "block")};
     }
     .second{
-        top: ${({ isOpen }) => (isOpen ? "8px" : "16px")};
+        top: ${({ isOpen }) => (isOpen ? "8px" : "12px")};
         transform: ${({ isOpen }) => (isOpen ? "rotate(-45deg)" : "rotate(0deg)")};
         transition: top 0s 0s,transform .2s ease-in;
     }
