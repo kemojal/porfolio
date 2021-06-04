@@ -41,7 +41,7 @@ position: relative;
     position: absolute;
     background-size: 100% 100%;
     /* z-index: -1; */
-    transform: translate(-20%, -20%) rotate(0deg);
+    transform: translate(-20%, 20%) rotate(0deg);
 }
 @media (min-width: 768px) {
     display: flex;
@@ -82,12 +82,12 @@ const PreviewCardWrapper  = styled.div`
 `
 const PreviewCard  = styled.div`
 position: relative;
-background-color: blue;
-background-color: white;
+/* background-color: blue;
+background-color: white; */
 width: 100%;
 margin-top: 50px;
-border: 1px solid #e8e8e8;
-overflow: hidden;
+/* border: 1px solid #e8e8e8; */
+/* overflow: hidden; */
 height: 300px;
 border-radius:15px;
 display: flex;
@@ -99,6 +99,19 @@ align-items: center;
     padding: 0px;
     border-radius:35px
 }
+&:before {
+    content: '';
+    position: absolute;
+    width: 800px;
+    height: 50px;
+    bottom:45%;
+    left: -50%;
+    transform: rotate(-30deg);
+    z-index: 0;
+    background: #FEDC7B;
+    background-size:30% 30%;
+    background-position: center center;
+}
 `
 const PreviewCardInner = styled.div`
 position: relative;
@@ -107,7 +120,7 @@ height: 100%;
 display: flex;
 justify-content: center;
 align-items: center;
-overflow: hidden;
+/* overflow: hidden; */
 
 
 @media (min-width: 768px) {
@@ -290,10 +303,10 @@ const ProjectCard = ({title, subtitle, discription, color, imgScr, isReverse=fal
                     priority={true}
                 />
                 </PreviewCardInner>
-                <PreviewDetails color ={ color}>
+                {/* <PreviewDetails color ={ color}>
                     <div className="subtitle">{subtitle}</div>
-                    {/* <div className="info">{discription}</div> */}
-                </PreviewDetails>
+                    <div className="info">{discription}</div>
+                </PreviewDetails> */}
             </PreviewCard>
             </PreviewCardWrapper>
         </Card>

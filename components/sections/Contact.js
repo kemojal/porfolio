@@ -60,7 +60,6 @@ const TextContainer = styled.div`
 &:before {
     content: '';
     position: absolute;
-  /* background-size: 110% 100%; */
     width: 382px;
     height: 382px;
     bottom: -10%;
@@ -68,7 +67,6 @@ const TextContainer = styled.div`
     z-index: 0;
     background: url('/assets/imgs/sliced-cirlce.svg') no-repeat;
     background-size:30% 30%;
-    /* transform: rotate(10deg); */
     background-position: center center;
 }
 `
