@@ -11,7 +11,7 @@ const ProjectsSection  = styled.section`
     /* padding: 0 2rem; */
     padding-bottom: 5rem;
     margin-top: 150px ;
-    background-color: #0A3CB7;
+    background-color:#0A3CB7;
     
 
     /* height: 600px; */

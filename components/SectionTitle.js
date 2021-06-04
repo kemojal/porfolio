@@ -32,13 +32,13 @@ const TitleContainer = styled.div`
 const Line  = styled.div `
     position: absolute;
     width: 100vw;
-    height: 55px;
+    height: 85px;
     border-radius:0px;
-    opacity: 0.8;
+    opacity: 1;
     left: 0px;
     background-color: var(--crimson);
     background: #FF5700;
-    background: orange; /*radial-gradient(circle, #FF5700 0%,  #FF0056 100%); */
+    background: #ffdc7c; /*radial-gradient(circle, #FF5700 0%,  #FF0056 100%); */
     @media (min-width: 768px) {
         width: 50%;
         height: 20px;

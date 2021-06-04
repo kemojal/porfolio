@@ -1,12 +1,12 @@
 import styled from 'styled-components'
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Image from 'next/image' 
+import { motion } from "framer-motion";
 
 
-
-const Nav  = styled.nav`
+const Nav  = styled(motion.nav)`
     position: fixed !important; 
-    padding: 0 2rem;
+    padding: 0rem 2rem;
     box-shadow: 0 2px 15px rgb(0 0 0 / 10%);
     width: 100vw;
     display: flex;
@@ -203,10 +203,37 @@ justify-content: center;
 }
 `
 const nav = () => {
+
     const [isOpen, setIsOpen] =useState(false);
     const onClick = () => setIsOpen(!isOpen);
+    // const [hideNav, setHideNav] = useState(false)
+
+    //handing the navbar scrolling animation
+    // useEffect(
+    //     ()=>{
+    //         function handScroll(){
+    //             if(window.scroll > 1260){
+    //                 setHideNav(false);
+    //             }else{
+    //                 setHideNav(true);
+    //             }
+    //             console.log("scrolling " + window.scrollY)
+    //             console.log("animate " + hideNav)
+    //         }
+    //         window.addEventListener("scroll", handScroll, false);
+
+    //         return () => {
+    //             window.removeEventListener("scroll", handScroll, false)
+    //         }
+    //     }
+    // )
     return (
-            <Nav isOpen={isOpen}>
+            <Nav 
+            isOpen={isOpen}
+            // initial={{ opacity: 1 }}
+            // animate ={{opacity: hideNav ? 0: 1}}
+            // transition={{ opacity: { duration: 0.2 } }}
+            >
         <NavLogo>
             <Image 
             src='/assets/imgs/logo.svg' 
