@@ -4,9 +4,8 @@ import Image from 'next/image';
 import { motion } from "framer-motion";
 // import Typewriter from 'typewriter-effect';
 import { useIntersection } from "react-use";
-// const Contactainer  = styled.div`
-//     width: 100%;
-// `
+
+
 const HeroContainer  = styled(motion.section)`
     position: relative;
     width: 100vw;
@@ -18,17 +17,7 @@ const HeroContainer  = styled(motion.section)`
 
 `
 
-// const Blob  = styled.div`
-// position: absolute;
-// width:600px;
-// height:400px;
-// left: -100px;
-// top: 30px;
-// z-index: 0;
-// display: flex;
-
-// `
-const MainContainer = styled.div`
+const MainContainer = styled(motion.div)`
 position: relative;
 z-index: 10;
 padding: 2rem;
@@ -194,7 +183,9 @@ const Hero = () => {
     const colorName   = colors[word];
     // console.log(colorName);
     return (
-        <HeroContainer  ref={myRef}>
+        <HeroContainer  
+        ref={myRef}
+        >
             {/* <Blob>
             <Image 
             src='/assets/imgs/blob.svg' 
@@ -203,7 +194,7 @@ const Hero = () => {
             height='840px'
             />
             </Blob> */}
-           <MainContainer>
+           <MainContainer animate={animationName} >
            <p>Hey, I'm</p>
             <DeveloperName
             initial={fadeOut}

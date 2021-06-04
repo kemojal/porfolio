@@ -31,8 +31,18 @@ const Card = styled.div`
 `
 const Wrapper = styled.div`
 position: relative;
-/* padding-left:2rem;
-padding-right: 2rem; */
+
+&:before {
+    content: '';
+    background: url(/assets/imgs/blobproj.svg) no-repeat center center;
+    width:800px;
+    height: 674px;
+    display: block;
+    position: absolute;
+    background-size: 100% 100%;
+    /* z-index: -1; */
+    transform: translate(-20%, -20%) rotate(0deg);
+}
 @media (min-width: 768px) {
     display: flex;
     flex-direction:column;
