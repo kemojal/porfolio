@@ -1,8 +1,27 @@
 import React, { useState, useEffect, useRef } from 'react';
-import styled from 'styled-components';
+import styled, { keyframes }  from 'styled-components';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { useIntersection } from 'react-use';
+
+const textAnim = keyframes`
+    0% {
+        opacity: 1
+        transform: translateY(0px)
+    }
+    25% {
+        opacity: 0;
+        transform: translateY(52px)
+    }
+    50% {
+        opacity: 0;
+        transform: translateY(52px)
+    }
+    100% {
+        opacity: 1
+        transform: translateY(0px)
+    }
+`
 
 const HeroContainer = styled(motion.section)`
   position: relative;
@@ -102,7 +121,13 @@ const Phrase = styled(motion.h1)`
     text-decoration-color: rgba(0, 0, 0, 0.2);
   }
 `;
-const AnimatedWord = styled.span``;
+const AnimatedWord = styled.span`
+    animation-duration: 1.5s;
+    animation-delay: 5s;
+    animation-iteration-count: infinite; 
+    animation-name: ${textAnim};
+    transition: all 0.1s ease-in;
+`;
 const SeeMyWorkBtn = styled.a`
   width: 181px;
   height: 60px;
@@ -170,7 +195,7 @@ const Hero = () => {
       setWord((word) => (word < 2 ? word + 1 : 0));
       setAnimate(!animate);
       setAnimate(false);
-    }, 1000);
+    }, 5000);
     return () => clearInterval(interval);
   });
 
@@ -197,7 +222,7 @@ const Hero = () => {
         </DeveloperName>
         <Phrase>
           <span className='phraseText'>I build things for </span>
-          <AnimatedWord className={`emp ${colorName}`} animate={animate}>
+          <AnimatedWord className={`emp ${colorName}`} >
             {words[word]}
           </AnimatedWord>
         </Phrase>

@@ -136,12 +136,12 @@ body {
   overflow-x: hidden;
 }
 .red {
-  color: #c52b46;
+  color: #0a3cb7;
   animation-duration: 0.2s;
   animation: fadeInOut;
 }
 .green {
-  color: #67e8bb;
+  color: #0a3cb7;
   animation-duration: 0.2s;
   animation: fadeInOut;
 }
