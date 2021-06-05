@@ -32,7 +32,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #e54351;
   background-color: #D62F3D;
   position: relative;
   z-index: 100;
@@ -92,14 +91,7 @@
   font-size: 1.5rem;
 }
 
-.code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
-}
+
 
 .grid {
   display: flex;

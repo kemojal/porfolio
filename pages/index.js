@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from 'react';
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
@@ -10,8 +11,7 @@ import MoreProjects from '../components/sections/MoreProjects';
 import Contact from '../components/sections/Contact';
 import Services from '../components/sections/Services';
 import Socials from '../components/Socials';
-
-
+import Mouse from '../components/Mouse';
 import styled from 'styled-components';
 
 const Combined = styled.div`
@@ -26,10 +26,34 @@ const Combined = styled.div`
   }
 `
 
+const AppContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  opacity:${({ fade }) => (fade ? "0.5" : "1")};
+`
 export default function Home() {
+  const [fade, setFade] = useState(false);
+  useEffect(() => {
+    const touchstart = ()=>{
+        setFade(true);
+    }
+    const touchend = ()=>{
+      setFade(false);
+  }
+    document.body.addEventListener('touchstart', touchstart, false);
+    document.body.addEventListener('touchstart', touchend, false);
+  
+    return () => {
+      document.body.removeEventListener('touchstart', touchstart, false);
+      document.body.removeEventListener('touchend', touchend, false);
+    }
+  });
   
   return (
-    <div className={styles.container}>
+    <AppContainer fade ={fade} >
       <Head>
         <title>Kemo Jallow</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -49,10 +73,9 @@ export default function Home() {
         {/* <Socials/> */}
         <Nav/>
       </main>
-
-      <footer className={styles.footer}>
+      <Mouse/>      <footer className={styles.footer}>
       <p className={styles.footerText}>©2021 Kemo Jallow</p>
       </footer> 
-    </div>
+    </AppContainer>
   )
 }
