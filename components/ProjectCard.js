@@ -1,11 +1,13 @@
-import React from 'react'
+import React, {useRef} from 'react'
 import styled from 'styled-components';
 import Link from 'next/link'
 import Image from 'next/image';
-// import {ReactComponent as ReactLogo} from '../assets/imgs/blob.svg'
+import { useIntersection } from 'react-use';
+import { motion } from 'framer-motion';
+
 import ProjectTitle from './ProjectTitle';
 
-const Card = styled.div`
+const Card = styled(motion.div)`
     padding: 5rem 2rem;
     margin-top: 10px;
     position: relative;
@@ -29,7 +31,7 @@ const Card = styled.div`
     margin-bottom: 10rem;
 }
 `
-const Wrapper = styled.div`
+const Wrapper = styled(motion.div)`
 position: relative;
 
 &:before {
@@ -58,10 +60,10 @@ position: relative;
 
 }
 `
-const CardDetails = styled.div`
+const CardDetails = styled(motion.div)`
 background-color: blue;
 `
-const ProjectSubTitle = styled.div`
+const ProjectSubTitle = styled(motion.div)`
     padding-bottom:10px;
     p{
         @media (min-width: 768px) {
@@ -72,7 +74,7 @@ const ProjectSubTitle = styled.div`
     }
     }
 `
-const PreviewCardWrapper  = styled.div`
+const PreviewCardWrapper  = styled(motion.div)`
 @media (min-width: 768px) {
     width:40%;
     display: flex;
@@ -80,7 +82,7 @@ const PreviewCardWrapper  = styled.div`
     height: 100%;
 }
 `
-const PreviewCard  = styled.div`
+const PreviewCard  = styled(motion.div)`
 position: relative;
 /* background-color: blue;
 background-color: white; */
@@ -113,7 +115,7 @@ align-items: center;
     background-position: center center;
 }
 `
-const PreviewCardInner = styled.div`
+const PreviewCardInner = styled(motion.div)`
 position: relative;
 width: 100%;
 height: 100%;
@@ -250,14 +252,33 @@ const Links = styled.div`
     }
 `
 const ProjectCard = ({title, subtitle, discription, color, imgScr, isReverse=false, githubLink}) => {
+    const myRef = useRef(null);
+  const intersection = useIntersection(myRef, {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.2,
+  });
+  const fadeIn = {
+    opacity: 1,
+    y: 0,
+    x: 0,
+  };
+  const fadeOut = {
+    opacity: 0,
+    y: 100,
+    x: 0,
+  };
+
+  const animationName = intersection && intersection.intersectionRatio < 0.2 ? fadeOut : fadeIn;
     return (
-        <Card isReverse={isReverse} >
-            <Wrapper >
+        <Card isReverse={isReverse}  ref={myRef}>
+            <Wrapper 
+            >
                 <ProjectTitle title={title} color ={ color} />
                 <ProjectSubTitle>
                     <p>{subtitle}</p>
                 </ProjectSubTitle> 
-                <p className="discription">{discription}</p>
+                <motion.p className="discription" animate={animationName}>{discription}</motion.p>
                 <DetailFooter >
                         <Tech>
                             <span><span className="hashtag" >#</span>firebase</span>
@@ -293,7 +314,7 @@ const ProjectCard = ({title, subtitle, discription, color, imgScr, isReverse=fal
             </Wrapper>
             <PreviewCardWrapper>
             <PreviewCard >
-                <PreviewCardInner >
+                <PreviewCardInner  animate={animationName}>
                 <Image 
                     className="img" 
                     src={imgScr}
