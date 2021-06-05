@@ -1,9 +1,10 @@
-import React from 'react'
+import React, {useRef} from 'react'
 import styled from 'styled-components';
 import Link from 'next/link'
 import Image from 'next/image';
-
-const MoreProjectContainer = styled.div`
+import { useIntersection } from 'react-use';
+import { motion } from 'framer-motion';
+const MoreProjectContainer = styled(motion.div)`
     width: 100%;
     padding: 20px 40px;
     display: flex;
@@ -22,7 +23,7 @@ const MoreProjectContainer = styled.div`
 
     }
 `
-const MoreProjectNum  = styled.div`
+const MoreProjectNum  = styled(motion.div)`
 width: 100%;
 border-right: 1px solid #e8e8e8;
 flex-grow: 0.2;
@@ -33,7 +34,7 @@ font-size: 1.5rem;
 color: #8f8e8e;
 opacity: .5;
 `
-const MoreProjectBody = styled.div`
+const MoreProjectBody = styled(motion.div)`
 width: 100%;
 flex-grow: 0.8;
 flex-basis:0;
@@ -88,10 +89,42 @@ p{
 `
 const MoreProject = ({num, title, githubLink, discription}) => {
     
+    const myRef = useRef(null);
+  const intersection = useIntersection(myRef, {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.2,
+  });
+  const fadeIn = {
+    opacity: 1,
+    y: 0,
+    x: -30,
+  };
+
+  const fadeOut = {
+    opacity: 0,
+    y: 200,
+    x: 0,
+  };
+  const titleIn = {
+    opacity: 1,
+    y: 0,
+    x: 0,
+  };
+
+  const titleOut = {
+    opacity: 0,
+    y: 200,
+    x: 0,
+  };
+
+  const animationName = intersection && intersection.intersectionRatio < 0.2 ? fadeOut : fadeIn;
+  const animationTitle = intersection && intersection.intersectionRatio < 0.2 ? titleOut : titleIn;
+
     return (
-        <MoreProjectContainer>
-           <MoreProjectNum>{num}</MoreProjectNum>
-            <MoreProjectBody>
+        <MoreProjectContainer ref={myRef}>
+           <MoreProjectNum  animate={animationName}>{num}</MoreProjectNum>
+            <MoreProjectBody animate={animationTitle}>
                 <div className="info">
                     <h1>{title}</h1>
                     <p>{discription}</p>
