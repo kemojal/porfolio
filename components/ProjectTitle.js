@@ -30,7 +30,8 @@ border: 2px solid var(--crimson);
 background: red;
 position: absolute;
 z-index: -1;
-opacity: 0.2;
+opacity: 1;
+background: red;
 @media (min-width: 768px) {
     left: 35%;
 }
