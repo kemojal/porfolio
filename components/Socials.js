@@ -9,7 +9,6 @@ const SocialContainer  = styled.div`
     
     @media (min-width: 768px) {
         position: fixed;
-        width: 100vw;
         height: 100vh;
         z-index: 1000;
         top: 0;
@@ -31,6 +30,7 @@ const Icons  = styled.div`
     color: black;
     justify-content: space-between;
     align-items: center;
+    cursor: pointer;
     &:before {
             content: '';
             height: 100vh;
@@ -53,8 +53,11 @@ const Icon = styled.div`
             justify-content: center;
             padding: 4px;
             opacity: 0.8;
+            cursor: pointer;
             &:hover{
-                opacity: 1
+                opacity: 1;
+                padding-bottom: 10px;
+                /* background-color: red; */
             }
             
 `
@@ -142,11 +145,11 @@ const Socials = () => {
                         />
                 </Icon>
             </Icons>
-            <EmailContainer>
+            {/* <EmailContainer>
                 <span>
                 kemo3855@gmail.com
                 </span>
-            </EmailContainer>
+            </EmailContainer> */}
         </SocialContainer>
     )
 }

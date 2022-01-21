@@ -5,246 +5,310 @@ import Image from 'next/image';
 import { useIntersection } from 'react-use';
 import { motion } from 'framer-motion';
 
-import ProjectTitle from './ProjectTitle';
-
 const Card = styled(motion.div)`
-  padding: 5rem 2rem;
-  margin-top: 10px;
+  margin: 10px 0;
+  /* width: 95%; */
+  /* width: 25%; */
   position: relative;
+  /* max-width: 800px; */
+  /* background: pink; */
+  /* box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2); */
+  padding: 25px;
+  border-radius: 3rem;
+  height: auto;
+  width: 30%;
+  margin: 1rem;
+  transition: all 0.3s ease-in;
   display: flex;
   flex-direction: column;
-  p {
-    padding-top: 1rem;
-    font-size: 1rem;
-    letter-spacing: -0.02em;
-    font-weight: 300;
-    color: var(--lightNormalTextTitleColor);
-    color: #2d89f5;
-    line-height: 1.8em;
-  }
-  @media (min-width: 768px) {
-    display: flex;
-    flex-direction: ${({ isReverse }) => (isReverse ? 'row-reverse' : 'row')};
-    padding: 20rem 100px;
-    padding-left: 0;
-    height: 50vh;
-    margin-bottom: 10rem;
-  }
-`;
-const Wrapper = styled(motion.div)`
-  position: relative;
-
-  &:before {
-    content: '';
-    background: url(/assets/imgs/blobproj.svg) no-repeat center center;
-    width: 800px;
-    height: 674px;
-    display: block;
-    position: absolute;
-    background-size: 100% 100%;
-    /* z-index: -1; */
-    transform: translate(-20%, 20%) rotate(0deg);
-  }
-  @media (min-width: 768px) {
-    display: flex;
-    flex-direction: column;
-    padding-top: 8rem;
-    height: 100%;
-    width: 60%;
-    .discription {
-      font-size: 1.2rem;
-      padding: 0 120px;
-      letter-spacing: 0.05rem;
-      text-align: left;
-    }
-  }
-`;
-const CardDetails = styled(motion.div)`
-  background-color: blue;
-`;
-const ProjectSubTitle = styled(motion.div)`
-  padding-bottom: 10px;
-  p {
-    @media (min-width: 768px) {
-      font-size: 2.5rem;
-      letter-spacing: 0.1rem;
-      text-align: center;
-      padding-top: 0;
-    }
-  }
-`;
-const PreviewCardWrapper = styled(motion.div)`
-  @media (min-width: 768px) {
-    width: 40%;
-    display: flex;
-    justify-content: flex-end;
-    height: 100%;
-  }
-`;
-const PreviewCard = styled(motion.div)`
-  position: relative;
-  /* background-color: blue;
-background-color: white; */
-  width: 100%;
-  margin-top: 50px;
-  /* border: 1px solid #e8e8e8; */
-  /* overflow: hidden; */
-  height: 300px;
-  border-radius: 15px;
-  display: flex;
-  justify-content: center;
   align-items: center;
-  @media (min-width: 768px) {
-    width: auto;
-    height: 530px;
-    padding: 0px;
-    border-radius: 35px;
+  /* background-color: lime; */
+  margin-right: 10px;
+  cursor: pointer;
+  background-color: #E5E5E526;
+  /* border: 3px solid transparent; */
+  &:hover{
+    height: auto;
+    /* border: 3px solid #CC2553; */
+    /* background-color: #6c36d6; */
+    background-color: #FE1554;
+    .proj__discription{
+      color: black;
+    }
+    .proj__title {
+      background-color: black;
+      color: #FE3161;
+      box-shadow:
+    0 0 0 4px white,
+    0 0 0 6px black;
+    }
+
   }
-  &:before {
+
+  @media (max-width: 992px) {
+    max-width: 680px;
+    height: 400px;
+    width: 95%;
+    margin-right: 0px;
+    border-radius: 1rem;
+    
+  }
+
+  @media (max-width: 768px) {
+    /* min-height: 500px; */
+    height: auto;
+    /* margin: 60px auto; */
+    padding-bottom: 0;
+
+
+
+    padding: 10px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    margin: 5px auto;
+    /* &:nth-child(1) { 
+      margin-top: 180px;
+    } */
+  }
+
+  @media screen and (max-height: 500px) and (min-width: 992px) {
+    height: 350px;
+    margin: 10px 0;
+  }
+   &:nth-child(1) { 
+      /* margin-top: 180px; */
+      /* background: blue; */
+    }
+    
+  &:after{
     content: '';
     position: absolute;
-    width: 800px;
-    height: 50px;
-    bottom: 45%;
-    left: -50%;
-    transform: rotate(-30deg);
-    z-index: 0;
-    background: #fedc7b;
-    background-size: 30% 30%;
-    background-position: center center;
+    width: 100vw;
+    height: 1vw;
+    /* background-color: #E5E5E5; */
+    background-color: transparent;
+    bottom:-20px;
+    @media screen and (min-width: 776px) {
+      display: none;
+    }
+    /* background: linear-gradient( */
+      /* 360deg, */
+      /* rgba(255, 255, 255, 0) 0%, */
+      /* #c51838 51%, */
+      rgba(255, 255, 255, 0) 100%
+    );
   }
 `;
-const PreviewCardInner = styled(motion.div)`
-  position: relative;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* overflow: hidden; */
-
-  @media (min-width: 768px) {
-    width: 100%;
-    height: 100%;
-    max-height: 100%;
-    max-width: 100%;
-    div {
-      width: 100%;
-      height: 100%;
-    }
-  }
-  .img {
-    width: 100%;
-    opacity: 1;
-    ${PreviewCard}:hover & {
-      opacity: 0.8;
-    }
-  }
-`;
-const PreviewDetails = styled.div`
+const RoundAbsoluteDiv = styled.div`
   position: absolute;
-  background-color: white;
-  height: 150px;
-  border-top-left-radius: 0px;
-  border-top-right-radius: 0px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  bottom: -200px;
-  padding: 60px;
-  .subtitle {
-    font-size: 1rem;
-    text-transform: uppercase;
-    font-weight: bold;
-    padding: 5px 0;
-  }
+  left: 0;
+  top: 0;
+  width: 3rem;
+  height: 4rem;
+  border-top-left-radius: 6rem;
+  border-bottom-left-radius: .5rem;
+  border-top-right-radius: .5rem;
+  background-color: #FE1554;
+`
 
+const RoundAbsoluteDivBottomRight = styled.div`
+  position: absolute;
+  right: 20px;
+  bottom: -40px;
+  width: 4rem;
+  height: 6rem;
+  /* z-index: 10000; */
+  border-top-right-radius: 6rem;
+  border-bottom-right-radius: .5rem;
+  border-bottom-right-radius: .5rem;
+  background-image: url("/assets/imgs/dots-red.svg");
+  background-size:     cover;                      /* <------ */
+    background-repeat:   no-repeat;
+    background-position: center center;
+  transform: rotate(
+90deg
+);
+  /* background-color: rgba(255,133,119,1); */
+`
+const PreviewImg = styled.div`
   width: 100%;
-`;
-const DetailFooter = styled.div`
-  width: 100%;
-  height: 60px;
-  display: flex;
-  justify-content: space-between;
-  /* background-color: rgba(0, 0, 0,0.2); */
-  border-top-left-radius: 0px;
-  border-top-right-radius: 0px;
-  /* position: absolute; */
-  margin-top: 2rem;
-  padding: 10px 1rem;
-  @media (min-width: 768px) {
-    padding: 10px 8rem;
-    margin-top: 5rem;
+  flex-shrink: 0;
+  height: 300px;
+  /* background: white; */
+  box-shadow: 4px 13px 30px 1px rgb(253 170 170 / 17%);
+  border-radius: 20px;
+  overflow: hidden;
+
+  &:after {
+    content: "";
+    left: 0;
+    right: 0;
+    bottom: 10px;
+    border-bottom-left-radius: 250%;
+    border-bottom-right-radius: 250%;
+    width: 300%;
+    height: 75%;
+    -webkit-transform: translate(-10%,30%);
+    -ms-transform: translate(-10%,30%);
+    transform: translate(-10%,30%);
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    background-image: linear-gradient(
+180deg
+,hsla(0,0%,100%,0) 1%,#fff 37%);
+    position: absolute;
+}
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    opacity: 1;
+    border-radius: 0px;
+    transition: all 0.3s;
+  }
+  
+  @media screen and (max-width: 768px) {
+    width: 90%;
+    /* background-color: brown; */
+  }
+  @media screen and (max-width: 576px) {
+    width: 95%;
+    position: relative;
+    height: auto;
+  }
+  @media screen and (max-height: 500px) and (min-width: 992px) {
+    height: 270px;
   }
 `;
-const Tech = styled.div`
-  display: none;
-  span {
-    color: #8892b0;
-    font-size: 10px;
-    background-color: rgb(5, 5, 5, 0.2);
-    padding: 1px 3px;
-    margin: 0px 2px;
-    border-radius: 40px;
+const SliderContent = styled.div`
+padding-top: 20px;
+/* background: orange; */
+.proj__title {
+    padding: 10px 0;
+}
+.title{
+  
+}
+.sub-title{
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  color: black;
+  font-size: 2rem;
+  line-height: 1.6;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-align: left;
+  margin-top: 1.5rem;
+  color: ${({ theme }) => theme.text};
+    background: none;
+  -webkit-background-clip: none;
+  -webkit-text-fill-color: unset;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  @media screen and (min-width: 786px) {
+    font-size: 1.3rem;
+    line-height: 1.6;
+    margin-bottom: 0.8rem;
+  }
+}
+.proj__title {
+    /* padding: 10px 0; */
+    border-radius: 91% 9% 90% 10% / 29% 82% 18% 71%;
+    background: #FE3161;
+    color: #FFFFFF;
+    color: ${({ theme }) => theme.text};
+  -webkit-background-clip: inherit;
+  -webkit-text-fill-color: inherit;
+    box-shadow:
+    0 0 0 4px white,
+    0 0 0 6px #FE3161;
+    position: relative;
+    font-size: 1.2rem;
+    line-height: 2rem;
     display: flex;
-    flex-direction: row;
     align-items: center;
-    justify-content: space-between;
-    .hashtag {
-      margin: 0;
-      margin-right: 0px;
-      color: crimson;
-      border-radius: 20px;
-    }
+    margin: 0px 0;
+    margin-right: 1rem;
 
-    ${PreviewCard}:hover & {
-      span {
-        color: orange;
-      }
-    }
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: .25rem;
+    display: inline-block;
+    color: ${({ theme }) => theme.text};
+    /* background: -webkit-linear-gradient(-180deg, #FFB800,#fd4370
+    );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
+}
+.proj__discription{
+  color: var(--lightNormalTextTitleColor);;
+  padding: 0px 0;
+  margin-bottom: 1.5rem;
+  @media screen and (min-width: 786px) {
+    font-size: 0.9rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
-  @media (min-width: 768px) {
-    width: 60%;
+}
+a{
+  /* background: #61DAFB47;
+  color: #61DAFB
+  color: red; */
+  height: 38px;
+  width: 180px;
+  padding: 15px 15px;
+    font-size: 14px;
+    border-radius: 15px;
+    position: relative;
     display: flex;
-    justify-content: space-between;
-    span {
-      padding: 5px 10px;
-      font-size: 12px;
-      .hashtag {
-        margin: 0;
-        margin-right: 5px;
-        color: crimson;
-        border-radius: 20px;
-      }
-    }
-  }
-`;
-const Links = styled.div`
-  width: 100%;
+    align-items: center;
+
+    box-shadow: 0 0 0 5px #00000010, 0 0 0 10px #00000005, 0 0 0 20px #00000001;
+    border-radius: 30px;
+    color: #ffffff90;
+    background-color: #fd4370;
+    background-image: linear-gradient(-90deg,#ff004d,#fd4370);
+    will-change: transform;
+    -webkit-transition: -webkit-transform 450ms;
+    -webkit-transition: transform 450ms;
+    transition: transform 450ms;
+    -webkit-transition: all ease-in-out;
+    transition: all ease-in-out;
+    z-index: 1000;
+    
+}`;
+
+const Circle = styled.div`
+  width: 32px;
+  height: 32px;
+  /* border-radius: 30px; */
+  border-radius: 15px;
+  border: 2px solid var(--crimson);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  background-color: rgba(255,255,255,0.05);
+  backdrop-filter: blur(20px);
+  /* width: 100%; */
+  position: absolute;
+  /* left: 0; */
+  right: 5px;
+  border-radius: 30px;
   display: flex;
-  z-index: 1000;
-  justify-content: space-between;
-  padding: 0 2rem;
-  a {
-    width: 50px;
-    height: 50px;
-    display: flex;
-    justify-content: flex-end;
-  }
-  .ionicon {
-    color: white;
-    opacity: 0.5;
-
-    &:hover {
-      opacity: 1;
-    }
-  }
-
-  @media (min-width: 768px) {
-    width: 40%;
-    justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  
+  img {
+    width: 20px;
   }
 `;
+
 const ProjectCard = ({
   title,
   subtitle,
@@ -254,118 +318,32 @@ const ProjectCard = ({
   isReverse = false,
   githubLink,
 }) => {
-  const myRef = useRef(null);
-  const intersection = useIntersection(myRef, {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.2,
-  });
-  const fadeIn = {
-    opacity: 1,
-    y: 0,
-    x: 0,
-  };
-  const fadeOut = {
-    opacity: 0,
-    y: 100,
-    x: 0,
-  };
-  const imageIn = {
-    opacity: 1,
-    y: 0,
-    x: 0,
-  };
-  const imageOut = {
-    opacity: 0,
-    y: 0,
-    x: -300,
-  };
-
-  const exitAnim = {
-    opacity: 0,
-    y: 0,
-    x: 300,
-  };
-  const animationName =
-    intersection && intersection.intersectionRatio < 0.2 ? fadeOut : fadeIn;
-  const animationImg =
-    intersection && intersection.intersectionRatio < 0.2 ? imageOut : imageIn;
   return (
-    <Card isReverse={isReverse} ref={myRef}>
-      <Wrapper>
-        <ProjectTitle title={title} color={color} />
-        <ProjectSubTitle>
-          <p>{subtitle}</p>
-        </ProjectSubTitle>
-        <motion.p className='discription' animate={animationName}>
-          {discription}
-        </motion.p>
-        <DetailFooter>
-          <Tech>
-            <span>
-              <span className='hashtag'>#</span>firebase
-            </span>
-            <span>
-              <span className='hashtag'>#</span>React.js
-            </span>
-            <span>
-              <span className='hashtag'>#</span>Next.js
-            </span>
-          </Tech>
-          <Links>
-            <Link href={githubLink}>
-              <a target='_blank'>
-                <Image
-                  className='ionicon'
-                  src={'/assets/imgs/logo-github.svg'}
-                  alt='Picture of the author'
-                  width='32px'
-                  height='32px'
-                  priority={true}
-                />
-              </a>
-            </Link>
-            <a target='_blank'>
-              <Image
-                className='ionicon'
-                src={'/assets/imgs/link-outline.svg'}
-                alt='Picture of the author'
-                width='32px'
-                height='32px'
-                priority={true}
-              />
-            </a>
-          </Links>
-        </DetailFooter>
-      </Wrapper>
-      <PreviewCardWrapper>
-        <PreviewCard>
-          <PreviewCardInner
-            animate={animationImg}
-            transition={{
-              type: 'spring',
-              stiffness: 260,
-              damping: 200,
-              default: { duration: 0.2 },
-            }}
-          >
-            <Image
-              className='img'
-              src={imgScr}
-              alt='Picture of the author'
-              width='650px'
-              height='650px'
-              priority={true}
-            />
-          </PreviewCardInner>
-          {/* <PreviewDetails color ={ color}>
-                    <div className="subtitle">{subtitle}</div>
-                    <div className="info">{discription}</div>
-                </PreviewDetails> */}
-        </PreviewCard>
-      </PreviewCardWrapper>
+    <Card>
+      <RoundAbsoluteDiv />
+      <RoundAbsoluteDivBottomRight/>
+        <PreviewImg>
+          <img src={imgScr} alt='Picture of the author' />
+        </PreviewImg>
+      <SliderContent>
+        
+        <div  class="title">
+          <span className='proj__title'> {title}</span>
+          <p class="sub-title">{subtitle}</p>
+        </div>
+        <div className='proj__discription'>
+            {discription}
+        </div>
+          
+          <a href='githubLink' className='proj__button'>
+          Read more...
+          <Circle>
+          <img src='/assets/imgs/arrow_forward.svg' />
+        </Circle>
+          </a>
+        </SliderContent>
+
     </Card>
   );
 };
-
 export default ProjectCard;

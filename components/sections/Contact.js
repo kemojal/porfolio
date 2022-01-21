@@ -5,9 +5,23 @@ import { useIntersection } from 'react-use';
 
 const ContactContainer = styled(motion.section)`
   width: 100vw;
-  background-color: #e33140;
+  /* background-color: #e33140; */
   color: white;
   padding-bottom: 8rem;
+  /* background: #3758F9; */
+  /* background: rgb(0, 76, 63); */
+  background-color: #fd4370;
+    background-image: linear-gradient(
+-90deg
+,#ff004d,#fd4370);
+
+
+  /* margin-top: 0px; */
+  /* background: radial-gradient(circle at 50% 50%,#ff0037, #ff4870, rgba(255,144,168,1)); */
+
+
+
+
   @media (min-width: 1025px) {
     padding-bottom: 10rem;
   }
@@ -30,8 +44,15 @@ const TextContainer = styled(motion.div)`
     letter-spacing: 0.08rem;
     text-align: center;
     padding: 2rem;
+    span{
+      border-radius: 91% 9% 90% 10% / 29% 82% 18% 71%;
+      /* background: #FE3161; */
+      background: white;
+      color: rgb(0, 76, 63);
+      padding: 0.25rem 0.5rem;
+    }
     @media (min-width: 768px) {
-      font-size: 6rem;
+      font-size: 3rem;
       font-weight: bold;
       letter-spacing: 0.08rem;
       text-align: left;
@@ -50,20 +71,34 @@ const TextContainer = styled(motion.div)`
     p {
       font-size: 1.5rem;
       padding-top: 5rem;
-      font-size: 1.5rem;
+      font-size: 1rem;
       font-weight: 200;
       width: 30%;
     }
   }
 
   /* the circle */
+  &:after{
+    content: '';
+    position: absolute;
+    top: -25px;
+    left: 0;
+    right: 0;
+    height: 50px;
+    border-radius: 40%;
+    /* background: rgb(0, 76, 63); */
+    background-color: #fd4370;
+    background-image: linear-gradient(
+-90deg
+,#ff004d,#fd4370);
+  }
   &:before {
     content: '';
     position: absolute;
     width: 382px;
     height: 382px;
-    bottom: -10%;
-    left: 20%;
+    bottom: -20%;
+    right: 30%;
     z-index: 0;
     background: url('/assets/imgs/sliced-cirlce.svg') no-repeat;
     background-size: 30% 30%;
@@ -78,40 +113,77 @@ const ActionBTContainer = styled(motion.div)`
   justify-content: center;
 `;
 const SeeMyWorkBtn = styled(motion.a)`
-  width: 181px;
-  height: 60px;
+   height: 45px;
   position: relative;
   margin-top: 2.2em;
-  margin-left: 4em;
+
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  z-index: 50;
-  color: var(--lightTextTitleColor);
-  color: white;
+  /* z-index: 50; */
+  box-shadow: ${({ theme }) => theme.btnBoxShadow};
+  /* font-weight: 900; */
+  width: 50vw;
+  justify-content: flex-start;
+  padding-left: 25px;
+  transform: translateX(5vw);
+  border-radius: 30px;
+  color: ${({ theme }) => theme.btnTextColor};
+  background-color: #fd4370;
+  background: white;
+  color:  rgb(0, 76, 63);
+  /* background-image: linear-gradient(-90deg,#ff004d,#fd4370);  */
+  /* color: var(--lightTextTitleColor); */
+  /* color: #0E182B;; */
+  will-change: transform;
+  transition: transform 450ms;
+  transition: all ease-in-out;
+  z-index: 1000;
   p {
     z-index: 10;
-    color: white;
+    /* color: #0E182B; */
   }
   &:hover {
+    transition: transform 125ms;
+    transform: translateY(-10px) scale(1.1, 1.1);
     p {
       color: var(white);
     }
   }
+  @media (min-width: 320px) {
+    margin-top: 0;
+  }
+  @media (min-width: 768px) {
+    margin-left: 0em;
+    width: 181px;
+    transform: translateX(2vw);
+  }
 `;
 const Circle = styled(motion.div)`
-  width: 60px;
-  height: 60px;
-  border-radius: 30px;
+  width: 40px;
+  height: 40px;
+  border-radius: 15px;
   border: 2px solid var(--crimson);
-  background-color: #fd4370;
-  background-color: black;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  /* background-color: #fd4370;
+  background-color: #FFFFFF; */
+  /* background-color: rgba(255, 255, 255, 0.05); */
+  background-color: rgb(1 76 62 / 13%);
+  backdrop-filter: blur(20px);
+  /* color: #0E182B; */
   position: absolute;
-  left: 0;
+  right: 5px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   ${SeeMyWorkBtn}:hover & {
     /* background-color: var(--crimson); */
-    width: 100%;
+    background-color: #fd437070;
+    background-color: #fd4370;
+    /* width: 100%; */
   }
 `;
 const Contact = () => {
@@ -151,9 +223,10 @@ const Contact = () => {
   return (
     <ContactContainer id='contact' ref={myRef}>
       <TextContainer>
-        <h1 animate={animationTitle}>Let's work together</h1>
+        <h1 animate={animationTitle}>Let's
+          <span>work</span> together</h1>
         <p animate={animationName}>
-          Have an app or website idea? I'm available for freelance work.
+          Have an app or website idea? I'm available for freelance work. I can help you realize your dream software product.
         </p>
       </TextContainer>
       <ActionBTContainer>

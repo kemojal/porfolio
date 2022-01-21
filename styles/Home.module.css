@@ -20,6 +20,12 @@
   /* background-color: pink; */
   width: 100vw;
 }
+.footerNav{
+  display: flex;
+  width: 500px;
+  gap: 15px;
+  padding-left: 50px;
+}
 @media screen and (min-width: 768px) {
   .main {
     overflow-x: auto;
@@ -28,15 +34,29 @@
 .footer {
   /* overflow-x: hidden; */
   width: 100%;
-  height: 100px;
+  height: 90px;
   border-top: 1px solid transparent;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #E33140;
+  /* background-color: #E33140; */
+  /* background-color: #fd4270; */
+  /* background: radial-gradient(circle at 50% 50%,rgb(247 79 115),#ff4870,rgba(255,144,168,1)); */
+  background-color:  black;
+  padding: 20px 0;
+  color: white;
   position: relative;
   z-index: 100;
 }
+.footerNav{
+  width: 100vwd;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+}
+
 .footerText {
   font-size: 0.875rem;
   opacity: 0.5;
@@ -166,6 +186,9 @@
     background-color: transparent;
     position: relative;
     background-color: #E33140;
+    background-color: #fd4270;
+    background-color: black;
+    /* background: radial-gradient(circle at 50% 50%,rgb(247 79 115),#ff4870,rgba(255,144,168,1)); */
 
   }
   /* .footer::before {

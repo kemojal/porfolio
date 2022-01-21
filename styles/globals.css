@@ -74,6 +74,9 @@
 *::-webkit-scrollbar {
   display: none;
 }
+
+
+
 html {
   scroll-behavior: smooth;
 }
@@ -99,6 +102,7 @@ a {
   --crimson: #ff0857;
   --darkBlobOpacity: 0;
   --lightBlobOpacity: 1;
+--maximeheckel-colors-typeface-2: #FD4270;
 }
 /*:root {
   --bgLight: #020815;
@@ -111,9 +115,7 @@ a {
   --darkBlobOpacity: 1;
   --lightBlobOpacity: 0;
 }*/
-html {
-  /* background-color: blue; */
-}
+
 
 /* html,
 body,
@@ -136,17 +138,17 @@ body {
   overflow-x: hidden;
 }
 .red {
-  color: #0a3cb7;
+  color: #f9ca24;
   animation-duration: 0.2s;
   animation: fadeInOut;
 }
 .green {
-  color: #0a3cb7;
+  color: #f9ca24;
   animation-duration: 0.2s;
   animation: fadeInOut;
 }
 .blue {
-  color: #0a3cb7;
+  color: #f9ca24;
   animation-duration: 0.2s;
   animation: fadeInOut;
 }
@@ -184,3 +186,4 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #b30000;
 }
+

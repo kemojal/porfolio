@@ -8,51 +8,116 @@ const TitleContainer = styled(motion.div)`
   position: relative;
   display: flex;
   align-items: center;
-  padding-top: 1.2rem;
+  justify-content: center;
+  padding: 0.2rem 0;
+  justify-content: center;
   z-index: 1000;
-  span {
-    color: green;
-    padding-left: 10px;
-    color: var(--lightTextTitleColor);
-    font-weight: 800;
-    line-height: 18px;
-    letter-spacing: 3px;
-    font-size: 1.5rem;
-    padding-top: 0rem;
+  
+  h1{
+    font-size: 36px;
+    font-weight: 900!important;
+    color: #fff;
     text-transform: uppercase;
+    margin: 0;
   }
+  .orange{
+      color: #FE1554;
+      margin-left: 10px;
+    }
+  .white{
+    color: black;
+  }
+  /* border: 1px solid red; */
+  .behind-text {
+    color: var(--lightTextTitleColor);
+    /* font-weight: 600;
+    line-height: 14vw;
+    letter-spacing: 8px;
+    font-size: 1.2rem;
+    font-size: 6vw;
+    padding-top: 0rem;
+    
+    color:  #565a63;
+    display: flex;
+    align-items: center;
+    
+   
+    color: white;
+    padding: 0 10px;
+    max-height: 65px;
+     */
+    
+    
+    /* font-weight: 900!important; */
+    text-transform: uppercase;
+
+
+    font-size: 65px;
+    letter-spacing: 10px;
+    line-height: .7;
+    position: absolute;
+    top: 50%;
+    text-transform: uppercase;
+    font-weight: 800;
+    transform: translateY(-50%);
+    color: hsla(0,0%,100%,.07);
+    
+  }
+  &:before{
+        content: ' ';
+        display: block;
+        position: absolute;
+        left:calc(50% - 2rem);
+        width: 23vw;
+        height:23vw;
+        max-width:100px;
+        max-height:100px;
+        transform: rotate(-5deg);
+        border-radius: 50%;
+       background-color: #C5183810;
+       background-color: #1E202310;
+       box-shadow: 0 0 0 5px #ffffff10, 0 0 0 10px #ffffff05, 0 0 0 20px #ffffff01;
+    }
   @media (min-width: 768px) {
     justify-content: center;
-    margin-top: 2rem;
-    padding: 5rem;
+    /* background:  orange; */
+    /* margin-top: 2rem; */
+    /* padding: 5rem; */
     span {
-      padding-top: 10px;
-      font-size: 6rem;
-      color: #000000;
+      padding-top: 0px;
+      font-size: 3rem;
     }
+    /* &:before{
+        content: ' ';
+        width: 100px;
+        height: 100px;
+    } */
   }
 `;
 const Line = styled.div`
   position: absolute;
   width: 100vw;
-  height: 85px;
+  height: 3.5px;
   border-radius: 0px;
   opacity: 1;
-  left: 0px;
+  width: 20vw;
+  bottom: 0px;
   background-color: var(--crimson);
-  background: #ff5700;
-  background: #ffdc7c; /*radial-gradient(circle, #FF5700 0%,  #FF0056 100%); */
+  background: #1E2023;
+  border-radius: 20px;
+  box-shadow: 0 0 0 5px #ffffff10, 0 0 0 10px #ffffff05, 0 0 0 20px #ffffff01;
   @media (min-width: 768px) {
-    width: 50%;
-    height: 20px;
-    background: orange;
-    left: 25%;
-    top: 45%;
+    width: 90px;
+    height: 5px;
+    /* left: 25%;
+    top: 45%; */
+    bottom: 0px;
     transform: rotate(1deg);
   }
 `;
 
 const SectionTitle = ({ title }) => {
+  let words  = title.split(' ');
   const myRef = useRef(null);
   const intersection = useIntersection(myRef, {
     root: null,
@@ -84,8 +149,15 @@ const SectionTitle = ({ title }) => {
         default: { duration: 0.2 },
       }}
     >
-      <Line />
-      <span>{title}</span>
+
+     
+      {/* <span>{title}</span> */}
+      <h1>
+      <span className="white">{words[0]}</span>
+      <span className="orange">{ words[1]}</span>
+      </h1>
+      <span class="behind-text">WORKS</span>
+      {/* <Line /> */}
     </TitleContainer>
   );
 };
