@@ -1,6 +1,6 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This portfolio is built using Next.js. 
 
-## Getting Started
+## Porfolio
 
 First, run the development server:
 
