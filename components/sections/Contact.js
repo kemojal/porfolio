@@ -91,6 +91,9 @@ const TextContainer = styled(motion.div)`
     background-image: linear-gradient(
 -90deg
 ,#ff004d,#fd4370);
+@media (min-width: 768px) {
+  display: none;
+}
   }
   &:before {
     content: '';

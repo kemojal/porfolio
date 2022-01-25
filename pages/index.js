@@ -37,9 +37,11 @@ const Combined = styled.div`
     /* background-color: #39fee208; */
     backdrop-filter: blur(20px);
     width: 100%;
+    max-width: 1200px;
   }
   @media (max-width: 767px) {
     overflow: hidden;
+    
   }
 `;
 
@@ -83,7 +85,7 @@ export default function Home() {
       document.body.removeEventListener('touchend', touchend, false);
     };
 
-    //check device TDv1wYpesgaGyk
+    //check device resize event
     window.addEventListener('resize', handleWindowSizeChange);
     return () => {
       window.removeEventListener('resize', handleWindowSizeChange);

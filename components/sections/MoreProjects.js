@@ -26,6 +26,8 @@ const MoreProjectDiv = styled.div`
     flex-wrap: wrap;
     padding-bottom: 50px;
     background-color: #F8F8F8;
+    background-color: #F8F8F8;
+    justify-content: center;
     @media screen and (min-width: 776px) {
         padding-top: 50px;
         padding-bottom: 50px;

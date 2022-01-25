@@ -58,7 +58,7 @@ const AboutSection = styled(motion.section)`
     border-radius: 300px;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: flex-end;
     height: 100%;
     top: 0;
     bottom: 0;
