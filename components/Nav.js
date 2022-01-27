@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 
-const Nav = styled(motion.nav)`
+const Nav= styled(motion.nav)`
   position: fixed !important;
   padding: 0rem 2rem;
   /* box-shadow: 0 2px 15px ${({ theme }) => theme.navShadowColor}; */
@@ -31,8 +31,17 @@ const Nav = styled(motion.nav)`
   @media (min-width: 768px) {
     background-color: ${({ theme }) => theme.bgNav};
     backdrop-filter: blur(20px);
+    min-height: 80px;
   }
 `;
+const FluidContainer  = styled.div`
+  width: 100vw;
+  @media (min-width: 768px) {
+    background-color: ${({ theme }) => theme.bgNav};
+    backdrop-filter: blur(20px);
+    max-width: 1200px;;
+  }
+`
 const NavLogo = styled.a`
   padding: 1rem 0;
   padding: 0.5rem 0;
@@ -305,51 +314,50 @@ const nav = () => {
       // animate ={{opacity: hideNav ? 0: 1}}
       // transition={{ opacity: { duration: 0.2 } }}
     >
-      <Menu isOpen={isOpen}>
-        <MenuTitleBody>
-          <MenuLink href='#about' isOpen={isOpen} index={1} onClick={onClick}>
-            <span className='number' isOpen={isOpen}>
-              01.
-            </span>
-            <span className='s-name'>About</span>
-          </MenuLink>
-          <MenuLink
-            href='#projects'
-            isOpen={isOpen}
-            index={1}
-            onClick={onClick}
-          >
-            <span className='number'>02.</span>
-            <span className='s-name'>Projects</span>
-          </MenuLink>
-          <MenuLink href='#contact' isOpen={isOpen} index={1} onClick={onClick}>
-            <span className='number'>03.</span>
-            <span className='s-name'>Contact</span>
-          </MenuLink>
-          <SayHelloMenu>
-            <h3>Say Hello </h3>
-            <a href="youtu.be/z3vusUCorz0">youtube/kemojallow</a>
-            <p>@kemo_jallow</p>
-            <p>Twitter</p>
-          </SayHelloMenu>
-        </MenuTitleBody>
-      </Menu>
-      <NavLogo>
-        <Image
-          src='/assets/imgs/logo.svg'
-          alt='Picture of the author'
-          width={45}
-          height={45}
-        />
-      </NavLogo>
-      <Hamburger onClick={onClick} isOpen={isOpen}>
-        <div>
-          <span className='first' isOpen={isOpen} />
-          <span className='center' isOpen={isOpen} />
-          <span className='second' isOpen={isOpen} />
-        </div>
-      </Hamburger>
-      
+        <Menu isOpen={isOpen}>
+          <MenuTitleBody>
+            <MenuLink href='#about' isOpen={isOpen} index={1} onClick={onClick}>
+              <span className='number' isOpen={isOpen}>
+                01.
+              </span>
+              <span className='s-name'>About</span>
+            </MenuLink>
+            <MenuLink
+              href='#projects'
+              isOpen={isOpen}
+              index={1}
+              onClick={onClick}
+            >
+              <span className='number'>02.</span>
+              <span className='s-name'>Projects</span>
+            </MenuLink>
+            <MenuLink href='#contact' isOpen={isOpen} index={1} onClick={onClick}>
+              <span className='number'>03.</span>
+              <span className='s-name'>Contact</span>
+            </MenuLink>
+            <SayHelloMenu>
+              <h3>Say Hello </h3>
+              <a href="youtu.be/z3vusUCorz0">youtube/kemojallow</a>
+              <p>@kemo_jallow</p>
+              <p>Twitter</p>
+            </SayHelloMenu>
+          </MenuTitleBody>
+        </Menu>
+        <NavLogo>
+          <Image
+            src='/assets/imgs/logo.svg'
+            alt='Picture of the author'
+            width={45}
+            height={45}
+          />
+        </NavLogo>
+        <Hamburger onClick={onClick} isOpen={isOpen}>
+          <div>
+            <span className='first' isOpen={isOpen} />
+            <span className='center' isOpen={isOpen} />
+            <span className='second' isOpen={isOpen} />
+          </div>
+        </Hamburger>
     </Nav>
   );
 };

@@ -14,7 +14,7 @@ const Card = styled(motion.div)`
   /* background: pink; */
   /* box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2); */
   padding: 25px;
-  border-radius: 3rem;
+  /* border-radius: 3rem; */
   height: auto;
   width: 30%;
   margin: 1rem;
@@ -26,6 +26,8 @@ const Card = styled(motion.div)`
   margin-right: 10px;
   cursor: pointer;
   background-color: #E5E5E526;
+  box-shadow: 2px 2px 8px rgb(0 0 0 / 12%);
+  border-radius: 5px;
   /* border: 3px solid transparent; */
   &:hover{
     height: auto;
@@ -109,6 +111,9 @@ const RoundAbsoluteDiv = styled.div`
   border-bottom-left-radius: .5rem;
   border-top-right-radius: .5rem;
   background-color: #FE1554;
+
+  box-shadow: 2px 2px 8px rgb(0 0 0 / 12%);
+    border-radius: 5px;
 `
 
 const RoundAbsoluteDivBottomRight = styled.div`
