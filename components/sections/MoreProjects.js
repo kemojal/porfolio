@@ -19,6 +19,16 @@ margin-top: 0px;
 } */
 `
 
+const Wrapper  = styled.div`
+    margin-top: 40px;
+    width: 100%;
+    background-color: #F8F8F8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+`
+
 const MoreProjectDiv = styled.div`
     padding-top: 20px;
     max-width: 1100px;
@@ -37,21 +47,22 @@ const MoreProjects = () => {
     return (
         <MoreProjectsContainer>
             <SectionTitle title ={"More projects"} />
-            <MoreProjectDiv>
-                {
-                    OthersData.slice(0,9).map(({title, discription, githubLink}, i)=>
-                        (
-                            <MoreProject 
-                            num= {(i < 10  )? `0${i+1}` : `${i+1}`} 
-                            title = {title}
-                            discription={discription} 
-                            githubLink = {githubLink}
-                            />
+            <Wrapper >
+                <MoreProjectDiv>
+                    {
+                        OthersData.slice(0,9).map(({title, discription, githubLink}, i)=>
+                            (
+                                <MoreProject 
+                                num= {(i < 10  )? `0${i+1}` : `${i+1}`} 
+                                title = {title}
+                                discription={discription} 
+                                githubLink = {githubLink}
+                                />
+                            )
                         )
-                    )
-                }
-            </MoreProjectDiv>
-
+                    }
+                </MoreProjectDiv>
+            </Wrapper>
         </MoreProjectsContainer>
     )
 }
