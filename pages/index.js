@@ -25,7 +25,7 @@ import Wave from '../components/svg/Wave';
 const Combined = styled.div`
   display: flex;
   flex-direction: column;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   padding-bottom: 20px;
   position: relative;
   @media (min-width: 768px) {
@@ -40,7 +40,7 @@ const Combined = styled.div`
     max-width: 1200px;
   }
   @media (max-width: 767px) {
-    overflow: hidden;
+    /* overflow: hidden; */
     
   }
 `;
