@@ -29,6 +29,7 @@ const TitleContainer = styled(motion.div)`
   }
   /* border: 1px solid red; */
   .behind-text {
+    display: none !important;
     color: var(--lightTextTitleColor);
     /* font-weight: 600;
     line-height: 14vw;

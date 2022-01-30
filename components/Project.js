@@ -11,9 +11,10 @@ const MoreProjectContainer = styled(motion.div)`
   /* flex-shrink: 0; */
   /* flex-basis: 0; */
   background-color: #f8f8f8;
+  background-color: white;
   justify-content: space-between;
   border-bottom: 1px solid #e8e8e8;
-  background: #f8f8f8;
+  /* background: #f8f8f8; */
   &:hover {
     background-color: white;
     padding: 20px 80px;
@@ -31,6 +32,7 @@ const MoreProjectContainer = styled(motion.div)`
     align-items: center;
     justify-content: center;
     padding: 20px 15px;
+    background: white;
     
     &:hover {
     background-color: white;
