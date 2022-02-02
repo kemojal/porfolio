@@ -204,7 +204,9 @@ const MenuLink = styled.a`
     padding-left: 0.2rem;
   }
   .number {
-    color: #222;
+   
+     color: #222;
+     color: red;
     color: ${({ theme }) => theme.crimson};
     opacity: 0.4;
     font-size: 3rem;
