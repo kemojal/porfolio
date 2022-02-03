@@ -206,7 +206,6 @@ const MenuLink = styled.a`
   .number {
    
      color: #222;
-     color: red;
     color: ${({ theme }) => theme.crimson};
     opacity: 0.4;
     font-size: 3rem;
