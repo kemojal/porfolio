@@ -223,7 +223,7 @@ padding-top: 20px;
 }
 .proj__title {
     /* padding: 10px 0; */
-    border-radius: 91% 9% 90% 10% / 29% 82% 18% 71%;
+    /* border-radius: 91% 9% 90% 10% / 29% 82% 18% 71%; */
     background: #FE3161;
     color: #FFFFFF;
     color: ${({ theme }) => theme.text};
