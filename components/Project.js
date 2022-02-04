@@ -73,7 +73,7 @@ const MoreProjectBody = styled(motion.div)`
     color: #1e2023;
     padding: 1rem 1rem;
     /* border-radius: 91% 9% 90% 10% / 29% 82% 18% 71%; */
-    border-radius: 11% 9% 10% 10% / 14% 21% 9% 30%;
+    /* border-radius: 11% 9% 10% 10% / 14% 21% 9% 30%; */
     background: #1e202320;
     box-shadow: 0 0 0 6px white, 0 0 0 8px #1e2023;
   }
