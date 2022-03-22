@@ -25,7 +25,7 @@ const TitleContainer = styled(motion.div)`
       margin-left: 10px;
     }
   .white{
-    color: black;
+    color: ${({ theme }) => theme.text};
   }
   /* border: 1px solid red; */
   .behind-text {

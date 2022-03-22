@@ -9,7 +9,7 @@ const Nav= styled(motion.nav)`
   /* box-shadow: 0 2px 15px ${({ theme }) => theme.navShadowColor}; */
   width: 100vw;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   z-index: 2000;
@@ -28,10 +28,27 @@ const Nav= styled(motion.nav)`
   box-shadow: inset 0px -1px 1px ${({ theme }) => theme.navShadowColor} !important; 
   /* box-shadow: ${({ theme }) => theme.navShadowColor} !important; */
   transition: top 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+
+  .container {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      position: relative;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      max-width: 1200px;
+    }
   @media (min-width: 768px) {
     background-color: ${({ theme }) => theme.bgNav};
     backdrop-filter: blur(20px);
     min-height: 80px;
+
+    .container {
+      display: flex;
+      width: 100%;
+    }
   }
 `;
 const FluidContainer  = styled.div`
@@ -162,7 +179,7 @@ const Menu = styled.div`
     padding-right: 40px;
   }
   @media (min-width: 1025px) {
-    width: 30%;
+    width: 40%;
     background-color: transparent;
   }
 `;
@@ -315,6 +332,7 @@ const nav = () => {
       // animate ={{opacity: hideNav ? 0: 1}}
       // transition={{ opacity: { duration: 0.2 } }}
     >
+      <div className='container'>
         <Menu isOpen={isOpen}>
           <MenuTitleBody>
             <MenuLink href='#about' isOpen={isOpen} index={1} onClick={onClick}>
@@ -359,6 +377,7 @@ const nav = () => {
             <span className='second' isOpen={isOpen} />
           </div>
         </Hamburger>
+        </div>
     </Nav>
   );
 };

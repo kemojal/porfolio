@@ -122,7 +122,7 @@ export default function Home() {
           </Combined>
           <MyProjects />
           <MoreProjects />
-          {/* <Services/> */}
+          <Services/>
           <Contact />
           <Socials />
           <Settings theme={theme} toggleTheme={themeToggler} />

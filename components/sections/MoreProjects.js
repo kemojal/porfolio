@@ -22,7 +22,7 @@ margin-top: 0px;
 const Wrapper  = styled.div`
     margin-top: 40px;
     width: 100%;
-    background-color: #F8F8F8;
+    background-color: ${({ theme }) => theme.lightShadeBg};
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -35,8 +35,8 @@ const MoreProjectDiv = styled.div`
     display: flex;
     flex-wrap: wrap;
     padding-bottom: 50px;
-    background-color: #F8F8F8;
-    background-color: #F8F8F8;
+    /* background-color: #F8F8F8; */
+    /* background-color: #F8F8F8; */
     justify-content: center;
     @media screen and (min-width: 776px) {
         padding-top: 50px;

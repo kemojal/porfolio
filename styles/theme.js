@@ -4,7 +4,6 @@ export const lightTheme = {
   toggleBorder: '#FFF',
   bgLight: '#fff',
   bgNav: 'rgba(255,255,255,0.72)',
-  // bgNav: 'rgb(255,255,255)',
   NavModalBgColor: 'white',
   NavModalShadow: 'rgb(90 105 120 / 10%) 0px 15px 10px -5px',
   navShadowColor: 'rgb(0 0 0 / 10%)',
@@ -15,8 +14,9 @@ export const lightTheme = {
   btnBoxShadow: '0 0 0 5px #00000010, 0 0 0 10px #00000005, 0 0 0 20px #00000001',
 
   bgGradient: 'linear-gradient(180deg, hsla(0,0%,100%,0) 1%,#fff 37%)',
-  
-    
+  bgService: 'white',
+  lightShadeBg: '#25252510',
+  moreCardBg: 'white',
 
     blue: '#0270f3',
    lightTextTitleColor: '#020815',
@@ -44,6 +44,11 @@ export const darkTheme = {
   btnBoxShadow: '0 0 0 5px #ffffff10, 0 0 0 10px #ffffff05, 0 0 0 20px #ffffff01',
   
   bgGradient: 'linear-gradient(180deg ,rgba(18,18,18,0) 1%,#1E2023 37%)',
+
+  bgService: '#121212',
+  lightShadeBg: '#ff005715',
+  moreCardBg: '#00000069',
+
 
     blue: '#0270f3',
     lightTextTitleColor:' #fff',
