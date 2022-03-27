@@ -69,8 +69,9 @@ const MoreProjectBody = styled(motion.div)`
   h1 {
     font-size: 2rem;
     text-align: center;
-    color: #8f8e8e;
-    color: #1e2023;
+    /* color: #8f8e8e; */
+    /* color: #1e2023; */
+    color: white;
     padding: 1rem 1rem;
     /* border-radius: 91% 9% 90% 10% / 29% 82% 18% 71%; */
     /* border-radius: 11% 9% 10% 10% / 14% 21% 9% 30%; */
@@ -109,11 +110,12 @@ const MoreProjectBody = styled(motion.div)`
     h1 {
       font-size: 1rem;
       text-align: left;
-      color: #8f8e8e;
+      /* color: #8f8e8e; */
       padding: 0.5rem 0.5rem;
       font-size: 1.5rem;
     text-align: center;
-    color: #8f8e8e;
+    color: ${({ theme }) => theme.text};;
+    /* color: #8f8e8e; */
     padding: 0.8rem 0rem;
     max-width: 180px;
       /* width: 100%; */
