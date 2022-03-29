@@ -123,7 +123,7 @@ const MoreProjectBody = styled(motion.div)`
     }
     .link {
       border-top: none;
-      background-color: #ffffff;
+      background-color: #1c1D1E;
       border-radius: 10px;
       font-size: 12px;
       padding: 2px 8px;
