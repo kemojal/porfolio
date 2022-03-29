@@ -92,6 +92,7 @@ const MoreProjectBody = styled(motion.div)`
   }
   .link {
     border-top: 1px solid #e8e8e8;
+    border-top: 1px solid red;
     width: 100%;
     flex-grow: 0.2;
     flex-basis: 0;
