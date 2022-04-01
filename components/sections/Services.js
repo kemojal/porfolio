@@ -48,7 +48,7 @@ const ServicesContainer = styled.section`
 
  }
  .list-item-title{
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     line-height: 2rem;
     color: rgba(255, 255, 255, 0.87);
     color: ${({ theme }) => theme.text};
@@ -58,7 +58,8 @@ const ServicesContainer = styled.section`
 
     border-radius: 91% 9% 90% 10% / 29% 82% 18% 71%;
     background: rgb(0,76,63);
-    color: white;
+    background-color:  #EA3B5A;
+    /* color: ${({ theme }) => theme.bg}; */
     padding: 0.25rem 0.5rem;
 
  }
