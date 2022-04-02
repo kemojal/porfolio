@@ -52,6 +52,7 @@ const AboutSection = styled(motion.section)`
     border-radius: 0;
     margin-top: 0;
     z-index: 999;
+    height: 100%;
     /* background-color:transparent;  */
     border-top-left-radius: 100%;
     border-bottom-left-radius: 100%;
