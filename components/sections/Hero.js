@@ -57,7 +57,7 @@ const HeroContainer = styled(motion.section)`
   @media (min-width: 768px) {
     width: 60%;
     padding-left: 0;
-    height: 100vh;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;

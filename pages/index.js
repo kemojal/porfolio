@@ -38,9 +38,13 @@ const Combined = styled.div`
     backdrop-filter: blur(20px);
     width: 100%;
     max-width: 1200px;
+
+    height: 900px;
+    /* background-color: red; */
   }
   @media (max-width: 767px) {
     /* overflow: hidden; */
+    
     
   }
 `;
