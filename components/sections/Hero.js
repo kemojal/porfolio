@@ -70,14 +70,7 @@ const MainContainer = styled(motion.div)`
   z-index: 10;
   padding: 2rem;
   padding-top: 5.5rem;
-  /* background-color: rgb(247 79 115 / 4%);
-  background-color: rgb(0 251 239 / 4%); */
-
-  /* background: linear-gradient(
-180deg
-, rgba(0,251,239,0.04) 0%, rgba(30,32,35,0.02) 50%);
-    backdrop-filter: blur(20px);
-    border-radius: 5%; */
+ 
 
   border-radius: 5%;
   @media (min-width: 768px) {
