@@ -12,38 +12,26 @@ import { useIntersection } from 'react-use';
 import DoodleBG from './../svg/DoodleBG';
 
 const AboutSection = styled(motion.section)`
-  /* height: 60%; */
   position: relative;
-  /* width: 80vw;
-  height: 80vw; */
+  
   width: 100vw;
   height: 100vw;
-  /* transform: translateX(calc(50vw - 40vw)); */
-
-  /* padding: 2rem; */
+ 
   padding-top: 6rem;
-  /* background-color: crimson; */
-  /* background-color: #ed143de0; */
-  /* background-color: transparent; */
+  
   border-top-left-radius: 300px;
   border-bottom-left-radius: 300px;
   border-radius: 300px;
-  /* border-radius: 0; */
-  /* background: linear-gradient(-180deg, #1D1F21, #DD143C); */
-  /* background-color: #ffffff04; */
-  /* opacity: 0.72; */
+  
   backdrop-filter: blur(20px);
   margin-top: 80px;
   padding-top: 0px;
   margin-top: 180px;
-  /* height: 100%; */
+
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 999;
-  /* overflow-x: hidden; */
-  /* box-shadow: 0 0 0 10px #ffffff10, 0 0 0 20px #ffffff05, 0 0 0 40px #ffffff01; */
-  /* position: absolute; */
   @media (max-width: 767px) {
     overflow-y: visible;
   }

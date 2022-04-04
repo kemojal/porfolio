@@ -44,8 +44,10 @@ const Icons  = styled.div`
 `
 
 const Icon = styled.div`
-            background-color: #F1F1F3;
-            background-color: rgba(0, 0, 0,0.1);
+            background-color: white;
+            background-color: ${({ theme }) => theme.socialIconBg};
+            border: 1px solid #292B2E80;
+            backdrop-filter: blur(20px);
             width: 32px;
             height: 32px;
             border-radius: 30px;

@@ -17,6 +17,8 @@ export const lightTheme = {
   bgService: 'white',
   lightShadeBg: '#25252510',
   moreCardBg: 'white',
+  socialIconBg: 'rgba(0,0,0,0.2)',
+
 
     blue: '#0270f3',
    lightTextTitleColor: '#020815',
@@ -48,6 +50,7 @@ export const darkTheme = {
   bgService: '#121212',
   lightShadeBg: '#ff005715',
   moreCardBg: '#00000069',
+  socialIconBg: 'rgba(255,255,255,0.1)',
 
 
     blue: '#0270f3',
