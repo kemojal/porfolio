@@ -10,10 +10,6 @@ const ProjectsSection = styled(motion.section)`
   width: 100vw;
   padding: 2rem 0;
   margin-top: 150px;
-  /* background-color:#0A3CB7; */
-  /* background-color:#fd3838; */
-  /* background-color: #C51838; */
-  /* background-color: #F4F6F9; */
   color: black;
   display: flex;
   flex-direction: column;
@@ -31,9 +27,7 @@ const ProjectsSection = styled(motion.section)`
     transform: rotate(-5deg);
     border-radius: 0%;
     background-color: #c51838;
-    /* background-color: #F4F6F9; */
-    /* border-top: 1px solid #0000000d; */
-    /* background-color: #FFE53B; */
+    
   }
   &:after {
     content: ' ';
@@ -54,14 +48,10 @@ const ProjectsSection = styled(motion.section)`
       #c51838 51%,
       rgba(255, 255, 255, 0) 100%
     );
-    /* border-top: 1px solid #C51838; */
-    /* background-color: #FFE53B; */
+   
   }
-  /* background-color: #FFE53B;
-    background-image: linear-gradient(147deg, #FFE53B 0%, #fd3838 74%); */
+  
   @media (min-width: 768px) {
-    /* padding: 0 8rem; */
-    /* padding-bottom: 12rem; */
     margin-top: -150px;
 
     &:after {
@@ -73,16 +63,13 @@ const ProjectsSection = styled(motion.section)`
 const Spacer = styled.div`
     height: 80px;
     width: 50px;
-    /* background-color: orange */
 `
 const ProjContainer = styled.div`
-  /* background-color: orange; */
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  /* background-color: #E5E5E5; */
   
   @media (min-width: 992px) {
     /* max-width: 90vw; */
@@ -104,11 +91,11 @@ const MyProjects = () => {
           <SectionTitle title={'My work'} />
       <Spacer />
       <ProjContainer>
-        {Data.slice(0,6).map((p, i) => (
+        {Data.slice(0,3).map((p, i) => (
           <ProjectCard key={i} {...p} />
         ))}
       </ProjContainer>
-      
+      <button className="see-more-btn">See More </button>
     </ProjectsSection>
   );
 };
