@@ -50,7 +50,7 @@ const MoreProjects = () => {
             <Wrapper >
                 <MoreProjectDiv>
                     {
-                        OthersData.slice(0,9).map(({title, discription, githubLink}, i)=>
+                        OthersData.slice(0,6).map(({title, discription, githubLink}, i)=>
                             (
                                 <MoreProject 
                                 num= {(i < 10  )? `0${i+1}` : `${i+1}`} 

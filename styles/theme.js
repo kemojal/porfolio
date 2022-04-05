@@ -4,6 +4,7 @@ export const lightTheme = {
   toggleBorder: '#FFF',
   bgLight: '#fff',
   bgNav: 'rgba(255,255,255,0.72)',
+  bgNavLogo: '#00000014',
   NavModalBgColor: 'white',
   NavModalShadow: 'rgb(90 105 120 / 10%) 0px 15px 10px -5px',
   navShadowColor: 'rgb(0 0 0 / 10%)',
@@ -36,6 +37,7 @@ export const darkTheme = {
   toggleBorder: '#6B8096',
   bgLight: '#020815',
   bgNav: '#44444414',
+  bgNavLogo: '#ffffff14',
   // bgNav: '#1E2023',
   NavModalBgColor: '#2B2B2B',
   NavModalShadow:'rgb(128 149 171 / 10%) 0px 15px 10px -5px',
@@ -48,8 +50,8 @@ export const darkTheme = {
   bgGradient: 'linear-gradient(180deg ,rgba(18,18,18,0) 1%,#1E2023 37%)',
 
   bgService: '#121212',
-  lightShadeBg: '#ff005715',
-  moreCardBg: '#00000069',
+  lightShadeBg: '#ffffff03',
+  moreCardBg: '#ffffff12',
   socialIconBg: 'rgba(255,255,255,0.1)',
 
 

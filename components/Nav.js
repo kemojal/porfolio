@@ -6,7 +6,6 @@ import { motion } from 'framer-motion';
 const Nav= styled(motion.nav)`
   position: fixed !important;
   padding: 0rem 2rem;
-  /* box-shadow: 0 2px 15px ${({ theme }) => theme.navShadowColor}; */
   width: 100vw;
   display: flex;
   justify-content: center;
@@ -17,7 +16,6 @@ const Nav= styled(motion.nav)`
   left: 0;
   right: 0;
   max-height: 64px;
-  /* background-color: var( --bgLight); */
   background-color: rgba(255, 255, 255, 0.72);
   background-color: ${({ theme }) => theme.bgNav};
 
@@ -66,9 +64,20 @@ const NavLogo = styled.a`
   text-decoration: none;
   font-weight: 800;
   font-size: 1.7rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   span {
     font-weight: 300;
     font-size: 1.3rem;
+  }
+  &:before{
+    content: '';
+    position: absolute;
+    background: ${({ theme }) => theme.bgNavLogo};
+    width: 50px;
+    height: 50px;
   }
 `;
 const Hamburger = styled.div`
@@ -88,9 +97,6 @@ const Hamburger = styled.div`
 
     box-shadow: 0 0 0 5px #ffffff10, 0 0 0 10px #ffffff05, 0 0 0 20px #ffffff01;
 
-
-    /* border: 1px solid;
-    color: #007FFF; */
     width: 32px;
     height: 32px;
     border-radius: 10px;
@@ -242,9 +248,7 @@ const MenuLink = styled.a`
   }
   .s-name {
     font-size: 3.1rem;
-    /* color: rgba(255, 255, 255, 0.5);
-    color: ${({ theme }) => theme.text};
-    color: ${({ theme }) => theme.text}; */
+    
     margin-top: ${({ isOpen, index }) => (isOpen ? '0' : '100vw ')};
     transition-delay: 0.25s;
 
@@ -304,33 +308,11 @@ p{
 const nav = () => {
   const [isOpen, setIsOpen] = useState(false);
   const onClick = () => setIsOpen(!isOpen);
-  // const [hideNav, setHideNav] = useState(false)
 
-  //handing the navbar scrolling animation
-  // useEffect(
-  //     ()=>{
-  //         function handScroll(){
-  //             if(window.scroll > 1260){
-  //                 setHideNav(false);
-  //             }else{
-  //                 setHideNav(true);
-  //             }
-  //             console.log("scrolling " + window.scrollY)
-  //             console.log("animate " + hideNav)
-  //         }
-  //         window.addEventListener("scroll", handScroll, false);
-
-  //         return () => {
-  //             window.removeEventListener("scroll", handScroll, false)
-  //         }
-  //     }
-  // )
+  
   return (
     <Nav
       isOpen={isOpen}
-      // initial={{ opacity: 1 }}
-      // animate ={{opacity: hideNav ? 0: 1}}
-      // transition={{ opacity: { duration: 0.2 } }}
     >
       <div className='container'>
         <Menu isOpen={isOpen}>
@@ -364,7 +346,7 @@ const nav = () => {
         </Menu>
         <NavLogo>
           <Image
-            src='/assets/imgs/logo.svg'
+            src='/assets/imgs/logo2.svg'
             alt='Picture of the author'
             width={45}
             height={45}

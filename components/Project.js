@@ -13,21 +13,21 @@ const MoreProjectContainer = styled(motion.div)`
   background-color: #f8f8f8;
   background-color: ${({ theme }) => theme.moreCardBg};
   justify-content: space-between;
-  border-bottom: 1px solid #e8e8e8;
+  /* border-bottom: 1px solid #e8e8e8; */
   /* background: #f8f8f8; */
   &:hover {
     background-color: white;
     padding: 20px 80px;
     h1 {
       color: black;
-      border-radius: 91% 9% 90% 10% / 29% 82% 18% 71%;
-      background: #fe3161;
+      /* border-radius: 91% 9% 90% 10% / 29% 82% 18% 71%; */
+      /* background: #fe3161; */
     }
   }
   @media screen and (min-width: 776px) {
     width: calc( 30% - 10px);
     margin: 10px 10px;
-    border-radius: 20px;
+    border-radius: 3px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -69,19 +69,14 @@ const MoreProjectBody = styled(motion.div)`
   h1 {
     font-size: 2rem;
     text-align: center;
-    /* color: #8f8e8e; */
-    /* color: #1e2023; */
     color: white;
     padding: 1rem 1rem;
-    /* border-radius: 91% 9% 90% 10% / 29% 82% 18% 71%; */
-    /* border-radius: 11% 9% 10% 10% / 14% 21% 9% 30%; */
-    background: #1e202320;
-    box-shadow: 0 0 0 6px white, 0 0 0 8px #1e2023;
   }
   p {
     margin-top: 20px;
     font-size: 1.2rem;
     padding: 1rem 0.2rem;
+    padding-top: 0;
     letter-spacing: 0.05rem;
     text-align: left;
     color: #909090;
@@ -93,6 +88,7 @@ const MoreProjectBody = styled(motion.div)`
   .link {
     border-top: 1px solid #e8e8e8;
     border-top: 1px solid red;
+    background-color: #EA3C5C;
     width: 100%;
     flex-grow: 0.2;
     flex-basis: 0;
@@ -123,7 +119,6 @@ const MoreProjectBody = styled(motion.div)`
     }
     .link {
       border-top: none;
-      background-color: #1c1D1E;
       border-radius: 10px;
       font-size: 12px;
       padding: 2px 8px;

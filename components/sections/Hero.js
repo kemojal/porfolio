@@ -4,24 +4,7 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { useIntersection } from 'react-use';
 import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
-const textAnim = keyframes`
-    0% {
-        color: #E92945;
-        transform: translateY(0px)
-    }
-    25% {
-        opacity: 0;
-        transform: translateY(52px)
-    }
-    50% {
-        opacity: 0;
-        transform: translateY(52px)
-    }
-    100% {
-        opacity: 1
-        transform: translateY(0px)
-    }
-`;
+
 
 const spinWords = keyframes`
     10% {
@@ -120,11 +103,8 @@ const MainContainer = styled(motion.div)`
     }
     @media (min-width: 768px) {
       font-size: 1rem;
-      /* background-color: orange; */
       padding-right:  150px;
       padding-top: 1.5rem;
-      /* font-size: 1.2rem; */
-  
     }
   }
 `;
