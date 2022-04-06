@@ -29,6 +29,7 @@ export const lightTheme = {
     crimson: '#FD4270',
     darkBlobOpacity: 0,
     lightBlobOpacity: 1,
+    bgContactMe: '#f4f4f4'
 };
 
 export const darkTheme = {
@@ -63,4 +64,5 @@ export const darkTheme = {
     crimson: '#FD4270',
     darkBlobOpacity: 1,
     lightBlobOpacity: 0,
+    bgContactMe: '#1c1c1c'
 };

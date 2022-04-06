@@ -15,20 +15,22 @@ const ProjectsSection = styled(motion.section)`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  &:before {
+  overflow: hidden;
+  /* &:before {
     content: ' ';
     display: block;
     position: absolute;
-    top: -5vw;
-    left: -20px;
+    top: 0;
     width: 110vw;
-    /* height: 15vw; */
     height: 0vw;
+    height: 25px;
+    height: 117px;
+    width: 100px;
     transform: rotate(-5deg);
     border-radius: 0%;
     background-color: #c51838;
     
-  }
+  } */
   &:after {
     content: ' ';
     display: block;

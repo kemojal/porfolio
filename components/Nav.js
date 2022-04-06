@@ -79,6 +79,14 @@ const NavLogo = styled.a`
     width: 50px;
     height: 50px;
   }
+  @media (max-width: 767px) {
+    ::before {
+    content: "";
+    width: 35px;
+    height: 35px;
+    left: 3px;
+}
+  }
 `;
 const Hamburger = styled.div`
   display: none;

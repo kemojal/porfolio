@@ -123,7 +123,7 @@ const ProfileImageContainer = styled(motion.div)`
     /* background-color: orange;  */
     width: 200%;
     height: 35%;
-    transform: translate(-10%,30%);
+    transform: translate(-10%,39%);
     transition: all 0.2s ease-in-out;
     background-image:${({ theme }) => theme.bgGradient};;
     /* background-image: linear-gradient(180deg,hsla(0,0%,100%,0) 1%,#fff 37%); */
@@ -192,7 +192,7 @@ const About = ({theme}) => {
 
   return (
     <AboutSection id='about' ref={myRef}>
-      <ProfileImageContainer animate={animationName}>
+      <ProfileImageContainer>
         {/* <ScrollAnimation 
         animateIn='zoomIn' 
         duration={10}

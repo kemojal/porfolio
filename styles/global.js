@@ -6,7 +6,14 @@ export const GlobalStyles = createGlobalStyle`
   *::before {
     box-sizing: border-box;
   }
-
+  /* * {
+  outline: 1px solid #f00 !important;
+}
+* {
+  outline: 1px solid #f00 !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+} */
   body {
     align-items: center;
     background: ${({ theme }) => theme.body};

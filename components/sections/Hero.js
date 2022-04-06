@@ -36,6 +36,7 @@ const spinWords = keyframes`
 const HeroContainer = styled(motion.section)`
   position: relative;
   width: 100vw;
+  overflow-x: hidden;
 
   @media (min-width: 768px) {
     width: 60%;
@@ -236,12 +237,7 @@ const SeeMyWorkBtn = styled.a`
 
   color: ${({ theme }) => theme.btnTextColor};
   background-color: #fd4370;
-  /* background-image: linear-gradient(-90deg,#FFB800,#fd4370); */
   background-image: linear-gradient(-90deg,#ff004d,#fd4370); 
-  /* background-image: url('/imgs/Frame.png'); */
-
-/* #FF2C55,#fd4370 */
-  /* box-shadow: 0 2px 8px 0 rgb(0 34 255 / 8%), 0 2px 8px 0 rgb(0 11 80 / 12%); */
   will-change: transform;
   transition: transform 450ms;
   transition: all ease-in-out;

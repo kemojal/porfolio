@@ -268,7 +268,8 @@ a{
   color: #61DAFB
   color: red; */
   height: 38px;
-  width: 180px;
+  /* width: 180px; */
+  width: 141px;
   padding: 15px 15px;
     font-size: 14px;
     border-radius: 15px;

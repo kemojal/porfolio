@@ -20,8 +20,6 @@ const MoreProjectContainer = styled(motion.div)`
     padding: 20px 80px;
     h1 {
       color: black;
-      /* border-radius: 91% 9% 90% 10% / 29% 82% 18% 71%; */
-      /* background: #fe3161; */
     }
   }
   @media screen and (min-width: 776px) {
@@ -32,7 +30,6 @@ const MoreProjectContainer = styled(motion.div)`
     align-items: center;
     justify-content: center;
     padding: 20px 15px;
-    /* background: orange; */
     
     &:hover {
     background-color: white;
@@ -52,7 +49,6 @@ const MoreProjectNum = styled(motion.div)`
   opacity: 0.5;
 
   span {
-    /* background: #fe3161; */
     padding: 0.2rem 0.5rem;
     border-radius: 91% 9% 90% 10% / 29% 82% 18% 71%;
     background: #fd316150;
@@ -107,15 +103,12 @@ const MoreProjectBody = styled(motion.div)`
     h1 {
       font-size: 1rem;
       text-align: left;
-      /* color: #8f8e8e; */
       padding: 0.5rem 0.5rem;
       font-size: 1.5rem;
     text-align: center;
     color: ${({ theme }) => theme.text};;
-    /* color: #8f8e8e; */
     padding: 0.8rem 0rem;
     max-width: 180px;
-      /* width: 100%; */
     }
     .link {
       border-top: none;

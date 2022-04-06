@@ -10,10 +10,12 @@ const ContactContainer = styled(motion.section)`
   padding-bottom: 8rem;
   /* background: #3758F9; */
   /* background: rgb(0, 76, 63); */
-  background-color: #fd4370;
+  /* background-color: #fd4370;
     background-image: linear-gradient(
 -90deg
-,#ff004d,#fd4370);
+,#ff004d,#fd4370); */
+
+background-color: ${({ theme }) => theme.bgContactMe};;
 
 
   /* margin-top: 0px; */
@@ -34,7 +36,8 @@ const TextContainer = styled(motion.div)`
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  color: white;
+  /* color: white; */
+  color: ${({ theme }) => theme.text};
   @media (min-width: 768px) {
     padding: 5rem 0;
   }
@@ -48,7 +51,8 @@ const TextContainer = styled(motion.div)`
       border-radius: 91% 9% 90% 10% / 29% 82% 18% 71%;
       /* background: #FE3161; */
       background: white;
-      color: rgb(0, 76, 63);
+      color: ${({ theme }) => theme.crimson};
+      /* color: rgb(0, 76, 63); */
       padding: 0.25rem 0.5rem;
     }
     @media (min-width: 768px) {
@@ -63,7 +67,8 @@ const TextContainer = styled(motion.div)`
     font-size: 1.2rem;
     text-align: center;
     padding: 0.1rem 2rem;
-    color: white;
+    /* color: white; */
+    color: ${({ theme }) => theme.text};
     font-weight: 300;
     line-height: 2.2rem;
   }
@@ -78,7 +83,7 @@ const TextContainer = styled(motion.div)`
   }
 
   /* the circle */
-  &:after{
+  /* &:after{
     content: '';
     position: absolute;
     top: -25px;
@@ -86,11 +91,10 @@ const TextContainer = styled(motion.div)`
     right: 0;
     height: 50px;
     border-radius: 40%;
-    /* background: rgb(0, 76, 63); */
     background-color: #fd4370;
     background-image: linear-gradient(
 -90deg
-,#ff004d,#fd4370);
+,#ff004d,#fd4370); */
 @media (min-width: 768px) {
   display: none;
 }

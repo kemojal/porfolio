@@ -8,11 +8,21 @@ import { OthersData } from '../../utils/Data'
 const MoreProjectsContainer = styled.section`
 width: 100vw;
 margin-top: 60px;
-/* background:  orange; */
 display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
+position: relative;
+    /* margin-bottom: 40px; */
+    /* &:before { 
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    height: 200px;   
+    background-color: ${({ theme }) => theme.bgService};
+ } */
 
 /* @media screen and (min-width: 776px) {
 margin-top: 0px;
@@ -21,12 +31,15 @@ margin-top: 0px;
 
 const Wrapper  = styled.div`
     margin-top: 40px;
-    width: 100%;
+    /* width: 100%; */
     background-color: ${({ theme }) => theme.lightShadeBg};
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-bottom: 50px;
+    border-radius: 12px;
+    
 `
 
 const MoreProjectDiv = styled.div`
