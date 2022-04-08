@@ -16,6 +16,7 @@ export const lightTheme = {
 
   bgGradient: 'linear-gradient(180deg, hsla(0,0%,100%,0) 1%,#fff 37%)',
   bgService: 'white',
+  bgServiceIcons: '#fe155414',
   lightShadeBg: '#25252510',
   moreCardBg: 'white',
   socialIconBg: 'rgba(0,0,0,0.2)',
@@ -30,6 +31,7 @@ export const lightTheme = {
     darkBlobOpacity: 0,
     lightBlobOpacity: 1,
     bgContactMe: '#f4f4f4'
+  
 };
 
 export const darkTheme = {
@@ -51,6 +53,7 @@ export const darkTheme = {
   bgGradient: 'linear-gradient(180deg ,rgba(18,18,18,0) 1%,#1E2023 37%)',
 
   bgService: '#121212',
+  bgServiceIcons: '#fe155457',
   lightShadeBg: '#ffffff03',
   moreCardBg: '#ffffff12',
   socialIconBg: 'rgba(255,255,255,0.1)',
