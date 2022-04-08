@@ -53,7 +53,7 @@ const AboutSection = styled(motion.section)`
     top: 0;
     bottom: 0;
     right: 0px;
-    position: absolute;
+    /* position: absolute; */
    
    box-shadow: none;
    border-radius: 0px;
