@@ -5,24 +5,10 @@ import { useIntersection } from 'react-use';
 
 const ContactContainer = styled(motion.section)`
   width: 100vw;
-  /* background-color: #e33140; */
   color: white;
   padding-bottom: 8rem;
-  /* background: #3758F9; */
-  /* background: rgb(0, 76, 63); */
-  /* background-color: #fd4370;
-    background-image: linear-gradient(
--90deg
-,#ff004d,#fd4370); */
 
-background-color: ${({ theme }) => theme.bgContactMe};;
-
-
-  /* margin-top: 0px; */
-  /* background: radial-gradient(circle at 50% 50%,#ff0037, #ff4870, rgba(255,144,168,1)); */
-
-
-
+background-color: ${({ theme }) => theme.bgContactMe};
 
   @media (min-width: 1025px) {
     padding-bottom: 10rem;
@@ -82,22 +68,7 @@ const TextContainer = styled(motion.div)`
     }
   }
 
-  /* the circle */
-  /* &:after{
-    content: '';
-    position: absolute;
-    top: -25px;
-    left: 0;
-    right: 0;
-    height: 50px;
-    border-radius: 40%;
-    background-color: #fd4370;
-    background-image: linear-gradient(
--90deg
-,#ff004d,#fd4370); */
-@media (min-width: 768px) {
-  /* display: none; */
-}
+
   }
   &:before {
     content: '';
