@@ -85,10 +85,12 @@ const MoreProjectBody = styled(motion.div)`
     border-top: 1px solid #e8e8e8;
     border-top: 1px solid red;
     background-color: #EA3C5C;
+    box-shadow: ${({ theme }) => theme.btnBoxShadow};
     width: 100%;
     flex-grow: 0.2;
     flex-basis: 0;
     a {
+      
       width: 100%;
       height: 100%;
       display: flex;

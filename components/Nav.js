@@ -228,6 +228,7 @@ const MenuLink = styled.a`
       @media (min-width: 768px) {
         color: #000;
         opacity: 1;
+        
       }
     }
   }
@@ -252,6 +253,7 @@ const MenuLink = styled.a`
 
     @media (min-width: 768px) {
       font-size: 1rem;
+      display: none;
     }
   }
   .s-name {

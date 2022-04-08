@@ -14,8 +14,9 @@ import DoodleBG from './../svg/DoodleBG';
 const AboutSection = styled(motion.section)`
   position: relative;
   
-  width: 100vw;
-  height: 100vw;
+  width: 90vw;
+  height: 90vw;
+  transform: translateX(5vw);
  
   padding-top: 6rem;
   
@@ -92,7 +93,6 @@ const ProfileImageContainer = styled(motion.div)`
   margin-left: 0px;
   margin-top: 0px;
   z-index: 50;
-  /*background-color :#ffda2905; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -110,6 +110,12 @@ const ProfileImageContainer = styled(motion.div)`
   background-color: #0000000f;;
   background-color: transparent;
   padding-bottom: 25px;
+  background-color: red;
+  background: rgb(255,255,255);
+background: radial-gradient(circle, rgba(255,255,255,0.055081407563025264) 0%, rgba(255,255,255,0) 100%);
+box-shadow: ${({ theme }) => theme.btnBoxShadow};
+  position: relative;
+  /* overflow: hidden; */
 
   &:after { 
     content: "";
@@ -121,10 +127,14 @@ const ProfileImageContainer = styled(motion.div)`
     border-bottom-left-radius: 250%;
     border-bottom-right-radius: 250%;  
     /* background-color: orange;  */
-    width: 200%;
+    /* width: 100%; */
+    /* width: 70%; */
     height: 35%;
-    transform: translate(-10%,39%);
-    transition: all 0.2s ease-in-out;
+    width: 90%;
+    /* transform: translate(-10%,39%); */
+    /* transform: translate(20%,39%); */
+    transform: translate(5%,40%);
+    transition: all 0s ease-in-out;
     background-image:${({ theme }) => theme.bgGradient};;
     /* background-image: linear-gradient(180deg,hsla(0,0%,100%,0) 1%,#fff 37%); */
 
@@ -143,12 +153,12 @@ const ProfileImageContainer = styled(motion.div)`
  top: 0; */
   img {
     width: 100%;
-    width: 120%;
+    width: 100%;
     @media (min-width: 768px) {
       width: 100%;
     }
   }
-  &:before {
+  /* &:before {
     content: '';
     background: url(/assets/imgs/blob.svg) no-repeat center center;
     background-size: 100% 100%;
@@ -165,6 +175,14 @@ const ProfileImageContainer = styled(motion.div)`
     position: absolute;
     z-index: -1;
     transform: translate(-10%, -15%);
+  } */
+
+  @media (min-width: 768px) {
+  
+     &:after { 
+     width: 70%;
+     transform: translate(20%,39%);
+  } 
   }
 `;
 const About = ({theme}) => {

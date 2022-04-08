@@ -29,6 +29,7 @@ const Card = styled(motion.div)`
   box-shadow: 2px 2px 8px rgb(0 0 0 / 12%);
   border-radius: 5px;
   /* border: 3px solid transparent; */
+  box-shadow: ${({ theme }) => theme.btnBoxShadow};
   &:hover{
     height: auto;
     /* border: 3px solid #CC2553; */
@@ -38,11 +39,11 @@ const Card = styled(motion.div)`
       color: black;
     }
     .proj__title {
-      background-color: black;
-      color: #FE3161;
-      box-shadow:
+      background-color: #00000010;
+      color: white;
+      /* box-shadow:
     0 0 0 4px white,
-    0 0 0 6px black;
+    0 0 0 6px black; */
     }
 
   }
@@ -224,14 +225,15 @@ padding-top: 20px;
 .proj__title {
     /* padding: 10px 0; */
     /* border-radius: 91% 9% 90% 10% / 29% 82% 18% 71%; */
-    background: #FE3161;
+    background: #FFFFFF10;
+    
     color: #FFFFFF;
     color: ${({ theme }) => theme.text};
   -webkit-background-clip: inherit;
   -webkit-text-fill-color: inherit;
-    box-shadow:
+    /* box-shadow:
     0 0 0 4px white,
-    0 0 0 6px #FE3161;
+    0 0 0 6px #FE3161; */
     position: relative;
     font-size: 1.2rem;
     line-height: 2rem;

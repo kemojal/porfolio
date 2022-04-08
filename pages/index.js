@@ -118,9 +118,8 @@ export default function Home() {
         </Head>
 
         <main className={styles.main}>
-          <Combined>
             {/* {isMobile ? <BgPatternsMobile /> : <BgPatternsDesktop />} */}
-
+          <Combined>
             <Hero />
             <About theme={theme}/>
           </Combined>
@@ -132,7 +131,7 @@ export default function Home() {
           <Settings theme={theme} toggleTheme={themeToggler} />
           <Nav />
         </main>
-        <Mouse />
+        {/* <Mouse /> */}
         <footer className={styles.footer}>
           <p className={styles.footerText}>©2021 Kemo Jallow. All rights reserved
           </p>
@@ -141,7 +140,7 @@ export default function Home() {
             <div>Project</div>
             <div>Contact</div>
           </div>
-          {/* <Wave /> */}
+          
         </footer>
       </AppContainer>
     </ThemeProvider>

@@ -36,7 +36,7 @@ const spinWords = keyframes`
 const HeroContainer = styled(motion.section)`
   position: relative;
   width: 100vw;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 
   @media (min-width: 768px) {
     width: 60%;

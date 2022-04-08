@@ -61,6 +61,7 @@ const ServicesContainer = styled.section`
     justify-content: center;
     /* background-color: #fe155457; */
     background-color: ${({ theme }) => theme.bgServiceIcons};
+    box-shadow: ${({ theme }) => theme.btnBoxShadow};
 
  }
  .relative-icon{
