@@ -96,7 +96,7 @@ const TextContainer = styled(motion.div)`
 -90deg
 ,#ff004d,#fd4370); */
 @media (min-width: 768px) {
-  display: none;
+  /* display: none; */
 }
   }
   &:before {
