@@ -156,6 +156,7 @@ const SectionTitle = ({ title }) => {
       <h1>
       <span className="white">{words[0]}</span>
       <span className="orange">{ words[1]}</span>
+       {words[2] && <span className="white">{ words[2]}</span>}
       </h1>
       <span class="behind-text">WORKS</span>
       {/* <Line /> */}

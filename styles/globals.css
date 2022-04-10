@@ -129,6 +129,7 @@ html,
 body,
 #__next {
   height: 100%;
+  overflow: scroll;
 }
 
 body {
@@ -136,6 +137,13 @@ body {
   /* padding-top: 7.5rem; */
   background-color: var(--bgLight);
   overflow-x: hidden;
+}
+body {
+  position: fixed;
+  overflow-y: scroll;
+  padding: 0;
+  margin: 0;
+  width: 100%;
 }
 .red {
   color: #f9ca24;

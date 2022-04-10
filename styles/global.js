@@ -27,13 +27,13 @@ export const GlobalStyles = createGlobalStyle`
     font-family: BlinkMacSystemFont, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     transition: all 0.25s linear;
   }
-  /* body {
+  body {
   position: fixed;
   overflow-y: scroll;
   padding: 0;
   margin: 0;
   width: 100%;
-} */
+}
   ::-webkit-scrollbar {
   width: 5px;
 }
@@ -55,5 +55,6 @@ export const GlobalStyles = createGlobalStyle`
   background: #b30000;
 }
   `;
+
 
 
