@@ -48,6 +48,15 @@ max-width: 1100px;
     padding: 20px 0;
     width: 100%;
     flex-wrap: wrap;
+    position: relative;
+}
+.tool-gradient-overlay {
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#121212), color-stop(18%, rgba(18, 18, 18, 0)), color-stop(83%, rgba(18, 18, 18, 0)), to(#121212));
+    background-image: linear-gradient(180deg, #121212, rgba(18, 18, 18, 0) 18%, rgba(18, 18, 18, 0) 83%, #121212);
 }
 svg{
     transform: scale(1.5);
@@ -74,6 +83,7 @@ const Skills = () => {
        
        <SectionTitle  title={`Skills & Tools`}/>
         <div className="tool-container">
+            
             <CssIcon/>
             <Github/>
             <BehanceIcon/>
@@ -94,6 +104,7 @@ const Skills = () => {
             <TailwindIcon/>
             <Vscode/>
             <VueIcon/>
+            {/* <div className="tool-gradient-overlay"></div> */}
         </div>
         </div>
     </SkillContainer>

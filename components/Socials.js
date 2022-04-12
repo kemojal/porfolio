@@ -6,14 +6,25 @@ import Image from 'next/image';
 // /assets/imgs/blob.svg
 const SocialContainer  = styled.div`
     /* display: none; */
+    display: flex;
+    position: fixed;
+    z-index: 1000;
+    height: 25vh;
+        bottom: 5px;
+        left: 5px;
+    justify-content: center;
+    align-items: center;
+    /* background-color: rgba(255, 255, 255, 0.72); */
+  /* background-color: ${({ theme }) => theme.bgNav}; */
+  /* box-shadow: inset 0px -1px 1px ${({ theme }) => theme.navShadowColor} !important;  */
+    border-radius: 10px;
+    transition: top 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+
     
     @media (min-width: 768px) {
-        position: fixed;
         height: 100vh;
-        z-index: 1000;
         top: 0;
         left: 0px;
-        display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
@@ -22,15 +33,22 @@ const SocialContainer  = styled.div`
     }
 `
 const Icons  = styled.div`
+ display: flex;
+ color: black;
+ justify-content: space-between;
+    align-items: center;
     width: 50px;
+    flex-direction: column;
+    height: 80%;
+@media (min-width: 768px) {
+    
     padding: 20px 0;
     height: 40%;
-    display: flex;
     flex-direction: column;
-    color: black;
-    justify-content: space-between;
-    align-items: center;
     cursor: pointer;
+
+}
+   
     &:before {
             content: '';
             height: 100vh;
@@ -67,6 +85,12 @@ const Icon = styled.div`
             padding: 4px;
             opacity: 0.8;
             cursor: pointer;
+            @media (max-width: 767px) {
+                width: 25px;
+            height: 25px;
+            box-shadow: ${({ theme }) => theme.btnBoxShadow};
+            border-width: 1px;
+            }
             &:hover{
                 opacity: 1;
                 padding-bottom: 10px;
