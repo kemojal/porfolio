@@ -55,7 +55,9 @@ const ProjectsSection = styled(motion.section)`
 
   .see-more-btn{
     margin-top: 10px;
-    height: 38px;
+    /* height: 38px; */
+    width: 90%;
+    max-width: 370px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -65,10 +67,10 @@ const ProjectsSection = styled(motion.section)`
     border-radius: 15px;
     border: none;
     box-shadow: 0 0 0 5px #00000010, 0 0 0 10px #00000005, 0 0 0 20px #00000001;
-    border-radius: 30px;
+    border-radius: 3px;
     color: #ffffff90;
-    background-color: #fd4370;
-    background-image: linear-gradient(-90deg,#ff004d,#fd4370);
+    background-color: #313131;
+    /* background-image: linear-gradient(-90deg,#ff004d,#fd4370); */
   }
   
   @media (min-width: 768px) {
