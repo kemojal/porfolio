@@ -211,6 +211,7 @@ const Contact = () => {
         <SeeMyWorkBtn href='mailto:kemo3855@yahoo.com' animate={animationName}>
           <Circle />
           <p>Let's chat</p>
+          
         </SeeMyWorkBtn>
       </ActionBTContainer>
     </ContactContainer>
