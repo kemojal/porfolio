@@ -70,6 +70,7 @@
   font-family: 'Inter', sans-serif;
   transition: all 0.2s;
   position: relative;
+  scroll-behavior: smooth;
 }
 *::-webkit-scrollbar {
   display: none;

@@ -346,7 +346,8 @@ const ProjectCard = ({
           <a href='githubLink' className='proj__button'>
           Read more...
           <Circle>
-          <img src='/assets/imgs/arrow_forward.svg' />
+          <span>👉</span>
+          {/* <img src='/assets/imgs/arrow_forward.svg' /> */}
         </Circle>
           </a>
         </SliderContent>

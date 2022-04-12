@@ -52,6 +52,24 @@ const ProjectsSection = styled(motion.section)`
     );
    
   }
+
+  .see-more-btn{
+    margin-top: 10px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  /* width: 141px; */
+  padding: 15px 15px;
+    font-size: 14px;
+    border-radius: 15px;
+    border: none;
+    box-shadow: 0 0 0 5px #00000010, 0 0 0 10px #00000005, 0 0 0 20px #00000001;
+    border-radius: 30px;
+    color: #ffffff90;
+    background-color: #fd4370;
+    background-image: linear-gradient(-90deg,#ff004d,#fd4370);
+  }
   
   @media (min-width: 768px) {
     margin-top: -150px;
@@ -87,17 +105,26 @@ const ProjContainer = styled.div`
 `
 const MyProjects = () => {
   const [featureProjects, setFeaturedProjects] = useState([]);
+  const [n, setNested] = useState(3);
+
+  const toggleSeeMore = () => {
+    if( n < Data.length ){
+      setNested(Data.length );
+    }else{
+        setNested(3 );
+    }
+  }
 
   return (
       <ProjectsSection id='projects'>
           <SectionTitle title={'My work'} />
       <Spacer />
       <ProjContainer>
-        {Data.slice(0,3).map((p, i) => (
+        {Data.slice(0,n).map((p, i) => (
           <ProjectCard key={i} {...p} />
         ))}
       </ProjContainer>
-      <button className="see-more-btn">See More </button>
+      <button className="see-more-btn" onClick={toggleSeeMore}>See { n < Data.length ? 'More' : 'Less'} Projects</button>
     </ProjectsSection>
   );
 };

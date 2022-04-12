@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 // /assets/imgs/blob.svg
 const SocialContainer  = styled.div`
-    display: none;
+    /* display: none; */
     
     @media (min-width: 768px) {
         position: fixed;

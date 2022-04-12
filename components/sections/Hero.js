@@ -8,27 +8,34 @@ import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
 
 const spinWords = keyframes`
     10% {
-      color: #FD4270;
+      /* background-color: #fd4370; */
+      
+      /* color: #FD4270; */
       transform: translateY(-100%) 
     }
     20% {
-      color: #FD4270;
+      /* background-color: #fd4370; */
+      /* color: #FD4270; */
       transform: translateY(-100%) 
     }
     40% {
-      color: white;
+      /* background-color: #fd4370; */
+      /* color: white; */
       transform: translateY(-200%)
     }
     60% {
-      color: white;
+      /* background-color: #fd4370; */
+      /* color: white; */
       transform: translateY(-200%)
     }
     80% {
-      color: #61DAFB;
+      /* background-color: #fd4370; */
+      /* color: #61DAFB; */
       transform: translateY(0%) 
     }
     100% {
-      color: #61DAFB;
+      /* background-color: #fd4370; */
+      /* color: #61DAFB; */
         transform: translateY(0%) 
     }
 `;
@@ -162,13 +169,17 @@ const Phrase = styled(motion.h1)`
 
   .words {
     overflow: hidden;
-    color: yellow;
+    /* color: yellow; */
     height: 100%;
     margin-left: 10px;
+    padding: 0 10px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    background-color: #fd4370;
     /* border: 1px solid red; */
   }
   @media (min-width: 320px) {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     height: 2.4rem;
     padding: 10px 0;
     padding-top: 30px;
@@ -208,6 +219,7 @@ const AnimatedWord = styled.span`
   animation-duration: 6s;
   animation-delay: 0s;
   animation-iteration-count: infinite;
+  color:  white;
   /* transition: ease-in; */
 `;
 const SeeMyWorkBtn = styled.a`
@@ -340,7 +352,7 @@ const Hero = () => {
   return (
     <HeroContainer ref={myRef}>
       <MainContainer animate={animationName}>
-        <p>Hey, I'm</p>
+        <p>Hey, I'm 👋</p>
         <DeveloperName
           initial={fadeOut}
           animate={fadeIn}
@@ -394,10 +406,12 @@ const Hero = () => {
       </MainContainer>
 
       <SeeMyWorkBtn href='#projects'>
+       
         <Circle />
         <p>See my work</p>
         <Circle>
-          <img src='/assets/imgs/arrow_forward.svg' />
+          {/* <img src='/assets/imgs/arrow_forward.svg' /> */}
+          <span>👉</span>
         </Circle>
       </SeeMyWorkBtn>
     </HeroContainer>
