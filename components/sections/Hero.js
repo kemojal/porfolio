@@ -254,6 +254,9 @@ const SeeMyWorkBtn = styled.a`
   transition: transform 450ms;
   transition: all ease-in-out;
   z-index: 1000;
+  span{
+    font-size: 25px;
+  }
   p {
     z-index: 10;
   }

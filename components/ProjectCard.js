@@ -265,6 +265,9 @@ padding-top: 20px;
     text-overflow: ellipsis;
   }
 }
+.emoji{
+    font-size: 20px;
+  }
 a{
   /* background: #61DAFB47;
   color: #61DAFB
@@ -346,7 +349,7 @@ const ProjectCard = ({
           <a href='githubLink' className='proj__button'>
           Read more...
           <Circle>
-          <span>👉</span>
+          <span className='emoji'>👉</span>
           {/* <img src='/assets/imgs/arrow_forward.svg' /> */}
         </Circle>
           </a>
