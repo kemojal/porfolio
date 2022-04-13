@@ -74,6 +74,8 @@ export default function Home() {
     setWidth(window.innerWidth);
   }
 
+  const [scrollPRounded, setScrollPRounded] = useState();
+
   useEffect(() => {
     setWidth(window.innerWidth);
     const touchstart = () => {
@@ -95,6 +97,16 @@ export default function Home() {
     return () => {
       window.removeEventListener('resize', handleWindowSizeChange);
     };
+
+    //scroll progress bar
+    window.onscroll = () => {
+      let scrollTop = window.scrollY;
+      let docHeight = document.body.offsetHeight;
+      let winHeight = window.innerHeight;
+      let scrollPercent = scrollTop / (docHeight - winHeight);
+      let scrollPercentRounded = Math.round(scrollPercent * 100);
+      setScrollPRounded(scrollPercentRounded);
+    };
   }, []);
 
   let isMobile = width <= 768;
@@ -103,12 +115,20 @@ export default function Home() {
       <GlobalStyles/>
       <AppContainer fade={fade}>
         <Head>
-          <title>Kemo Jallow</title>
+          <title>Kemo Jallow - A Full Stack Developer</title>
           <meta
             name='viewport'
             content='width=device-width, initial-scale=1.0'
           />
-          <meta name='description' content='I am kemo' />
+          <meta name='description' content='I’m a Taiwan-based Software engineer who specializes in building web
+  and mobile apps (and occasionally designing) exceptional digital
+    experiences. Currently, working at home and social distancing.' />
+
+<meta content="Kemo Jallow - A Full Stack Developer" property="og:title"/>
+<meta name="og:url" content="https://kemojallow-one.vercel.app/"/>
+<meta content="description' content='I’m a Taiwan-based Software engineer who specializes in building web
+  and mobile apps (and occasionally designing) exceptional digital
+    experiences. Currently, working at home and social distancing."></meta>
           <meta name="theme-color" 
       content="#ecd96f" 
       media="(prefers-color-scheme: light)"/>
@@ -133,6 +153,12 @@ export default function Home() {
           <Socials />
           <Settings theme={theme} toggleTheme={themeToggler} />
           <Nav />
+          {/* <div
+        className="pb"
+        style={{
+          background: `linear-gradient(to right, #498 ${scrollPRounded}%, #eee ${scrollPRounded}%)`
+        }}
+      ></div> */}
         </main>
         {/* <Mouse /> */}
         <footer className={styles.footer}>

@@ -196,3 +196,12 @@ body {
   background: #b30000;
 }
 
+
+.pb {
+  position: fixed;
+  top: 80px;
+  height: 5px;
+  width: 100%;
+  z-index: 100;
+  background: #ddd;
+}
