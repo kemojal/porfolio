@@ -20,6 +20,7 @@ import Settings from '../components/Settings';
 import Mouse from '../components/Mouse';
 import Wave from '../components/svg/Wave';
 import Skills from '../components/sections/Skills';
+import ChatButton from '../components/ChatButton';
 // import BgPatternsMobile from '../components/svg/BgPatternsMobile.js';
 // import BgPatternsDesktop from '../components/svg/BgPatternsDesktop.js';
 
@@ -159,6 +160,7 @@ export default function Home() {
           background: `linear-gradient(to right, #498 ${scrollPRounded}%, #eee ${scrollPRounded}%)`
         }}
       ></div> */}
+      <ChatButton/>
         </main>
         {/* <Mouse /> */}
         <footer className={styles.footer}>

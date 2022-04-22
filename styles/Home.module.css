@@ -43,14 +43,15 @@
   /* background-color: #E33140; */
   /* background-color: #fd4270; */
   /* background: radial-gradient(circle at 50% 50%,rgb(247 79 115),#ff4870,rgba(255,144,168,1)); */
-  background-color:  black;
+  /* background-color:  black; */
+  /* background-color: ${({ theme }) => theme.bgContactMe}; */
   padding: 20px 0;
   color: white;
   position: relative;
   z-index: 100;
 }
 .footerNav{
-  width: 100vwd;
+  width: 100vw;
   gap: 15px;
   justify-content: center;
   align-items: center;
@@ -185,9 +186,9 @@
   .footer {
     background-color: transparent;
     position: relative;
-    background-color: #E33140;
-    background-color: #fd4270;
-    background-color: black;
+    /* background-color: #E33140;
+    background-color: #fd4270; */
+    
     /* background: radial-gradient(circle at 50% 50%,rgb(247 79 115),#ff4870,rgba(255,144,168,1)); */
 
   }
