@@ -1,5 +1,5 @@
 import '../styles/globals.css'
-
+import '../styles/variables.css'
 
 import { ThemeProvider } from 'styled-components';
 import { lightTheme, darkTheme } from './../styles/theme';

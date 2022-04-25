@@ -346,6 +346,10 @@ const nav = () => {
               <span className='number'>03.</span>
               <span className='s-name'>Contact</span>
             </MenuLink>
+            <MenuLink href='/blogs' isOpen={isOpen} index={1} onClick={onClick}>
+              <span className='number'>03.</span>
+              <span className='s-name'>Blogs</span>
+            </MenuLink>
             <SayHelloMenu>
               <h3>Say Hello </h3>
               <a href="youtu.be/z3vusUCorz0">youtube/kemojallow</a>
