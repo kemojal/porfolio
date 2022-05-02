@@ -12,27 +12,6 @@ const LayoutContainer = styled.div`
   align-items: center;
   background-color: red;
 
-  /* .bg-gradient {
-    background: radial-gradient(
-        at 83% 25%,
-        var(--color-gradient-1) 0,
-        transparent 21%
-      ),
-      radial-gradient(at 36% 47%, var(--color-gradient-3) 0, transparent 50%),
-      radial-gradient(at 79% 45%, var(--color-gradient-3) 0, transparent 28%),
-      radial-gradient(at 66% 38%, var(--color-gradient-1) 0, transparent 53%),
-      radial-gradient(at 89% 13%, var(--color-gradient-2) 0, transparent 54%),
-      radial-gradient(at 24% 7%, var(--color-gradient-2) 0, transparent 40%),
-      radial-gradient(at 76% 46%, var(--color-gradient-1) 0, transparent 50%);
-
-    height: 600px;
-    max-width: 900px;
-    filter: blur(44px);
-    z-index: 0;
-    opacity: 0.8;
-    position: absolute;
-    top: 100px;
-  } */
   .container {
     width: 100%;
     min-height: 100vh;
