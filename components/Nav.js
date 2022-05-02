@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 
-const Nav= styled(motion.nav)`
+const Nav = styled(motion.nav)`
   position: fixed !important;
   padding: 0rem 2rem;
   width: 100vw;
@@ -21,23 +21,23 @@ const Nav= styled(motion.nav)`
 
   background-color: ${({ isOpen }) =>
     isOpen ? '#E33140' : `${({ theme }) => theme.bgNav}`};
-    background-color: ${({ theme }) => theme.bgNav};
+  background-color: ${({ theme }) => theme.bgNav};
   /* backdrop-filter: blur(20px); */
-  box-shadow: inset 0px -1px 1px ${({ theme }) => theme.navShadowColor} !important; 
+  box-shadow: inset 0px -1px 1px ${({ theme }) => theme.navShadowColor} !important;
   /* box-shadow: ${({ theme }) => theme.navShadowColor} !important; */
   transition: top 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 
   .container {
-      display: flex;
-      width: 100%;
-      height: 100%;
-      position: relative;
-      justify-content: space-between;
-      align-items: center;
-      width: 100%;
-      height: 100%;
-      max-width: 1200px;
-    }
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    max-width: 1200px;
+  }
   @media (min-width: 768px) {
     background-color: ${({ theme }) => theme.bgNav};
     backdrop-filter: blur(20px);
@@ -49,14 +49,14 @@ const Nav= styled(motion.nav)`
     }
   }
 `;
-const FluidContainer  = styled.div`
+const FluidContainer = styled.div`
   width: 100vw;
   @media (min-width: 768px) {
     background-color: ${({ theme }) => theme.bgNav};
     backdrop-filter: blur(20px);
-    max-width: 1200px;;
+    max-width: 1200px;
   }
-`
+`;
 const NavLogo = styled.a`
   padding: 1rem 0;
   padding: 0.5rem 0;
@@ -72,7 +72,7 @@ const NavLogo = styled.a`
     font-weight: 300;
     font-size: 1.3rem;
   }
-  &:before{
+  &:before {
     content: '';
     position: absolute;
     background: ${({ theme }) => theme.bgNavLogo};
@@ -81,11 +81,11 @@ const NavLogo = styled.a`
   }
   @media (max-width: 767px) {
     ::before {
-    content: "";
-    width: 35px;
-    height: 35px;
-    left: 3px;
-}
+      content: '';
+      width: 35px;
+      height: 35px;
+      left: 3px;
+    }
   }
 `;
 const Hamburger = styled.div`
@@ -103,13 +103,11 @@ const Hamburger = styled.div`
   box-shadow: 0 2px 4px 0 rgb(136 144 195 / 20%),
     0 5px 15px 0 rgb(37 44 97 / 15%);
 
-    box-shadow: 0 0 0 5px #ffffff10, 0 0 0 10px #ffffff05, 0 0 0 20px #ffffff01;
+  box-shadow: 0 0 0 5px #ffffff10, 0 0 0 10px #ffffff05, 0 0 0 20px #ffffff01;
 
-    width: 32px;
-    height: 32px;
-    border-radius: 10px;
-    
-
+  width: 32px;
+  height: 32px;
+  border-radius: 10px;
 
   div {
     position: relative;
@@ -130,7 +128,7 @@ const Hamburger = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid rgb(229,232,236);
+    border: 1px solid rgb(229, 232, 236);
   }
   .first {
     top: ${({ isOpen }) => (isOpen ? '8px' : '0')};
@@ -156,7 +154,6 @@ const Menu = styled.div`
   height: 100%;
   top: 0;
   right: 0;
-  
 
   @media (max-width: 768px) {
     overflow: hidden;
@@ -165,7 +162,7 @@ const Menu = styled.div`
     background-color: #212325;
     background-color: ${({ theme }) => theme.NavModalBgColor};
     backdrop-filter: blur(20px);
-  box-shadow: inset 0px -1px 1px ${({ theme }) => theme.navShadowColor};
+    box-shadow: inset 0px -1px 1px ${({ theme }) => theme.navShadowColor};
     color: white;
     position: absolute;
     top: 5rem;
@@ -183,8 +180,6 @@ const Menu = styled.div`
     opacity: ${({ isOpen }) => (isOpen ? '1' : '1')};
 
     box-shadow: ${({ theme }) => theme.NavModalShadow};
-
-    
   }
   @media (min-width: 768px) {
     width: 50%;
@@ -228,7 +223,6 @@ const MenuLink = styled.a`
       @media (min-width: 768px) {
         color: #000;
         opacity: 1;
-        
       }
     }
   }
@@ -236,8 +230,7 @@ const MenuLink = styled.a`
     padding-left: 0.2rem;
   }
   .number {
-   
-     color: #222;
+    color: #222;
     color: ${({ theme }) => theme.crimson};
     opacity: 0.4;
     font-size: 3rem;
@@ -246,7 +239,7 @@ const MenuLink = styled.a`
     transition-delay: 0.2s;
     color: rgb(32, 38, 45);
 
-     color: ${({ theme }) => theme.text};
+    color: ${({ theme }) => theme.text};
     font-size: 1rem;
     line-height: 1.5;
     letter-spacing: 0px;
@@ -258,17 +251,17 @@ const MenuLink = styled.a`
   }
   .s-name {
     font-size: 3.1rem;
-    
+
     margin-top: ${({ isOpen, index }) => (isOpen ? '0' : '100vw ')};
     transition-delay: 0.25s;
 
     /* color: rgb(32, 38, 45); */
     color: ${({ theme }) => theme.text};
-    font-size: 1rem;
+    font-size: 0.875rem;
     line-height: 1.5;
     letter-spacing: 0px;
     @media (min-width: 768px) {
-      font-size: 1rem;
+      /* font-size: 1rem; */
       color: ${({ theme }) => theme.text};
     }
   }
@@ -305,50 +298,52 @@ const SayHelloMenu = styled.div`
     font-weight: 500;
     font-size: 18px;
     line-height: 25px;
-}
-p{
-  padding: 4px 0;
-  font-size: 1rem;
-  color: #000000a3;
-}
+  }
+  p {
+    padding: 4px 0;
+    font-size: 1rem;
+    color: #000000a3;
+  }
   @media (min-width: 768px) {
     display: none;
   }
-`
+`;
 const nav = () => {
   const [isOpen, setIsOpen] = useState(false);
   const onClick = () => setIsOpen(!isOpen);
 
-  
   return (
-    <Nav
-      isOpen={isOpen}
-    >
-      <div className='container'>
+    <Nav isOpen={isOpen}>
+      <div className="container">
         <Menu isOpen={isOpen}>
           <MenuTitleBody>
-            <MenuLink href='#about' isOpen={isOpen} index={1} onClick={onClick}>
-              <span className='number' isOpen={isOpen}>
+            <MenuLink href="#about" isOpen={isOpen} index={1} onClick={onClick}>
+              <span className="number" isOpen={isOpen}>
                 01.
               </span>
-              <span className='s-name'>About</span>
+              <span className="s-name">About</span>
             </MenuLink>
             <MenuLink
-              href='#projects'
+              href="#projects"
               isOpen={isOpen}
               index={1}
               onClick={onClick}
             >
-              <span className='number'>02.</span>
-              <span className='s-name'>Projects</span>
+              <span className="number">02.</span>
+              <span className="s-name">Projects</span>
             </MenuLink>
-            <MenuLink href='#contact' isOpen={isOpen} index={1} onClick={onClick}>
-              <span className='number'>03.</span>
-              <span className='s-name'>Contact</span>
+            <MenuLink
+              href="#contact"
+              isOpen={isOpen}
+              index={1}
+              onClick={onClick}
+            >
+              <span className="number">03.</span>
+              <span className="s-name">Contact</span>
             </MenuLink>
-            <MenuLink href='/blogs' isOpen={isOpen} index={1} onClick={onClick}>
-              <span className='number'>03.</span>
-              <span className='s-name'>Blogs</span>
+            <MenuLink href="/blogs" isOpen={isOpen} index={1} onClick={onClick}>
+              <span className="number">03.</span>
+              <span className="s-name">Blogs</span>
             </MenuLink>
             <SayHelloMenu>
               <h3>Say Hello </h3>
@@ -360,20 +355,20 @@ const nav = () => {
         </Menu>
         <NavLogo>
           <Image
-            src='/assets/imgs/logo2.svg'
-            alt='Picture of the author'
+            src="/assets/imgs/logo2.svg"
+            alt="Picture of the author"
             width={45}
             height={45}
           />
         </NavLogo>
         <Hamburger onClick={onClick} isOpen={isOpen}>
           <div>
-            <span className='first' isOpen={isOpen} />
-            <span className='center' isOpen={isOpen} />
-            <span className='second' isOpen={isOpen} />
+            <span className="first" isOpen={isOpen} />
+            <span className="center" isOpen={isOpen} />
+            <span className="second" isOpen={isOpen} />
           </div>
         </Hamburger>
-        </div>
+      </div>
     </Nav>
   );
 };

@@ -10,6 +10,7 @@ const LayoutContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: red;
 
   /* .bg-gradient {
     background: radial-gradient(
