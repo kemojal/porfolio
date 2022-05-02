@@ -1,4 +1,4 @@
-This portfolio is built using Next.js. 
+This portfolio is built using Next.js. It has been update
 
 ## Porfolio
 
