@@ -86,7 +86,7 @@ const TitleContainer = styled(motion.div)`
     /* padding: 5rem; */
     span {
       padding-top: 0px;
-      font-size: 3rem;
+      font-size: 2rem;
     }
     /* &:before{
         content: ' ';
