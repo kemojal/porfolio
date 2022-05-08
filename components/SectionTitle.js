@@ -12,19 +12,19 @@ const TitleContainer = styled(motion.div)`
   padding: 0.2rem 0;
   justify-content: center;
   z-index: 1000;
-  
-  h1{
+
+  h1 {
     font-size: 36px;
-    font-weight: 900!important;
+    font-weight: 900 !important;
     color: #fff;
     text-transform: uppercase;
     margin: 0;
   }
-  .orange{
-      color: #FE1554;
-      margin-left: 10px;
-    }
-  .white{
+  .orange {
+    color: #fe1554;
+    margin-left: 10px;
+  }
+  .white {
     color: ${({ theme }) => theme.text};
   }
   /* border: 1px solid red; */
@@ -47,38 +47,35 @@ const TitleContainer = styled(motion.div)`
     padding: 0 10px;
     max-height: 65px;
      */
-    
-    
+
     /* font-weight: 900!important; */
     text-transform: uppercase;
 
-
-    font-size: 65px;
+    font-size: 35px;
     letter-spacing: 10px;
-    line-height: .7;
+    line-height: 0.7;
     position: absolute;
     top: 50%;
     text-transform: uppercase;
     font-weight: 800;
     transform: translateY(-50%);
-    color: hsla(0,0%,100%,.07);
-    
+    color: hsla(0, 0%, 100%, 0.07);
   }
-  &:before{
-        content: ' ';
-        display: block;
-        position: absolute;
-        left:calc(50% - 2rem);
-        width: 23vw;
-        height:23vw;
-        max-width:100px;
-        max-height:100px;
-        transform: rotate(-5deg);
-        border-radius: 50%;
-       background-color: #C5183810;
-       background-color: #1E202310;
-       box-shadow: 0 0 0 5px #ffffff10, 0 0 0 10px #ffffff05, 0 0 0 20px #ffffff01;
-    }
+  &:before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: calc(50% - 2rem);
+    width: 23vw;
+    height: 23vw;
+    max-width: 100px;
+    max-height: 100px;
+    transform: rotate(-5deg);
+    border-radius: 50%;
+    background-color: #c5183810;
+    background-color: #1e202310;
+    box-shadow: 0 0 0 5px #ffffff10, 0 0 0 10px #ffffff05, 0 0 0 20px #ffffff01;
+  }
   @media (min-width: 768px) {
     justify-content: center;
     /* background:  orange; */
@@ -86,7 +83,7 @@ const TitleContainer = styled(motion.div)`
     /* padding: 5rem; */
     span {
       padding-top: 0px;
-      font-size: 3rem;
+      font-size: 1.5rem;
     }
     /* &:before{
         content: ' ';
@@ -104,7 +101,7 @@ const Line = styled.div`
   width: 20vw;
   bottom: 0px;
   background-color: var(--crimson);
-  background: #1E2023;
+  background: #1e2023;
   border-radius: 20px;
   box-shadow: 0 0 0 5px #ffffff10, 0 0 0 10px #ffffff05, 0 0 0 20px #ffffff01;
   @media (min-width: 768px) {
@@ -118,7 +115,7 @@ const Line = styled.div`
 `;
 
 const SectionTitle = ({ title }) => {
-  let words  = title.split(' ');
+  let words = title.split(' ');
   const myRef = useRef(null);
   const intersection = useIntersection(myRef, {
     root: null,
@@ -150,13 +147,11 @@ const SectionTitle = ({ title }) => {
         default: { duration: 0.2 },
       }}
     >
-
-     
       {/* <span>{title}</span> */}
       <h1>
-      <span className="white">{words[0]}</span>
-      <span className="orange">{ words[1]}</span>
-       {words[2] && <span className="white">{ words[2]}</span>}
+        <span className="white">{words[0]}</span>
+        <span className="orange">{words[1]}</span>
+        {words[2] && <span className="white">{words[2]}</span>}
       </h1>
       <span class="behind-text">WORKS</span>
       {/* <Line /> */}
