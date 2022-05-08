@@ -10,7 +10,8 @@ const LayoutContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: red;
+  background-color: #2e263b;
+  color: #fff;
 
   .container {
     width: 100%;
@@ -18,7 +19,7 @@ const LayoutContainer = styled.div`
     position: relative;
     display: flex;
     flex-direction: column;
-    /* max-width: 1000px; */
+    max-width: 1000px;
   }
   .featuredBlog,
   .older-blogs-container {
