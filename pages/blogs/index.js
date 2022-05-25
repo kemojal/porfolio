@@ -10,7 +10,7 @@ const LayoutContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #2e263b;
+  background-color: #f2f1f6;
   color: #fff;
 
   .container {
@@ -19,7 +19,10 @@ const LayoutContainer = styled.div`
     position: relative;
     display: flex;
     flex-direction: column;
-    max-width: 1000px;
+    max-width: 800px;
+    padding: 20px 0;
+    background-color: white;
+    /* background-color: red; */
   }
   .featuredBlog,
   .older-blogs-container {
@@ -32,11 +35,12 @@ const LayoutContainer = styled.div`
   }
   .featuredBlog {
     min-height: 400px;
-    background: #ff0057;
+    /* background: #ff0057; */
     border-bottom-left-radius: 100px;
   }
   .older-blogs-container {
     max-width: 1100px;
+    flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
@@ -54,6 +58,7 @@ const Blogs = () => {
       image:
         'https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
       date: '2020-01-01',
+      tags: ['#design', '#web', '#development', '#react'],
     },
     {
       title: 'Digital Craftments',
@@ -62,6 +67,7 @@ const Blogs = () => {
       image:
         'https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
       date: '2020-01-01',
+      tags: ['#design', '#web', '#development'],
     },
     {
       title: 'Digital Craftments',
@@ -70,6 +76,7 @@ const Blogs = () => {
       image:
         'https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
       date: '2020-01-01',
+      tags: ['#design', '#web', '#development'],
     },
     {
       title: 'Digital Craftments',
@@ -78,6 +85,7 @@ const Blogs = () => {
       image:
         'https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
       date: '2020-01-01',
+      tags: ['#design', '#web', '#development'],
     },
     {
       title: 'Digital Craftments',
@@ -86,6 +94,7 @@ const Blogs = () => {
       image:
         'https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
       date: '2020-01-01',
+      tags: ['#design', '#web', '#development'],
     },
   ];
   const featuredBlog = BlogsList[0];
