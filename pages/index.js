@@ -17,11 +17,9 @@ import Services from '../components/sections/Services';
 import Socials from '../components/Socials';
 import Settings from '../components/Settings';
 
-import Mouse from '../components/Mouse';
-import Wave from '../components/svg/Wave';
+
 import Skills from '../components/sections/Skills';
-// import BgPatternsMobile from '../components/svg/BgPatternsMobile.js';
-// import BgPatternsDesktop from '../components/svg/BgPatternsDesktop.js';
+
 
 const Combined = styled.div`
   display: flex;
