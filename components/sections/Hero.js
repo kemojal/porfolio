@@ -129,12 +129,12 @@ const DeveloperName = styled(motion.h1)`
   padding-top: 0.2em;
   letter-spacing: -0.03em;
 
-  background: -webkit-linear-gradient(-90deg, #FD4470, #FE567B
-    );
-    background: -webkit-linear-gradient(-180deg, #FFB800,#fd4370
-    );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+//  background: -webkit-linear-gradient(-90deg, #FD4470, #FE567B
+//    );
+//    background: -webkit-linear-gradient(-180deg, #FFB800,#fd4370
+//    );
+//  -webkit-background-clip: text;
+//  -webkit-text-fill-color: transparent;
 
   @media (min-width: 320px) {
     font-size: 15vw;
@@ -148,11 +148,11 @@ const DeveloperName = styled(motion.h1)`
     color: var(--crimson);
   }
   .surname {
-    color: ${({ theme }) => theme.crimson};
-    background: -webkit-linear-gradient(#FD4470, #FE567B
-    );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+//    color: ${({ theme }) => theme.crimson};
+//    background: -webkit-linear-gradient(#FD4470, #FE567B
+//    );
+//  -webkit-background-clip: text;
+//  -webkit-text-fill-color: transparent;
   }
 `;
 const Phrase = styled(motion.h1)`
