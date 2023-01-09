@@ -4,7 +4,7 @@ import Image from 'next/image';
 import styles from '../styles/Home.module.css';
 import styled, { ThemeProvider } from 'styled-components';
 import { useDarkMode } from '../styles/useDarkMode';
-import { GlobalStyles } from "../styles/global";
+import { GlobalStyles } from '../styles/global';
 import { lightTheme, darkTheme } from '../styles/theme';
 
 import Nav from '../components/Nav';
@@ -17,9 +17,7 @@ import Services from '../components/sections/Services';
 import Socials from '../components/Socials';
 import Settings from '../components/Settings';
 
-
 import Skills from '../components/sections/Skills';
-
 
 const Combined = styled.div`
   display: flex;
@@ -43,8 +41,6 @@ const Combined = styled.div`
   }
   @media (max-width: 767px) {
     /* overflow: hidden; */
-    
-    
   }
 `;
 
@@ -110,43 +106,55 @@ export default function Home() {
   let isMobile = width <= 768;
   return (
     <ThemeProvider theme={themeMode}>
-      <GlobalStyles/>
+      <GlobalStyles />
       <AppContainer fade={fade}>
         <Head>
           <title>Kemo Jallow - A Full Stack Developer</title>
           <meta
-            name='viewport'
-            content='width=device-width, initial-scale=1.0'
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
           />
-          <meta name='description' content='I’m a Taiwan-based Software engineer who specializes in building web
+          <meta
+            name="description"
+            content="I’m a Taiwan-based Software engineer who specializes in building web
   and mobile apps (and occasionally designing) exceptional digital
-    experiences. Currently, working at home and social distancing.' />
+    experiences. Currently, working at home and social distancing."
+          />
 
-<meta content="Kemo Jallow - A Full Stack Developer" property="og:title"/>
-<meta name="og:url" content="https://kemojallow-one.vercel.app/"/>
-<meta content="description' content='I’m a Taiwan-based Software engineer who specializes in building web
+          <meta
+            content="Kemo Jallow - A Full Stack Developer"
+            property="og:title"
+          />
+          <meta name="og:url" content="https://kemojallow-one.vercel.app/" />
+          <meta
+            content="description' content='I’m a Taiwan-based Software engineer who specializes in building web
   and mobile apps (and occasionally designing) exceptional digital
-    experiences. Currently, working at home and social distancing."></meta>
-          <meta name="theme-color" 
-      content="#ecd96f" 
-      media="(prefers-color-scheme: light)"/>
-<meta name="theme-color" 
-      content="#fd4370" 
-      media="(prefers-color-scheme: dark)"></meta>
-          <link rel='icon' href='/logo.ico' />
+    experiences. Currently, working at home and social distancing."
+          ></meta>
+          <meta
+            name="theme-color"
+            content="#ecd96f"
+            media="(prefers-color-scheme: light)"
+          />
+          <meta
+            name="theme-color"
+            content="#fd4370"
+            media="(prefers-color-scheme: dark)"
+          ></meta>
+          <link rel="icon" href="/logo.ico" />
         </Head>
 
         <main className={styles.main}>
-            {/* {isMobile ? <BgPatternsMobile /> : <BgPatternsDesktop />} */}
+          {/* {isMobile ? <BgPatternsMobile /> : <BgPatternsDesktop />} */}
           <Combined>
             <Hero />
-            <About theme={theme}/>
+            <About theme={theme} />
           </Combined>
 
           <MyProjects />
           <MoreProjects />
-          <Services/>
-          <Skills/>
+          <Services />
+          <Skills />
           <Contact />
           <Socials />
           <Settings theme={theme} toggleTheme={themeToggler} />
@@ -160,14 +168,14 @@ export default function Home() {
         </main>
         {/* <Mouse /> */}
         <footer className={styles.footer}>
-          <p className={styles.footerText}>©2021 Kemo Jallow. All rights reserved
+          <p className={styles.footerText}>
+            ©2021 Kemo Jallow. All rights reserved
           </p>
           <div className={styles.footerNav}>
             <div>About</div>
             <div>Project</div>
             <div>Contact</div>
           </div>
-          
         </footer>
       </AppContainer>
     </ThemeProvider>

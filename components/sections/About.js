@@ -13,17 +13,17 @@ import DoodleBG from './../svg/DoodleBG';
 
 const AboutSection = styled(motion.section)`
   position: relative;
-  
+
   width: 90vw;
   height: 90vw;
   transform: translateX(5vw);
- 
+
   padding-top: 6rem;
-  
+
   border-top-left-radius: 300px;
   border-bottom-left-radius: 300px;
   border-radius: 300px;
-  
+
   backdrop-filter: blur(20px);
   margin-top: 80px;
   padding-top: 0px;
@@ -54,11 +54,10 @@ const AboutSection = styled(motion.section)`
     bottom: 0;
     right: 0px;
     /* position: absolute; */
-   
-   box-shadow: none;
-   border-radius: 0px;
-   /* background-color: red; */
-   
+
+    box-shadow: none;
+    border-radius: 0px;
+    /* background-color: red; */
   }
 `;
 const RelativeDiv = styled.div`
@@ -106,26 +105,29 @@ const ProfileImageContainer = styled(motion.div)`
   width: 100%;
   height: 100%;
 
-
-  background-color: #0000000f;;
+  background-color: #0000000f;
   background-color: transparent;
   padding-bottom: 25px;
   background-color: red;
-  background: rgb(255,255,255);
-background: radial-gradient(circle, rgba(255,255,255,0.055081407563025264) 0%, rgba(255,255,255,0) 100%);
-box-shadow: ${({ theme }) => theme.btnBoxShadow};
+  background: rgb(255, 255, 255);
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.055081407563025264) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  box-shadow: ${({ theme }) => theme.btnBoxShadow};
   position: relative;
   /* overflow: hidden; */
 
-  &:after { 
-    content: "";
+  &:after {
+    content: '';
     /* height: 400px; */
     left: 0;
     right: 0;
     bottom: 0px;
     /* top: 20px; */
     border-bottom-left-radius: 250%;
-    border-bottom-right-radius: 250%;  
+    border-bottom-right-radius: 250%;
     /* background-color: orange;  */
     /* width: 100%; */
     /* width: 70%; */
@@ -133,9 +135,9 @@ box-shadow: ${({ theme }) => theme.btnBoxShadow};
     width: 90%;
     /* transform: translate(-10%,39%); */
     /* transform: translate(20%,39%); */
-    transform: translate(5%,40%);
+    transform: translate(5%, 40%);
     transition: all 0s ease-in-out;
-    background-image:${({ theme }) => theme.bgGradient};;
+    background-image: ${({ theme }) => theme.bgGradient};
     /* background-image: linear-gradient(180deg,hsla(0,0%,100%,0) 1%,#fff 37%); */
 
     position: absolute;
@@ -145,7 +147,6 @@ box-shadow: ${({ theme }) => theme.btnBoxShadow};
     width: 465px;
     height: 465px;
     padding-bottom: 40px;
-    
   }
   /* position: absolute;
   bottom: 120px;
@@ -158,34 +159,15 @@ box-shadow: ${({ theme }) => theme.btnBoxShadow};
       width: 100%;
     }
   }
-  /* &:before {
-    content: '';
-    background: url(/assets/imgs/blob.svg) no-repeat center center;
-    background-size: 100% 100%;
-    width: 150%;
-
-    height: 150%;
-    display: block;
-    @media (min-width: 768px) {
-      display: none;
-      width: 220%;
-      height: 150%;
-      transform: translate(-30%, -25%);
-    }
-    position: absolute;
-    z-index: -1;
-    transform: translate(-10%, -15%);
-  } */
 
   @media (min-width: 768px) {
-  
-     &:after { 
-     width: 70%;
-     transform: translate(20%,39%);
-  } 
+    &:after {
+      width: 70%;
+      transform: translate(20%, 39%);
+    }
   }
 `;
-const About = ({theme}) => {
+const About = ({ theme }) => {
   const myRef = useRef(null);
   const intersection = useIntersection(myRef, {
     root: null,
@@ -209,7 +191,7 @@ const About = ({theme}) => {
     intersection && intersection.intersectionRatio < 0.2 ? fadeOut : fadeIn;
 
   return (
-    <AboutSection id='about' ref={myRef}>
+    <AboutSection id="about" ref={myRef}>
       <ProfileImageContainer>
         {/* <ScrollAnimation 
         animateIn='zoomIn' 
@@ -217,7 +199,7 @@ const About = ({theme}) => {
         delay={50}
         animateOut ='fadeInDown' > */}
         {/* {theme === 'dark' && <DoodleBG />} */}
-        <img src='/assets/imgs/me4.svg' />
+        <img src="/assets/imgs/me4.svg" />
 
         {/* <Image
           src='/assets/imgs/me3.svg'
