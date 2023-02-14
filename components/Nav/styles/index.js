@@ -16,11 +16,9 @@ export const Nav = styled(motion.nav)`
   max-height: 64px;
   background-color: rgba(255, 255, 255, 0.72);
   background-color: ${({ theme }) => theme.bgNav};
-
   background-color: ${({ isOpen }) =>
     isOpen ? '#E33140' : `${({ theme }) => theme.bgNav}`};
   background-color: ${({ theme }) => theme.bgNav};
-  /* backdrop-filter: blur(20px); */
   box-shadow: inset 0px -1px 1px ${({ theme }) => theme.navShadowColor} !important;
   /* box-shadow: ${({ theme }) => theme.navShadowColor} !important; */
   transition: top 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
