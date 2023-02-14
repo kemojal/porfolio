@@ -28,16 +28,13 @@ const Combined = styled.div`
   @media (min-width: 768px) {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     height: 100vh;
-    /* background-color: #39fee208; */
     backdrop-filter: blur(20px);
     width: 100%;
     max-width: 1200px;
-
     height: 900px;
-    /* background-color: red; */
   }
   @media (max-width: 767px) {
     /* overflow: hidden; */
