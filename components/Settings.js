@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import styled,  { keyframes, css }  from 'styled-components';
+import React, { useState } from 'react';
+import styled, { keyframes, css } from 'styled-components';
 import { motion } from 'framer-motion';
 
 //import GearIcon  from '/assets/imgs/gear.svg';
@@ -32,96 +32,95 @@ import LightIcon from './svg/LightIcon';
 // `;
 
 const ToggleThemeContainer = styled(motion.div)`
- position: fixed;
- /* background-color: brown; */
- background: ${({ theme }) => theme.text};
- /* width: 100px;
+  position: fixed;
+  /* background-color: brown; */
+  background: ${({ theme }) => theme.text};
+  /* width: 100px;
  height: 100px; */
- /* bottom: 2rem;
+  /* bottom: 2rem;
  left: 2rem; */
- top: 0.5rem;
- /* right: 5rem; */
- right: 9rem;
- display: flex;
- align-items: center;
- justify-content: center;
- background-color:transparent;
- z-index: 3000;
+  top: 0.5rem;
+  /* right: 5rem; */
+  right: 9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  z-index: 3000;
 
- @media (min-width: 768px) {
+  @media (min-width: 768px) {
     /* right: 2rem; */
     right: 23px;
     top: 1.56rem;
   }
 
-  @media ( min-width: 1200px) {
-    right: calc(( (100% - 1100px) / 2) - 70px);
-   }
+  @media (min-width: 1200px) {
+    right: calc(((100% - 1100px) / 2) - 70px);
+  }
 `;
 const GearButton = styled.button`
-border: none;
-/* width: 44px;
+  border: none;
+  /* width: 44px;
 height: 44px; */
-width: 32px;
-height: 32px;
+  width: 32px;
+  height: 32px;
 
-width: 84px;
-height: 44px;
+  width: 60px;
+  height: 32px;
 
+  cursor: pointer;
+  overflow: hidden;
+  border: none;
+  border-radius: 50%;
+  background-color: transparent;
+  outline: 0px;
+  font-size: 100%;
+  line-height: 1.15;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  backdrop-filter: blur(20px);
+  transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  border-radius: 49px;
+  padding: 1.5px;
+  /* border: 1px solid ${({ theme }) => theme.themeToggleButtonBorder}; */
+  background-color: transparent;
 
-cursor: pointer;
-overflow: hidden;
-border: none;
-border-radius: 50%;
-background-color: transparent;
-outline: 0px;
-font-size: 100%;
-line-height: 1.15;
-display: flex;
-align-items: center;
-justify-content: space-between;
-backdrop-filter: blur(20px);
-transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
-border-radius: 49px;
-    padding: 6.5px;
-    /* border: 1px solid ${({ theme }) => theme.themeToggleButtonBorder}; */
-    background-color: transparent;
-
-
-    background-color: ${({ theme }) =>
+  background-color: ${({ theme }) =>
     theme === 'light' ? 'rgba(0,0,0,.07)' : `rgba(255, 255, 255, 0.11)`};
 
-  /* box-shadow: inset 0px -1px 1px ${({ theme }) => theme.navShadowColor} !important; */
- position: relative;
+  /* box-shadow: inset 0px -1px 1px ${({ theme }) =>
+    theme.navShadowColor} !important; */
+  position: relative;
   .icon-container {
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0px;
-       /* background-color: orange; */
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px;
+    /* background-color: orange; */
   }
   .left {
     background-color: ${({ theme }) =>
-    theme === 'light' ? 'white' : `transparent`};
+      theme === 'light' ? 'white' : `transparent`};
   }
   .right {
     background-color: ${({ theme }) =>
-    theme === 'light' ? `transparent` : 'white' };
+      theme === 'light' ? `transparent` : 'white'};
   }
-  &:hover{
-      outline: none;
-      /* transform: rotate(180deg); */
-      /* background-color: green; */
+  &:hover {
+    outline: none;
+    /* transform: rotate(180deg); */
+    /* background-color: green; */
   }
   &:focus {
     outline: 0 !important;
     /* border: none; */
-}
-&:before {
-    transition: transform .2s ease-in-out;
+  }
+  &:before {
+    transition: transform 0.2s ease-in-out;
     /* will-change: transform; */
     /* width: 36px; */
     /* height: calc(100% - 8px); */
@@ -134,62 +133,54 @@ border-radius: 49px;
     bottom: 0;
     display: block;
     border-radius: 9999px;
-    content: "";
+    content: '';
     /* background-color: #fff; */
     box-shadow: 0 2px 8px 0 rgb(0 34 255 / 8%), 0 2px 8px 0 rgb(0 11 80 / 12%);
-}
-`
+  }
+`;
 
 const Effect = styled.div`
-    position: absolute;
-    left: ${({ theme }) =>
-    theme === 'light' ? '4px' : `40px`};;
-    width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0px;
-      background: white;
-      background: #00000030;
-      backdrop-filter: blur(20px);
-      pointer-events:  none;
-      opacity: 1;
-      z-index: -1;
-      transition: all .1s ease-out;
-      /* animation: ${props =>
+  position: absolute;
+  left: ${({ theme }) => (theme === 'light' ? '4px' : `40px`)};
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0px;
+  background: white;
+  background: #00000030;
+  backdrop-filter: blur(20px);
+  pointer-events: none;
+  opacity: 1;
+  z-index: -1;
+  transition: all 0.1s ease-out;
+  /* animation: ${(props) =>
     props.animate &&
     css`
       ${fadeIn} 0.2s linear 3
     `}; */
-`
+`;
 
-const Settings = ({theme,  toggleTheme }) => {
-    /* const [doAnimate, setDoAnimate] = useState(false); */
-    return (
-        <ToggleThemeContainer >
-            <GearButton 
-            theme={theme}
-            onClick={toggleTheme}>
-    
+const Settings = ({ theme, toggleTheme }) => {
+  /* const [doAnimate, setDoAnimate] = useState(false); */
+  return (
+    <ToggleThemeContainer>
+      <GearButton theme={theme} onClick={toggleTheme}>
         <div className="icon-container left">
-            <LightIcon/>
+          <LightIcon />
         </div>
         <div className="icon-container right">
-            <DarkIcon />
+          <DarkIcon />
         </div>
-                
-                {/* {theme === 'light' ? <LightIcon/> : <DarkIcon /> } */}
 
-                <Effect 
-                theme={theme}
-                />
+        {/* {theme === 'light' ? <LightIcon/> : <DarkIcon /> } */}
 
-            </GearButton>
-            
-        </ToggleThemeContainer>
-    )
-}
+        <Effect theme={theme} />
+      </GearButton>
+    </ToggleThemeContainer>
+  );
+};
 
-export default Settings
+export default Settings;

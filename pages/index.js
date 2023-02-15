@@ -7,7 +7,7 @@ import { useDarkMode } from '../styles/useDarkMode';
 import { GlobalStyles } from '../styles/global';
 import { lightTheme, darkTheme } from '../styles/theme';
 
-import Nav from '../components/Nav';
+import Navbar from '../components/Nav';
 import Hero from '../components/sections/Hero';
 import About from '../components/sections/About';
 import MyProjects from '../components/sections/MyProjects';
@@ -155,7 +155,7 @@ export default function Home() {
           <Contact />
           <Socials />
           <Settings theme={theme} toggleTheme={themeToggler} />
-          <Nav />
+          <Navbar />
           {/* <div
         className="pb"
         style={{
