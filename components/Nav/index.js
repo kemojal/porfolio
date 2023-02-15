@@ -1,49 +1,45 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 
 import {
   Nav,
-  FluidContainer,
   NavLogo,
   Hamburger,
   Menu,
   MenuLink,
   MenuTitleBody,
-  SayHelloMenu
+  SayHelloMenu,
 } from './styles';
-const nav = () => {
+function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const onClick = () => setIsOpen(!isOpen);
+  const toggleMenu = () => setIsOpen(!isOpen);
+
+  const menuLinks = [
+    // { index: '01.', title: 'About', href: '#about' },
+    { index: '01.', title: 'Work', href: '#projects' },
+    { index: '02.', title: 'Blog', href: '/blog' },
+    { index: '03.', title: 'Store', href: '/store' },
+    { index: '04.', title: 'Hire Me', href: '#contact' },
+  ];
 
   return (
     <Nav isOpen={isOpen}>
       <div className="container">
         <Menu isOpen={isOpen}>
           <MenuTitleBody>
-            <MenuLink href="#about" isOpen={isOpen} index={1} onClick={onClick}>
-              <span className="number" isOpen={isOpen}>
-                01.
-              </span>
-              <span className="s-name">About</span>
-            </MenuLink>
-            <MenuLink
-              href="#projects"
-              isOpen={isOpen}
-              index={1}
-              onClick={onClick}
-            >
-              <span className="number">02.</span>
-              <span className="s-name">Projects</span>
-            </MenuLink>
-            <MenuLink
-              href="#contact"
-              isOpen={isOpen}
-              index={1}
-              onClick={onClick}
-            >
-              <span className="number">03.</span>
-              <span className="s-name">Contact</span>
-            </MenuLink>
+            
+            {menuLinks.map((menuLink, index) => (
+              <MenuLink
+                key={menuLink.title}
+                href={menuLink.href}
+                isOpen={isOpen}
+                index={index + 1}
+                onClick={toggleMenu}
+              >
+                <span className="number">{isOpen ? menuLink.index : ''}</span>
+                <span className="s-name">{menuLink.title}</span>
+              </MenuLink>
+            ))}
             <SayHelloMenu>
               <h3>Say Hello </h3>
               <a href="youtu.be/z3vusUCorz0">youtube/kemojallow</a>
@@ -60,16 +56,16 @@ const nav = () => {
             height={45}
           />
         </NavLogo>
-        <Hamburger onClick={onClick} isOpen={isOpen}>
+        <Hamburger onClick={toggleMenu} isOpen={isOpen}>
           <div>
-            <span className="first" isOpen={isOpen} />
-            <span className="center" isOpen={isOpen} />
-            <span className="second" isOpen={isOpen} />
+          {[1, 2, 3].map((_, index) => (
+            <span key={index} className={isOpen ? `open-${index + 1}` : `close-${index + 1}`} />
+          ))}
           </div>
         </Hamburger>
       </div>
     </Nav>
   );
-};
+}
 
-export default nav;
+export default Navbar;
