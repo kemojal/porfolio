@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
 export const Nav = styled(motion.nav)`
-  position: fixed !important;
+  position: fixed;
   padding: 0rem 2rem;
   width: 100vw;
   display: flex;
@@ -19,7 +19,7 @@ export const Nav = styled(motion.nav)`
   background-color: ${({ isOpen }) =>
     isOpen ? '#E33140' : `${({ theme }) => theme.bgNav}`};
   background-color: ${({ theme }) => theme.bgNav};
-  box-shadow: inset 0px -1px 1px ${({ theme }) => theme.navShadowColor} !important;
+  box-shadow: inset 0px -1px 1px ${({ theme }) => theme.navShadowColor};
   /* box-shadow: ${({ theme }) => theme.navShadowColor} !important; */
   transition: top 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 
@@ -37,7 +37,7 @@ export const Nav = styled(motion.nav)`
   @media (min-width: 768px) {
     background-color: ${({ theme }) => theme.bgNav};
     backdrop-filter: blur(20px);
-    min-height: 80px;
+    min-height: 60px;
 
     .container {
       display: flex;

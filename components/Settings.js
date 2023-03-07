@@ -51,7 +51,7 @@ const ToggleThemeContainer = styled(motion.div)`
   @media (min-width: 768px) {
     /* right: 2rem; */
     right: 23px;
-    top: 1.56rem;
+    top: 1.1rem;
   }
 
   @media (min-width: 1200px) {
@@ -112,21 +112,13 @@ height: 44px; */
   }
   &:hover {
     outline: none;
-    /* transform: rotate(180deg); */
-    /* background-color: green; */
   }
   &:focus {
     outline: 0 !important;
-    /* border: none; */
   }
   &:before {
     transition: transform 0.2s ease-in-out;
-    /* will-change: transform; */
-    /* width: 36px; */
-    /* height: calc(100% - 8px); */
     position: absolute;
-    /* left: 4px; */
-    /* top: 4px; */
     left: 0;
     top: 0;
     right: 0;

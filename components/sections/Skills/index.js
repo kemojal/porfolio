@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-
+import { motion, useTransform, useViewportScroll } from 'framer-motion';
+import { Marquee } from '../../Marquee'
 import BehanceIcon from '../../icons/BehanceIcon';
 import BootstrapIcon from '../../icons/BootstrapIcon';
 import ChromeIcon from '../../icons/ChromeIcon';
@@ -31,14 +32,14 @@ const SkillContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: ${({ theme }) => theme.bgService};
+  /* background-color: ${({ theme }) => theme.bgService}; */
   .container {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    max-width: 1100px;
+    /* max-width: 1100px; */
   }
   .tool-container {
     display: flex;
@@ -49,7 +50,7 @@ const SkillContainer = styled.div`
     width: 100%;
     flex-wrap: wrap;
     position: relative;
-  }
+    
   .tool-gradient-overlay {
     position: absolute;
     z-index: 10;
@@ -89,33 +90,44 @@ const SkillContainer = styled.div`
 `;
 
 const Skills = () => {
+
+
+
+const iconComponents = [
+  { component: BehanceIcon },
+  { component: BootstrapIcon },
+  { component: ChromeIcon },
+  { component: CssIcon },
+  { component: DribbleIcon },
+  { component: FirebaseIcon },
+  { component: Github },
+  { component: FlutterIcon },
+  { component: GitIcon },
+  { component: JsIcon },
+  { component: MongoDBIcon },
+  { component: NodejsIcon },
+  { component: ReactIcon },
+  { component: ReduxIcon },
+  { component: SassIcon },
+  { component: SketchIcon },
+  { component: StackIcon },
+  { component: TailwindIcon },
+  { component: Vscode },
+  { component: VueIcon },
+];
+
+
+
   const size = 100;
+  const { scrollYProgress } = useViewportScroll();
+  const x = useTransform(scrollYProgress, [0, 1], [500, 0]);
+  const rx = useTransform(scrollYProgress, [0, 1], [360, 0]);
   return (
     <SkillContainer>
       <div className="container">
         <SectionTitle title={`Skills & Tools`} />
         <div className="tool-container">
-          <CssIcon />
-          <Github />
-          <BehanceIcon />
-          <BootstrapIcon />
-          <ChromeIcon />
-          <DribbleIcon />
-          <FirebaseIcon />
-          <FlutterIcon />
-          <GitIcon />
-          <JsIcon />
-          <MongoDBIcon />
-          <NodejsIcon />
-          <ReactIcon />
-          <ReduxIcon />
-          <SassIcon />
-          <SketchIcon />
-          <StackIcon />
-          <TailwindIcon />
-          <Vscode />
-          <VueIcon />
-          {/* <div className="tool-gradient-overlay"></div> */}
+        <Marquee list={iconComponents} time={25} />
         </div>
       </div>
     </SkillContainer>

@@ -1,7 +1,9 @@
-import React, { useRef } from 'react';
+import React, { useRef, useEffect } from 'react';
 import styled from 'styled-components';
-import { motion } from 'framer-motion';
-import { useIntersection } from 'react-use';
+// import { motion } from 'framer-motion';
+// import { useIntersection } from 'react-use';
+
+import { motion, useTransform, useViewportScroll } from 'framer-motion';
 
 const TitleContainer = styled(motion.div)`
   width: 100%;
@@ -31,24 +33,6 @@ const TitleContainer = styled(motion.div)`
   .behind-text {
     display: none !important;
     color: var(--lightTextTitleColor);
-    /* font-weight: 600;
-    line-height: 14vw;
-    letter-spacing: 8px;
-    font-size: 1.2rem;
-    font-size: 6vw;
-    padding-top: 0rem;
-    
-    color:  #565a63;
-    display: flex;
-    align-items: center;
-    
-   
-    color: white;
-    padding: 0 10px;
-    max-height: 65px;
-     */
-
-    /* font-weight: 900!important; */
     text-transform: uppercase;
 
     font-size: 35px;
@@ -117,35 +101,40 @@ const Line = styled.div`
 const SectionTitle = ({ title }) => {
   let words = title.split(' ');
   const myRef = useRef(null);
-  const intersection = useIntersection(myRef, {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.2,
-  });
-  const fadeIn = {
-    opacity: 1,
-    y: 0,
-    x: 0,
-  };
-  const fadeOut = {
-    opacity: 0,
-    y: 100,
-    x: 0,
-  };
+  // const intersection = useIntersection(myRef, {
+  //   root: null,
+  //   rootMargin: '0px',
+  //   threshold: 0.2,
+  // });
+  // const fadeIn = {
+  //   opacity: 1,
+  //   y: 0,
+  //   x: 0,
+  // };
+  // const fadeOut = {
+  //   opacity: 0,
+  //   y: 100,
+  //   x: 0,
+  // };
 
-  const animationName =
-    intersection && intersection.intersectionRatio < 0.2 ? fadeOut : fadeIn;
+  // const animationName =
+  //   intersection && intersection.intersectionRatio < 0.2 ? fadeOut : fadeIn;
+
+  const { scrollYProgress } = useViewportScroll();
+  const cx = useTransform(scrollYProgress, [0, 0.2, 1], [0, 1.1, 1.5]);
+  const tx = useTransform(scrollYProgress, [0, 0.2, 1], [4, 1, 1]);
 
   return (
     <TitleContainer
-      animate={animationName}
+      // animate={animationName}
+
       ref={myRef}
-      transition={{
-        type: 'spring',
-        stiffness: 260,
-        damping: 200,
-        default: { duration: 0.2 },
-      }}
+      // transition={{
+      //   type: 'spring',
+      //   stiffness: 260,
+      //   damping: 200,
+      //   default: { duration: 0.2 },
+      // }}
     >
       {/* <span>{title}</span> */}
       <h1>

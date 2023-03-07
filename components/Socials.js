@@ -139,48 +139,31 @@ const EmailContainer =  styled.div`
         
     }
 `
+const iconsData = [
+    { social: 'instagram', icon: '/assets/imgs/logo-instagram.svg', altText: 'Picture of the author' },
+    { social: 'youtube', icon: '/assets/imgs/logo-youtube.svg', altText: 'Picture of the author' },
+    { social: 'twitter', icon: '/assets/imgs/logo-twitter.svg', altText: 'Picture of the author' },
+    { social: 'github', icon: '/assets/imgs/logo-github.svg', altText: 'Picture of the author' }
+  ];
 const Socials = () => {
+    
     return (
         <SocialContainer>
             <Icons>
-                <Icon>
-                    <Image 
-                        className="social-icon"
-                        quality={100}
-                        src={'/assets/imgs/logo-instagram.svg'}
-                        alt="Picture of the author"
-                        width='16px'
-                        height='16px'
-                        priority={true}
-                    />
-                </Icon>
-                <Icon>
-                    <Image 
-                        src={'/assets/imgs/logo-youtube.svg'}
-                        alt="Picture of the author"
-                        width='16px'
-                        height='16px'
-                        priority={true}
-                    />
-                </Icon>
-                <Icon>
-                    <Image 
-                        src={'/assets/imgs/logo-twitter.svg'}
-                        alt="Picture of the author"
-                        width='16px'
-                        height='16px'
-                        priority={true}
-                        />
-                </Icon>
-                <Icon>
-                    <Image 
-                        src={'/assets/imgs/logo-github.svg'}
-                        alt="Picture of the author"
-                        width='16px'
-                        height='16px'
-                        priority={true}
-                        />
-                </Icon>
+                
+                {iconsData.map((iconData) => (
+          <Icon key={iconData.social}>
+            <Image 
+              className="social-icon"
+              quality={100}
+              src={iconData.icon}
+              alt={iconData.altText}
+              width='16px'
+              height='16px'
+              priority={true}
+            />
+          </Icon>
+        ))}
             </Icons>
             {/* <EmailContainer>
                 <span>

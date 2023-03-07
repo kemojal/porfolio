@@ -8,34 +8,21 @@ import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
 
 const spinWords = keyframes`
     10% {
-      /* background-color: #fd4370; */
-      
-      /* color: #FD4270; */
       transform: translateY(-100%) 
     }
     20% {
-      /* background-color: #fd4370; */
-      /* color: #FD4270; */
       transform: translateY(-100%) 
     }
     40% {
-      /* background-color: #fd4370; */
-      /* color: white; */
       transform: translateY(-200%)
     }
     60% {
-      /* background-color: #fd4370; */
-      /* color: white; */
       transform: translateY(-200%)
     }
     80% {
-      /* background-color: #fd4370; */
-      /* color: #61DAFB; */
       transform: translateY(0%) 
     }
     100% {
-      /* background-color: #fd4370; */
-      /* color: #61DAFB; */
         transform: translateY(0%) 
     }
 `;
@@ -43,7 +30,6 @@ const spinWords = keyframes`
 const HeroContainer = styled(motion.section)`
   position: relative;
   width: 100vw;
-  /* overflow-x: hidden; */
 
   @media (min-width: 768px) {
     max-width: 580px;
@@ -129,13 +115,6 @@ const DeveloperName = styled(motion.h1)`
   font-weight: 800;
   padding-top: 0.2em;
   letter-spacing: -0.03em;
-
-//  background: -webkit-linear-gradient(-90deg, #FD4470, #FE567B
-//    );
-//    background: -webkit-linear-gradient(-180deg, #FFB800,#fd4370
-//    );
-//  -webkit-background-clip: text;
-//  -webkit-text-fill-color: transparent;
 
   @media (min-width: 320px) {
     font-size: 15vw;
@@ -224,19 +203,14 @@ const AnimatedWord = styled.span`
   /* transition: ease-in; */
 `;
 const SeeMyWorkBtn = styled.a`
-  /* width: 181px; */
   height: 45px;
   position: relative;
   margin-top: 2.2em;
-  /* margin-left: 4em;
-  margin-left: calc(50% - 90.5px); */
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   z-index: 50;
-  /* border-radius: 30px; */
-  /* box-shadow: 0 0 0 5px #ffffff10, 0 0 0 10px #ffffff05, 0 0 0 20px #ffffff01; */
   box-shadow: ${({ theme }) => theme.btnBoxShadow};
 
   /* width: 90vw; */
@@ -263,7 +237,7 @@ const SeeMyWorkBtn = styled.a`
   }
   &:hover {
     transition: transform 125ms;
-    transform: translateY(-10px) scale(1.1, 1.1);
+    /* transform: translateY(-10px) scale(1.1, 1.1); */
     p {
       color: var(white);
     }
@@ -316,9 +290,9 @@ const Hero = () => {
   const words = ['Web', 'iOS', 'Android'];
   const colors = ['red', 'blue', 'green'];
   const [animate, setAnimate] = useState(false);
-  const discription = `I’m a Taiwan-based Software engineer who specializes in building web
+  const discription = `I’m a  Software engineer who specializes in building web
   and mobile apps (and occasionally designing) exceptional digital
-    experiences. Currently, working at home and social distancing.`;
+    experiences. `;
 
   const myRef = useRef(null);
   const intersection = useIntersection(myRef, {
@@ -328,14 +302,11 @@ const Hero = () => {
   });
   const fadeIn = {
     opacity: 1,
-    y: 0,
-    x: 0,
+  
   };
 
   const fadeOut = {
     opacity: 0,
-    y: 100,
-    x: 0,
   };
 
   const animationName =
