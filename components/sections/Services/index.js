@@ -14,10 +14,7 @@ const Services = () => {
                 'Fronted Development',
                 'Backend Development',
                 'Responsive & Mobile Websites',
-                'Mobile apps',
-                'Game Development',
-                'SaaS Applications',
-                'Platform Solutions',
+                'SaaS Applications'
             ]
         },
         { 
@@ -25,15 +22,10 @@ const Services = () => {
             src:"/assets/imgs/pen.svg",
             title: 'AI & Machine Learning',
             list: [
-                'Web Development',
-                'Mobile Development',
-                'Desktop Development',
-                'Game Development',
-                'Blockchain Development',
-                'Machine Learning',
-                'Data Science',
-                'Data Analysis',
-                'Data Visualization',
+                'Machine Learning (Tensorflow, Keras)',
+                'Data Science ( Python)',
+                'Data Analysis ( SQL, Pandas )',
+                'Data Visualization ( Excel, Mathplotlip)',
             ]
         },
         { 
@@ -41,15 +33,9 @@ const Services = () => {
             title: 'Mobile App Development',
             src:"/assets/imgs/design.svg",
             list: [
-                'Web Development',
-                'Mobile Development',
-                'Desktop Development',
-                'Game Development',
-                'Blockchain Development',
-                'Machine Learning',
-                'Data Science',
-                'Data Analysis',
-                'Data Visualization',
+                'iOS Development ( SwiftUI)',
+                'Android Development ( React Native & Flutter )',
+                'Mobile Game Dev ( Unity, Godot, SpritKit )',
             ]
         }, 
         { 
@@ -57,13 +43,10 @@ const Services = () => {
             title: 'Web Design',
             src:"/assets/imgs/layers.svg",
             list: [
-                'Fronted Development',
-                'Backend Development',
-                'Responsive & Mobile Websites',
-                'Mobile apps',
-                'Game Development',
-                'SaaS Applications',
-                'Platform Solutions',
+                'Figma',
+                'Sketch',
+                'Adobe XD',
+                'Framer & Webflow'
             ]
         }, 
         { 
@@ -71,9 +54,8 @@ const Services = () => {
             title: 'UI/UX Design',
             src:"/assets/imgs/pallete.svg",
             list: [
-                'User Experience Design',
+                'Copy Writing',
                 'Rapid Prototyping',
-                'Usability Testing',
                 'UX Reviews',
                 'Interaction Design',
             ]
@@ -84,7 +66,6 @@ const Services = () => {
             src:"/assets/imgs/brush.svg",
             list: [
                 'User Experience Design',
-                'Rapid Prototyping',
                 'Usability Testing',
                 'UX Reviews',
                 'Interaction Design',

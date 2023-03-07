@@ -70,7 +70,7 @@ const MainContainer = styled(motion.div)`
     transform: translate(-10%, -12%);
 
     @media (min-width: 768px) {
-      background: url(/assets/imgs/hero-blob-dark.svg) no-repeat center center;
+      background: url( ${({ theme }) => theme.body === '#fff' ? '/assets/imgs/hero-blob-light.svg' : '/assets/imgs/hero-blob-dark.svg'}) no-repeat center center;
       background-size: 100% 100%;
       width: 130%;
       height: 140%;
@@ -149,14 +149,12 @@ const Phrase = styled(motion.h1)`
 
   .words {
     overflow: hidden;
-    /* color: yellow; */
     height: 100%;
     margin-left: 10px;
     padding: 0 10px;
     border-radius: 5px;
     font-size: 1.2rem;
-    background-color: #fd4370;
-    /* border: 1px solid red; */
+    /* background-color: #fd4370; */
   }
   @media (min-width: 320px) {
     font-size: 1.5rem;
@@ -211,16 +209,12 @@ const SeeMyWorkBtn = styled.a`
   justify-content: center;
   text-align: center;
   z-index: 50;
-  box-shadow: ${({ theme }) => theme.btnBoxShadow};
-
-  /* width: 90vw; */
+  /* box-shadow: ${({ theme }) => theme.btnBoxShadow}; */
   width: 50vw;
   justify-content: flex-start;
   padding-left: 25px;
   transform: translateX(5vw);
-  /* border-radius: 10px; */
-
-  border-radius: 30px;
+  border-radius: 0.5rem;
 
   color: ${({ theme }) => theme.btnTextColor};
   background-color: #fd4370;
@@ -254,18 +248,12 @@ const SeeMyWorkBtn = styled.a`
 const Circle = styled.div`
   width: 40px;
   height: 40px;
-  /* border-radius: 30px; */
-  border-radius: 15px;
+  border-radius: 0.8rem;
   border: 2px solid var(--crimson);
   border: 1px solid rgba(255, 255, 255, 0.05);
-  /* border: 2px solid #242424; */
-  background-color: #44444470;
-  background-color: #2a2a2a;
   background-color: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(20px);
-  /* width: 100%; */
   position: absolute;
-  /* left: 0; */
   right: 5px;
   border-radius: 30px;
   display: flex;
@@ -274,12 +262,8 @@ const Circle = styled.div`
   /* will-change: transform;
     transition: transform 450ms; */
   ${SeeMyWorkBtn}:hover & {
-    /* background-color: var(--crimson); */
-    /* width: 100%; */
     background-color: #fd437070;
     background-color: #fd4370;
-    /* transition: transform 125ms;
-    transform: translateY(-10px); */
   }
   img {
     width: 20px;
