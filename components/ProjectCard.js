@@ -1,20 +1,12 @@
 import React, { useRef } from 'react';
 import styled from 'styled-components';
 import Link from 'next/link';
-import Image from 'next/image';
-import { useIntersection } from 'react-use';
 import { motion } from 'framer-motion';
 
 const Card = styled(motion.div)`
   margin: 10px 0;
-  /* width: 95%; */
-  /* width: 25%; */
   position: relative;
-  /* max-width: 800px; */
-  /* background: pink; */
-  /* box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2); */
   padding: 25px;
-  /* border-radius: 3rem; */
   height: auto;
   width: 30%;
   margin: 1rem;
@@ -22,28 +14,18 @@ const Card = styled(motion.div)`
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* background-color: lime; */
   margin-right: 10px;
   cursor: pointer;
-  background-color: #E5E5E526;
-  box-shadow: 2px 2px 8px rgb(0 0 0 / 12%);
   border-radius: 5px;
-  /* border: 3px solid transparent; */
-  box-shadow: ${({ theme }) => theme.btnBoxShadow};
   &:hover{
     height: auto;
-    /* border: 3px solid #CC2553; */
-    /* background-color: #6c36d6; */
-    background-color: #FE1554;
+    background-color: #e4e4e4;
     .proj__discription{
       color: black;
     }
     .proj__title {
       background-color: #00000010;
       color: white;
-      /* box-shadow:
-    0 0 0 4px white,
-    0 0 0 6px black; */
     }
 
   }
@@ -58,84 +40,22 @@ const Card = styled(motion.div)`
   }
 
   @media (max-width: 768px) {
-    /* min-height: 500px; */
     height: auto;
-    /* margin: 60px auto; */
     padding-bottom: 0;
-
-
-
     padding: 10px;
     padding-bottom: 20px;
     padding-top: 20px;
     margin: 5px auto;
-    /* &:nth-child(1) { 
-      margin-top: 180px;
-    } */
   }
 
   @media screen and (max-height: 500px) and (min-width: 992px) {
     height: 350px;
     margin: 10px 0;
   }
-   &:nth-child(1) { 
-      /* margin-top: 180px; */
-      /* background: blue; */
-    }
-    
-  &:after{
-    content: '';
-    position: absolute;
-    width: 100vw;
-    height: 1vw;
-    /* background-color: #E5E5E5; */
-    background-color: transparent;
-    bottom:-20px;
-    @media screen and (min-width: 776px) {
-      display: none;
-    }
-    /* background: linear-gradient( */
-      /* 360deg, */
-      /* rgba(255, 255, 255, 0) 0%, */
-      /* #c51838 51%, */
-      rgba(255, 255, 255, 0) 100%
-    );
-  }
+   
+  
 `;
-const RoundAbsoluteDiv = styled.div`
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 3rem;
-  height: 4rem;
-  border-top-left-radius: 6rem;
-  border-bottom-left-radius: .5rem;
-  border-top-right-radius: .5rem;
-  background-color: #FE1554;
 
-  box-shadow: 2px 2px 8px rgb(0 0 0 / 12%);
-    border-radius: 5px;
-`
-
-const RoundAbsoluteDivBottomRight = styled.div`
-  position: absolute;
-  right: 20px;
-  bottom: -40px;
-  width: 4rem;
-  height: 6rem;
-  /* z-index: 10000; */
-  border-top-right-radius: 6rem;
-  border-bottom-right-radius: .5rem;
-  border-bottom-right-radius: .5rem;
-  background-image: url("/assets/imgs/dots-red.svg");
-  background-size:     cover;                      /* <------ */
-    background-repeat:   no-repeat;
-    background-position: center center;
-  transform: rotate(
-90deg
-);
-  /* background-color: rgba(255,133,119,1); */
-`
 const PreviewImg = styled.div`
   width: 100%;
   flex-shrink: 0;
@@ -223,17 +143,10 @@ padding-top: 20px;
   }
 }
 .proj__title {
-    /* padding: 10px 0; */
-    /* border-radius: 91% 9% 90% 10% / 29% 82% 18% 71%; */
     background: #FFFFFF10;
-    
-    color: #FFFFFF;
     color: ${({ theme }) => theme.text};
   -webkit-background-clip: inherit;
   -webkit-text-fill-color: inherit;
-    /* box-shadow:
-    0 0 0 4px white,
-    0 0 0 6px #FE3161; */
     position: relative;
     font-size: 1.2rem;
     line-height: 2rem;
@@ -247,10 +160,6 @@ padding-top: 20px;
     padding-top: .25rem;
     display: inline-block;
     color: ${({ theme }) => theme.text};
-    /* background: -webkit-linear-gradient(-180deg, #FFB800,#fd4370
-    );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; */
 }
 .proj__discription{
   color: var(--lightNormalTextTitleColor);;
@@ -269,11 +178,7 @@ padding-top: 20px;
     font-size: 20px;
   }
 a{
-  /* background: #61DAFB47;
-  color: #61DAFB
-  color: red; */
   height: 38px;
-  /* width: 180px; */
   width: 141px;
   padding: 15px 15px;
     font-size: 14px;
@@ -282,7 +187,7 @@ a{
     display: flex;
     align-items: center;
 
-    box-shadow: 0 0 0 5px #00000010, 0 0 0 10px #00000005, 0 0 0 20px #00000001;
+    /* box-shadow: 0 0 0 5px #00000010, 0 0 0 10px #00000005, 0 0 0 20px #00000001; */
     border-radius: 30px;
     color: #ffffff90;
     background-color: #fd4370;
@@ -331,8 +236,6 @@ const ProjectCard = ({
 }) => {
   return (
     <Card>
-      <RoundAbsoluteDiv />
-      <RoundAbsoluteDivBottomRight/>
         <PreviewImg>
           <img src={imgScr} alt='Picture of the author' />
         </PreviewImg>

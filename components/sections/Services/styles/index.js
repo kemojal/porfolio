@@ -36,21 +36,15 @@ export const ServicesContainer = styled.section`
      width: 30%;
      margin-bottom: 1rem;
     margin: 0 1rem;
-    /* &:first-child{
-        align-items: flex-start;
-    } */
-
  }
  .list-item-icon{
     font-size: 30px;
-    /* background-color: crimson; */
     height: 64px;
     width: 64px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    /* background-color: #fe155457; */
     background-color: ${({ theme }) => theme.bgServiceIcons};
     box-shadow: ${({ theme }) => theme.btnBoxShadow};
 
