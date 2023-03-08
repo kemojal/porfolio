@@ -20,7 +20,6 @@ const TextContainer = styled(motion.div)`
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  /* color: white; */
   color: ${({ theme }) => theme.text};
   @media (min-width: 768px) {
     padding: 5rem 0;

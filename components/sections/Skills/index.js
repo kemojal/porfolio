@@ -51,6 +51,18 @@ const SkillContainer = styled.div`
     width: 100%;
     flex-wrap: wrap;
     position: relative;
+    &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100vw;
+    height: 2px;
+    right: 30%;
+    z-index: 0;
+    background: ${({ theme }) => theme.skillBorderLine};
+    margin-top: 15px;
+    z-index: -2;
+  }
     
   .tool-gradient-overlay {
     position: absolute;

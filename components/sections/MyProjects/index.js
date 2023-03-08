@@ -41,6 +41,35 @@ const ProjectsSection = styled(motion.section)`
     );
   }
 
+  &:before {
+    content: '';
+    background: url(/assets/imgs/hero-blob.svg) no-repeat center center;
+    background: url(/assets/imgs/hero-blob-dark-mobile.svg) no-repeat center
+      center;
+    background-size: 110% 100%;
+    width: 118%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    z-index: -1;
+    transform: translate(-30%, -10);
+    transform: translate(-10%, -12%);
+
+    @media (min-width: 768px) {
+      background: url( ${({ theme }) => theme.body === '#fff' ? '/assets/imgs/hero-blob-light.svg' : '/assets/imgs/hero-blob-dark.svg'}) no-repeat center center;
+      background-size: 100% 100%;
+      width: 80%;
+      height: 80%;
+      display: block;
+      position: absolute;
+      z-index: 0;
+      top: 5rem;
+      transform-origin: 100% -100%;
+      transform: translate(0%,0%) rotate(0deg);
+      opacity: 0.8;
+    }
+  }
+
   .see-more-btn {
     margin-top: 10px;
     /* height: 38px; */

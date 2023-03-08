@@ -124,13 +124,14 @@ export default function Layout({children}) {
         {/* <Mouse /> */}
         <footer className={styles.footer}>
           <p className={styles.footerText}>
-            ©2021 Kemo Jallow. All rights reserved
+            ©2023 Kemo Jallow. All rights reserved
           </p>
           <div className={styles.footerNav}>
             <div>About</div>
             <div>Project</div>
             <div>Contact</div>
           </div>
+          
         </footer>
       </AppContainer>
     </ThemeProvider>
