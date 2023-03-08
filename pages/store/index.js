@@ -149,7 +149,7 @@ export default function Store() {
         controller={{
           initialSlide: 1,
           slidingDuration: 300,
-          slidingDelay: 3000,
+          slidingDelay: 5000,
           onSliding: (nextSlide) => console.debug('onSliding(nextSlide): ', nextSlide),
           onBeforeSliding: (previousSlide, nextSlide) =>
             console.debug('onBeforeSliding(previousSlide, nextSlide): ', previousSlide, nextSlide),

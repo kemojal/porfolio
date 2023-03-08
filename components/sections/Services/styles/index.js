@@ -5,7 +5,12 @@ export const ServicesContainer = styled.section`
  display: flex;
  align-items: center;
  justify-content: center;
- width: 100%;
+ /* width: 100%; */
+ margin: 2rem 0;
+ border-radius: 5rem;
+ padding: 0 3rem;
+ /* background-color: rgb(88 139 191); */
+ max-width: calc( 100% - 15rem);
  .container {
     max-width: 1100px;
     width: 100%;
@@ -21,6 +26,9 @@ export const ServicesContainer = styled.section`
      display: flex;
      justify-content: center;
      flex-wrap: wrap;
+     background: ${({ theme }) => theme.bgServiceListContainer};
+    padding: 1rem 0.5rem;
+    border-radius: 2rem;
 
  }
  .list-item{
@@ -61,12 +69,6 @@ export const ServicesContainer = styled.section`
     color: ${({ theme }) => theme.text};
     font-weight: 900;
     margin: 0.5rem 0;
-
-
-    /* border-radius: 91% 9% 90% 10% / 29% 82% 18% 71%; */
-    /* background: rgb(0,76,63); */
-    /* background-color:  #EA3B5A; */
-    /* color: ${({ theme }) => theme.bg}; */
     padding: 0.25rem 0.5rem;
     padding-bottom:  0;
 

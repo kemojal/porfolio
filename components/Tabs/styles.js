@@ -39,10 +39,6 @@ const TabButton = styled.button`
   }
 `;
 
-// const TabContent = styled.div`
-//   margin-top: 1rem;
-// `;
-
 const TabContent = styled.div`
   margin-top: 1rem;
   display: flex;

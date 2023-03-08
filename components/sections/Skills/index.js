@@ -39,6 +39,7 @@ const SkillContainer = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding-top: 2rem;
     /* max-width: 1100px; */
   }
   .tool-container {
@@ -118,16 +119,16 @@ const iconComponents = [
 
 
 
-  const size = 100;
-  const { scrollYProgress } = useViewportScroll();
-  const x = useTransform(scrollYProgress, [0, 1], [500, 0]);
-  const rx = useTransform(scrollYProgress, [0, 1], [360, 0]);
+  /* const size = 100; */
+  /* const { scrollYProgress } = useViewportScroll(); */
+  /* const x = useTransform(scrollYProgress, [0, 1], [500, 0]); */
+  /* const rx = useTransform(scrollYProgress, [0, 1], [360, 0]); */
   return (
     <SkillContainer>
       <div className="container">
         <SectionTitle title={`Skills & Tools`} />
         <div className="tool-container">
-        <Marquee list={iconComponents} time={25} />
+        <Marquee list={iconComponents} time={80} />
         </div>
       </div>
     </SkillContainer>

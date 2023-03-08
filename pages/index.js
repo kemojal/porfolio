@@ -20,7 +20,6 @@ import Layout from './../Layout'
 const Combined = styled.div`
   display: flex;
   flex-direction: column;
-  /* overflow-x: hidden; */
   padding-bottom: 20px;
   position: relative;
   @media (min-width: 768px) {
@@ -33,9 +32,6 @@ const Combined = styled.div`
     width: 100%;
     max-width: 1200px;
     height: 900px;
-  }
-  @media (max-width: 767px) {
-    /* overflow: hidden; */
   }
 `;
 

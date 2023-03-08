@@ -15,7 +15,8 @@ export const lightTheme = {
   btnBoxShadow: '0 0 0 5px #00000010, 0 0 0 10px #00000005, 0 0 0 20px #00000001',
 
   bgGradient: 'linear-gradient(180deg, hsla(0,0%,100%,0) 1%,#fff 37%)',
-  bgService: 'white',
+  bgService: 'rgba(249,250,251)',
+  bgServiceListContainer: 'white',
   bgServiceIcons: '#fe155414',
   lightShadeBg: '#25252510',
   moreCardBg: 'white',
@@ -52,7 +53,8 @@ export const darkTheme = {
   
   bgGradient: 'linear-gradient(180deg ,rgba(18,18,18,0) 1%,#1E2023 37%)',
 
-  bgService: '#121212',
+  bgService: '#41414126',
+  bgServiceListContainer: '#b0b0b01c',
   bgServiceIcons: '#fe155457',
   lightShadeBg: '#ffffff03',
   moreCardBg: '#ffffff12',

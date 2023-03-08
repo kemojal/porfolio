@@ -11,7 +11,6 @@ const WrapperContainer = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  /* background-color: #ccc; */
 `;
 
 const Wrapper = ({ children }) => {
@@ -45,10 +44,10 @@ const MarqueeContainer = styled.div`
     pointer-events: none;
     background-image: linear-gradient(
       to right,
-      #fff,
-      transparent 20%,
-      transparent 80%,
-      #fff
+      ${({ theme }) => theme.body},
+      transparent 40%,
+      transparent 60%,
+      ${({ theme }) => theme.body}
     );
   }
 `;
