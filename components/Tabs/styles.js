@@ -12,19 +12,24 @@ const TabList = styled.ul`
   list-style: none;
   margin: 0;
   padding: 0;
+  width: 100%;
+  max-width: 1000px;
 `;
 
 const TabButton = styled.button`
   background-color: ${(props) =>
     props.active ? "lightgray" : "transparent"};
   border: none;
-  border-bottom: ${(props) =>
-    props.active ? "2px solid black" : "2px solid transparent"};
-  color: ${(props) => (props.active ? "black" : "gray")};
+  border: 1px solid #858585;
+    border-radius: 0.5rem;
+  border: ${(props) =>
+    props.active ? "1px solid black" : "1px solid #858585"};
+  color: ${(props) => (props.active ? "white" : "#939393")};
+  background-color: ${(props) => (props.active ? "#EA4867" : "transparent")};
   cursor: pointer;
   font-size: 1rem;
-  font-weight: bold;
-  margin: 0 1rem;
+  font-weight: normal;
+  margin: 0 0.5rem;
   padding: 0.5rem;
   transition: all 0.2s ease-in-out;
 
@@ -44,6 +49,8 @@ const TabContent = styled.div`
   flex-wrap: wrap;
   max-width: 1000px;
   justify-content: flex-start;
+  width: 100%;
+  max-width: 1000px;
   /* justify-content: center; */
 `;
 
