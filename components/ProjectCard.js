@@ -241,9 +241,9 @@ const ProjectCard = ({
         </PreviewImg>
       <SliderContent>
         
-        <div  class="title">
+        <div  className="title">
           <span className='proj__title'> {title}</span>
-          <p class="sub-title">{subtitle}</p>
+          <p className="sub-title">{subtitle}</p>
         </div>
         <div className='proj__discription'>
             {discription}

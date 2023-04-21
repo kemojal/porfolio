@@ -9,7 +9,7 @@ export const Slide = ({ title, description, coverImage, url, className, onClick,
         <SlideContent isActive={isActive}>
           <h1 >{title} </h1>
           <p>{description}</p>
-          <div class="hero-buttons"><a href={url}>$10.00</a> <button>Cart</button></div>
+          <div className="hero-buttons"><a href={url}>$10.00</a> <button>Cart</button></div>
           
         </SlideContent>
         <CoverImage src={coverImage} alt={title} isActive={isActive}/>

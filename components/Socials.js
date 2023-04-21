@@ -158,8 +158,8 @@ const Socials = () => {
               quality={100}
               src={iconData.icon}
               alt={iconData.altText}
-              width='16px'
-              height='16px'
+              width='16'
+              height='16'
               priority={true}
             />
           </Icon>

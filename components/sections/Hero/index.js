@@ -3,7 +3,7 @@ import styled, { keyframes } from 'styled-components';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { useIntersection } from 'react-use';
-import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
+// import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
 
 
 const spinWords = keyframes`
@@ -356,11 +356,12 @@ const Hero = () => {
             {discription}
           </motion.p>
         ) : (
-          <SkeletonTheme color='#0A3CB710' highlightColor='#0A3CB715'>
-            <p>
-              <Skeleton count={4} height={28} />
-            </p>
-          </SkeletonTheme>
+          <p>loading</p>
+          // <SkeletonTheme color='#0A3CB710' highlightColor='#0A3CB715'>
+          //   <p>
+          //     <Skeleton count={4} height={28} />
+          //   </p>
+          // </SkeletonTheme>
         )}
       </MainContainer>
 

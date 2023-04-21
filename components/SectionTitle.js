@@ -180,7 +180,7 @@ const SectionTitle = ({ title }) => {
         <div className="hero-box top-left"/>
 
       </div>
-      <span class="behind-text">WORKS</span>
+      <span className="behind-text">WORKS</span>
       {/* <Line /> */}
     </TitleContainer>
   );
