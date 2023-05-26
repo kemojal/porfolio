@@ -12,7 +12,7 @@ export const lightTheme = {
   textPhraseColor: '#565a63',
   themeToggleButtonBorder: 'rgb(229, 232, 236)',
   btnTextColor: '#fff',
-  btnBoxShadow: '0 0 0 5px #00000010, 0 0 0 10px #00000005, 0 0 0 20px #00000001',
+  btnBoxShadow: '0 0 0 2px #00000010, 0 0 0 4px #00000005, 0 0 0 10px #00000001',
 
   bgGradient: 'linear-gradient(180deg, hsla(0,0%,100%,0) 1%,#fff 37%)',
   bgService: 'rgba(249,250,251)',
@@ -50,7 +50,7 @@ export const darkTheme = {
   textPhraseColor: '#8892B0',
   themeToggleButtonBorder: '#FD427030',
   btnTextColor: '#fff',
-  btnBoxShadow: '0 0 0 5px #ffffff10, 0 0 0 10px #ffffff05, 0 0 0 20px #ffffff01',
+  btnBoxShadow: '0 0 0 2px #ffffff10, 0 0 0 4px #ffffff05, 0 0 0 10px #ffffff01',
   
   bgGradient: 'linear-gradient(180deg ,rgba(18,18,18,0) 1%,#1E2023 37%)',
 

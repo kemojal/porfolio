@@ -33,16 +33,13 @@ const SocialContainer  = styled.div`
     }
 `
 const Icons  = styled.div`
- display: flex;
- color: black;
- justify-content: space-between;
-    align-items: center;
-    width: 50px;
-    flex-direction: column;
-    height: 80%;
+display: flex;
+color: black;
+justify-content: space-between;
+align-items: center;
+gap: 20px;
+flex-direction: column;
 @media (min-width: 768px) {
-    
-    padding: 20px 0;
     height: 40%;
     flex-direction: column;
     cursor: pointer;
@@ -63,25 +60,16 @@ const Icons  = styled.div`
 
 const Icon = styled.div`
             background-color: white;
-            /* background-color: ${({ theme }) => theme.socialIconBg}; */
             background-color: ${({ theme }) => theme.bgServiceIcons};
             border: 1px solid #292B2E80;
             backdrop-filter: blur(20px);
             box-shadow: ${({ theme }) => theme.btnBoxShadow};
-            /* box-shadow:
-    inset 0 0 2.5px #fff,     
-    inset 1px 0 4px #f0f,   
-    inset -1px 0 4px #0ff, 
-    inset 1px 0 15px #f0f,  
-    inset -1px 0 15px #0ff,
-    0 0 2.5px #fff,            
-    -0.5px 0 4px #f0f,       
-    0.5px 0 4px #0ff;    */
-            width: 32px;
-            height: 32px;
-            border-radius: 30px;
+            width: 48px;
+            height: 48px;
+            border-radius: 18px;
             display: flex;
             justify-content: center;
+            align-items: center;
             padding: 4px;
             opacity: 0.8;
             cursor: pointer;

@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { motion } from 'framer-motion';
+import styled from "styled-components";
+import { motion } from "framer-motion";
 
 export const Nav = styled(motion.nav)`
   position: fixed;
@@ -17,7 +17,7 @@ export const Nav = styled(motion.nav)`
   background-color: rgba(255, 255, 255, 0.72);
   background-color: ${({ theme }) => theme.bgNav};
   background-color: ${({ isOpen }) =>
-    isOpen ? '#E33140' : `${({ theme }) => theme.bgNav}`};
+    isOpen ? "#E33140" : `${({ theme }) => theme.bgNav}`};
   background-color: ${({ theme }) => theme.bgNav};
   box-shadow: inset 0px -1px 1px ${({ theme }) => theme.navShadowColor};
   /* box-shadow: ${({ theme }) => theme.navShadowColor} !important; */
@@ -69,7 +69,7 @@ export const NavLogo = styled.a`
     font-size: 1.3rem;
   }
   &:before {
-    content: '';
+    content: "";
     position: absolute;
     background: ${({ theme }) => theme.bgNavLogo};
     width: 50px;
@@ -77,7 +77,7 @@ export const NavLogo = styled.a`
   }
   @media (max-width: 767px) {
     ::before {
-      content: '';
+      content: "";
       width: 35px;
       height: 35px;
       left: 3px;
@@ -116,7 +116,7 @@ export const Hamburger = styled.div`
     width: 14px;
     background-color: var(--hamburgerSpanColor);
     background-color: ${({ isOpen }) =>
-      isOpen ? 'var(--hamburgerSpanColor)' : 'var(--hamburgerSpanColor)'};
+      isOpen ? "var(--hamburgerSpanColor)" : "var(--hamburgerSpanColor)"};
     margin-bottom: 2px;
     border-radius: 5px;
   }
@@ -127,17 +127,17 @@ export const Hamburger = styled.div`
     border: 1px solid rgb(229, 232, 236);
   }
   .first {
-    top: ${({ isOpen }) => (isOpen ? '8px' : '0')};
-    transform: ${({ isOpen }) => (isOpen ? 'rotate(45deg)' : 'rotate(0deg)')};
+    top: ${({ isOpen }) => (isOpen ? "8px" : "0")};
+    transform: ${({ isOpen }) => (isOpen ? "rotate(45deg)" : "rotate(0deg)")};
     transition: top 0s 0s, transform 0.2s ease-in;
   }
   .center {
     top: 6px;
-    display: ${({ isOpen }) => (isOpen ? 'none' : 'block')};
+    display: ${({ isOpen }) => (isOpen ? "none" : "block")};
   }
   .second {
-    top: ${({ isOpen }) => (isOpen ? '8px' : '12px')};
-    transform: ${({ isOpen }) => (isOpen ? 'rotate(-45deg)' : 'rotate(0deg)')};
+    top: ${({ isOpen }) => (isOpen ? "8px" : "12px")};
+    transform: ${({ isOpen }) => (isOpen ? "rotate(-45deg)" : "rotate(0deg)")};
     transition: top 0s 0s, transform 0.2s ease-in;
   }
 `;
@@ -153,7 +153,7 @@ export const Menu = styled.div`
 
   @media (max-width: 768px) {
     overflow: hidden;
-    background-color: ${({ isOpen }) => (isOpen ? '#E33140' : 'crimson')};
+    background-color: ${({ isOpen }) => (isOpen ? "#E33140" : "crimson")};
     background-color: ${({ theme }) => theme.bgNav};
     background-color: #212325;
     background-color: ${({ theme }) => theme.NavModalBgColor};
@@ -167,13 +167,13 @@ export const Menu = styled.div`
     /* z-index: 1000; */
     flex-direction: column;
     transform: ${({ isOpen }) =>
-      isOpen ? 'translateY(-15vh)' : 'translateY(-75vh)'};
+      isOpen ? "translateY(-15vh)" : "translateY(-75vh)"};
     transition: all 0.2s ease-in;
     /* transition: transform 0.2s ease-in; */
     transition: height 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
     width: 100vw;
     height: 65vh;
-    opacity: ${({ isOpen }) => (isOpen ? '1' : '1')};
+    opacity: ${({ isOpen }) => (isOpen ? "1" : "1")};
 
     box-shadow: ${({ theme }) => theme.NavModalShadow};
   }
@@ -184,17 +184,21 @@ export const Menu = styled.div`
     padding-right: 40px;
   }
   @media (min-width: 1025px) {
-    width: 40%;
+    width: 50%;
+    justify-content: flex-end;
     background-color: transparent;
   }
 `;
 export const MenuLink = styled.a`
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   @media (max-width: 768px) {
     padding: 0.5rem 2rem;
     cursor: pointer;
     text-align: center;
     text-decoration: none;
-    display: ${({ isOpen }) => (isOpen ? 'flex' : 'none')};
+    display: ${({ isOpen }) => (isOpen ? "flex" : "none")};
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
@@ -231,7 +235,7 @@ export const MenuLink = styled.a`
     opacity: 0.4;
     font-size: 3rem;
     font-weight: bolder;
-    margin-top: ${({ isOpen }) => (isOpen ? '0' : '-100vw')};
+    margin-top: ${({ isOpen }) => (isOpen ? "0" : "-100vw")};
     transition-delay: 0.2s;
     color: rgb(32, 38, 45);
 
@@ -248,7 +252,7 @@ export const MenuLink = styled.a`
   .s-name {
     font-size: 3.1rem;
 
-    margin-top: ${({ isOpen, index }) => (isOpen ? '0' : '100vw ')};
+    margin-top: ${({ isOpen, index }) => (isOpen ? "0" : "100vw ")};
     transition-delay: 0.25s;
 
     /* color: rgb(32, 38, 45); */
@@ -260,6 +264,17 @@ export const MenuLink = styled.a`
       font-size: 1rem;
       color: ${({ theme }) => theme.text};
     }
+  }
+  .icon-wrapper {
+    width: 25px;
+    height: 25px;
+    border: 1px solid #74747424;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    background-color: #74747408;
   }
   @media (max-width: 768px) {
     flex-direction: row;

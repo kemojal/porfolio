@@ -1,12 +1,24 @@
-import styled from 'styled-components';
-import { motion } from 'framer-motion';
+import styled from "styled-components";
+import { motion } from "framer-motion";
 
 const ContactContainer = styled(motion.section)`
   width: 100vw;
   color: white;
   padding-bottom: 8rem;
 
-background-color: ${({ theme }) => theme.bgContactMe};
+  background-color: ${({ theme }) => theme.bgContactMe};
+  /* background-color: orange; */
+  border: 1px solid #0000000F;
+  margin-bottom: 5rem;
+  /* border-image: linear-gradient(to right bottom, #260B3C, #a053df);
+  border-image-slice: 1;
+  border-style: solid;
+  box-sizing: content-box;
+  border-width: 8px; */
+  border-top-right-radius: 10rem;
+  border-top-left-radius: 40rem;
+  border-bottom-left-radius: 10rem;
+  border-bottom-right-radius: 40rem;
 
   @media (min-width: 1025px) {
     padding-bottom: 10rem;
@@ -30,14 +42,12 @@ const TextContainer = styled(motion.div)`
     letter-spacing: 0.08rem;
     text-align: center;
     padding: 2rem;
-    span{
+    /* span{
       border-radius: 91% 9% 90% 10% / 29% 82% 18% 71%;
-      /* background: #FE3161; */
       background: white;
       color: ${({ theme }) => theme.crimson};
-      /* color: rgb(0, 76, 63); */
       padding: 0.25rem 0.5rem;
-    }
+    } */
     @media (min-width: 768px) {
       font-size: 3rem;
       font-weight: bold;
@@ -46,9 +56,57 @@ const TextContainer = styled(motion.div)`
       padding: 0;
     }
   }
+  .highlight {
+    border-radius: 91% 9% 90% 10% / 29% 82% 18% 71%;
+      /* background: #FE3161; */
+      background: white;
+      color: ${({ theme }) => theme.crimson};
+      /* color: rgb(0, 76, 63); */
+      padding: 0.25rem 0.5rem;
+  }
+  .wrapper{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    place-items: center;
+  }
+  ul{
+    display: grid;
+  }
+  .service-list{
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: start;
+    /* background-color: #FFFFFF;
+    padding: 2rem;
+    border-radius: 1rem; */
+  }
+  li{
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 1rem;
+    justify-content: center;
+  }
+  .service-card{
+    padding: 24px;
+    border: 1px solid #00000020;
+    border-radius: 12px;
+    background-color: #ffffff10;
+    border-top-right-radius: 10rem;
+  border-top-left-radius: 40rem;
+  border-bottom-left-radius: 10rem;
+  border-bottom-right-radius: 40rem;
+  border: 1px solid orange;
+  }
   p {
     font-size: 1.2rem;
-    text-align: center;
+    text-align: left;
     padding: 0.1rem 2rem;
     /* color: white; */
     color: ${({ theme }) => theme.text};
@@ -58,10 +116,17 @@ const TextContainer = styled(motion.div)`
   @media (min-width: 768px) {
     p {
       font-size: 1.5rem;
-      padding-top: 5rem;
+      padding-top: 2rem;
       font-size: 1rem;
       font-weight: 200;
-      width: 30%;
+     
+    }
+    .wrapper{
+      max-width: 800px;
+      /* grid-template-columns: repeat(2, 1fr); */
+    }
+    ul{
+      grid-template-columns: repeat(2, 1fr);
     }
   }
 
@@ -88,7 +153,7 @@ const ActionBTContainer = styled(motion.div)`
   justify-content: center;
 `;
 const SeeMyWorkBtn = styled(motion.a)`
-   height: 45px;
+  height: 45px;
   position: relative;
   margin-top: 2.2em;
 
@@ -107,7 +172,7 @@ const SeeMyWorkBtn = styled(motion.a)`
   color: ${({ theme }) => theme.btnTextColor};
   background-color: #fd4370;
   background: white;
-  color:  rgb(0, 76, 63);
+  color: rgb(0, 76, 63);
   /* background-image: linear-gradient(-90deg,#ff004d,#fd4370);  */
   /* color: var(--lightTextTitleColor); */
   /* color: #0E182B;; */
@@ -141,9 +206,6 @@ const Circle = styled(motion.div)`
   border-radius: 15px;
   border: 2px solid var(--crimson);
   border: 1px solid rgba(255, 255, 255, 0.05);
-  /* background-color: #fd4370;
-  background-color: #FFFFFF; */
-  /* background-color: rgba(255, 255, 255, 0.05); */
   background-color: rgb(1 76 62 / 13%);
   backdrop-filter: blur(20px);
   /* color: #0E182B; */
@@ -162,4 +224,10 @@ const Circle = styled(motion.div)`
   }
 `;
 
-export { ContactContainer, TextContainer, ActionBTContainer, SeeMyWorkBtn, Circle  }
+export {
+  ContactContainer,
+  TextContainer,
+  ActionBTContainer,
+  SeeMyWorkBtn,
+  Circle,
+};
